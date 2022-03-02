@@ -1,0 +1,38 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install Prerequisites
+        run: npm install --global pnpm
+
+      - name: Install Dependencies
+        run: pnpm i
+
+      - name: Build Constants
+        run: pnpm run buildConstants
+
+      - name: Push to Github
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add ./lib/constants.d.ts
+          git commit -m "build constants"
+
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
