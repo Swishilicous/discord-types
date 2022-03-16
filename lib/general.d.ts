@@ -1,11 +1,8 @@
-export type UserList = { [user: string]: User; };
-export type ChannelList = { [channelId: string]: Channel; };
-export type GuildList = { [guildId: string]: Guild; };
-export type RoleList = { [roleId: string]: Role; };
+import moment from 'moment';
 
 export class User {
-  constructor (user: object);
-  accentColor: unknown;
+  constructor(user: object);
+  accentColor: number;
   avatar: string;
   banner: string;
   bio: string;
@@ -14,7 +11,7 @@ export class User {
   discriminator: string;
   email: string | undefined;
   flags: number;
-  guildMemberAvatars: { [guild: string]: string; };
+  guildMemberAvatars: Record<string, string>;
   id: string;
   mfaEnabled: boolean;
   mobile: boolean;
@@ -55,32 +52,14 @@ export class User {
   toString(): string;
 }
 
-export interface Member {
-  avatar: string | undefined;
-  banner: string | undefined;
-  bio: string;
-  colorString: string;
-  communicationDisabledUntil: string | undefined;
-  fullProfileLoadedTimestamp: number;
-  guildId: string;
-  hoistRoleId: string;
-  iconRoleId: string;
-  isPending: boolean | undefined;
-  joinedAt: string | undefined;
-  nick: string | undefined;
-  premiumSince: string | undefined;
-  roles: string[];
-  userId: string;
-}
-
 export class Channel {
-  constructor (channel: object);
+  constructor(channel: object);
   application_id: number | undefined;
   bitrate: number;
   defaultAutoArchiveDuration: number | undefined;
   flags: number;
   guild_id: string;
-  icon: unknown;
+  icon: string;
   id: string;
   lastMessageId: string;
   lastPinTimestamp: string | undefined;
@@ -90,7 +69,7 @@ export class Channel {
   memberListId: unknown;
   messageCount: number | undefined;
   name: string;
-  nicks: { [unknown: string]: unknown; };
+  nicks: Record<string, unknown>;
   nsfw: boolean;
   originChannelId: unknown;
   ownerId: string;
@@ -113,7 +92,7 @@ export class Channel {
     discriminator: string;
   }[];
   recipients: string[];
-  rtcRegion: unknown;
+  rtcRegion: string;
   threadMetadata: {
     locked: boolean;
     archived: boolean;
@@ -156,10 +135,10 @@ export class Channel {
 }
 
 export class Guild {
-  constructor (guild: object);
+  constructor(guild: object);
   afkChannelId: string | undefined;
   afkTimeout: number;
-  applicationCommandCounts: { [key: number]: number; };
+  applicationCommandCounts: Record<number, number>;
   application_id: unknown;
   banner: string | undefined;
   defaultMessageNotifications: number;
@@ -182,7 +161,7 @@ export class Guild {
   premiumSubscriberCount: number;
   premiumTier: number;
   publicUpdatesChannelId: string | undefined;
-  roles: RoleList;
+  roles: Record<string, Role>;
   rulesChannelId: string;
   splash: string;
   systemChannelFlags: number;
@@ -206,6 +185,178 @@ export class Guild {
   toString(): string; // override that is identical to Guild.name
 }
 
+/*
+  If you want to help find the unknown props:
+  
+  Object.values(Webpack.getModule(m => m._channelMessages)._channelMessages)
+    .map(v => v._array.map(v => v.{PUT THE VALUE HERE})
+      .filter(v => Array.isArray(v) ? v.length : !!v)).filter(v => v.length)
+*/
+export class Message {
+  constructor(message: object);
+  activity: unknown;
+  application: unknown;
+  applicationId: unknown;
+  attachments: MessageAttachment[];
+  author: User;
+  blocked: boolean;
+  bot: boolean;
+  call: {
+    duration: moment.Duration;
+    endedTimestamp: moment.Moment;
+    participants: string[];
+  };
+  channel_id: string;
+  /* not fully typed: */
+  codedLinks: {
+    code?: string;
+    type: string;
+  }[];
+  colorString: unknown;
+  components: unknown[];
+  content: string;
+  customRenderedContent: unknown;
+  editedTimestamp: moment.Moment;
+  embeds: Embed[];
+  flags: number;
+  giftCodes: string[];
+  id: string;
+  interaction: {
+    id: string;
+    name: string;
+    type: number;
+    user: User;
+  }[] | undefined;
+  interactionData: {
+    application_command: {
+      application_id: string;
+      default_member_permissions: unknown;
+      default_permission: boolean;
+      description: string;
+      dm_permission: unknown;
+      id: string;
+      name: string;
+      options: CommandOptions[];
+      permissions: unknown[];
+      type: number;
+      version: string;
+    };
+    attachments: MessageAttachment[];
+    guild_id: string | undefined;
+    id: string;
+    name: string;
+    options: {
+      focused: unknown;
+      name: string;
+      type: number;
+      value: string;
+    }[];
+    type: number;
+    version: string;
+  }[];
+  interactionError: unknown[];
+  isSearchHit: boolean;
+  loggingName: unknown;
+  mentionChannels: string[];
+  mentionEveryone: boolean;
+  mentionRoles: string[];
+  mentioned: boolean;
+  mentions: string[];
+  messageReference: {
+    channel_id: string;
+    message_id: string;
+  } | undefined;
+  nick: unknown; // probably a string
+  nonce: string | undefined;
+  pinned: boolean;
+  reactions: MessageReaction[];
+  state: string;
+  stickerItems: {
+    format_type: number;
+    id: string;
+    name: string;
+  }[];
+  stickers: unknown[];
+  timestamp: moment.Moment;
+  tts: boolean;
+  type: number;
+  webhookId: string | undefined;
+
+  /** @note Doesn't actually update the original message; it just returns a new message instance with the added reaction. */
+  addReaction(emoji: ReactionEmoji, fromCurrentUser: boolean): Message;
+  /** @note Searches each reaction and if the provided string has an index above -1 it'll return the reaction object. */
+  getReaction(name: string): MessageReaction;
+  /** @note Doesn't actually update the original message; it just returns the message instance without the reaction searched with the provided emoji object.  */
+  removeReactionsForEmoji(emoji: ReactionEmoji): Message;
+  /** @note Doesn't actually update the original message; it just returns the message instance without the reaction.*/
+  removeReaction(emoji: ReactionEmoji, fromCurrentUser: boolean): Message;
+
+  getChannelId(): string;
+  hasFlag(flag: number): boolean;
+  isCommandType(): boolean;
+  isEdited(): boolean;
+  isSystemDM(): boolean;
+
+  /** @note Returns the entire object (minus the prototype functions) but with 3 additional props that are aliases. */
+  toJS(): {
+    webkhook_id: string | undefined;
+    edited_timestamp: moment.Moment;
+    mention_everyone: boolean;
+    [key: string]: any;
+  };
+}
+
+export interface Embed {
+  author?: {
+    iconProxyURL: string | undefined;
+    iconURL: string | undefined;
+    name: string;
+    url: string;
+  };
+  color: string;
+  fields: [];
+  id: string;
+  provider?: {
+    name: string;
+    url: string;
+  };
+  rawDescription: string;
+  rawTitle: string;
+  referenceId: unknown;
+  thumbnail?: {
+    height: number;
+    proxyURL: string | undefined;
+    url: string;
+    width: number;
+  };
+  type: string;
+  url: string | undefined;
+  video?: {
+    height: number;
+    proxyURL: string | undefined;
+    url: string;
+    width: number;
+  };
+}
+
+export interface Member {
+  avatar: string | undefined;
+  banner: string | undefined;
+  bio: string;
+  colorString: string;
+  communicationDisabledUntil: string | undefined;
+  fullProfileLoadedTimestamp: number;
+  guildId: string;
+  hoistRoleId: string;
+  iconRoleId: string;
+  isPending: boolean | undefined;
+  joinedAt: string | undefined;
+  nick: string | undefined;
+  premiumSince: string | undefined;
+  roles: string[];
+  userId: string;
+}
+
 export interface Role {
   color: number;
   colorString: string | undefined;
@@ -224,4 +375,44 @@ export interface Role {
     premium_subscriber: unknown;
   } | undefined;
   unicodeEmoji: string | undefined;
+}
+
+export interface CommandOptions {
+  type: number;
+  name: string;
+  description: string;
+  required?: boolean;
+  choices?: {
+    name: string;
+    values: string | number;
+  }[];
+  options?: CommandOptions[];
+  channel_types?: number[];
+  min_value?: number;
+  max_value?: number;
+  autocomplete?: boolean;
+}
+
+export interface MessageAttachment {
+  filename: string;
+  id: string;
+  proxy_url: string;
+  size: number;
+  spoiler: boolean;
+  url: string;
+  content_type?: string;
+  width?: number;
+  height?: number;
+}
+
+interface ReactionEmoji {
+  id: string | undefined;
+  name: string;
+  animated: boolean;
+}
+
+interface MessageReaction {
+  count: number;
+  emoji: ReactionEmoji;
+  me: boolean;
 }

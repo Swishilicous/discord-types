@@ -7,8 +7,8 @@ let file = fs.readFileSync(path, 'utf8', console.error);
 
 file = file.trim().split('\n');
 
-file[2] = 'export default interface Constants {';
-file[file.length - 1] = '}';
+file[2] = 'export const constants: {';
+file[file.length - 1] = '}\n\nexport default constants;';
 
 file = file.join('\n');
 
