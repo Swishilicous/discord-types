@@ -1,4 +1,4 @@
-# Manual Discord Types
+# Manual Discord Types (for Discord Client Mods)
 
 Manually typing common discord webpack modules :)
 
@@ -26,3 +26,16 @@ Help would be greatly appreciated.
 \* Most of it is typed but some if it is typed as "unknown"
 
 `Last updated: 3/15/2022`
+
+---
+
+## Installation
+```
+npm install discord-types
+pnpm add discord-types
+```
+
+## Intended Usage
+```js
+import type { User, MemberStore, constants } from 'discord-types';
+```

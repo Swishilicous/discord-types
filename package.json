@@ -1,4 +1,14 @@
 {
+	"name": "discord-types",
+	"description": "Type definitions for common Discord webpack modules.",
+	"author": "Swishilicous",
+	"license": "MIT",
+	"version": "0.1.1",
+	"types": "index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Swishilicous/Discord-Types.git"
+	},
 	"scripts": {
 		"buildConstants": "cd lib && dts-gen -o -f constants --expression-file \"../resources/constants.js\" && node ../resources/editGenerated"
 	},
