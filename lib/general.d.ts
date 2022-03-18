@@ -326,10 +326,29 @@ export interface MessageJSON {
   edited_timestamp: string;
   embeds: Embed[];
   flags: number;
+  guild_id: string | undefined;
   id: string;
+  member: {
+    avatar: string | undefined;
+    communication_disabled_until: string | undefined;
+    deaf: boolean;
+    hoisted_role: string | undefined;
+    is_pending: boolean;
+    joined_at: string;
+    mute: boolean;
+    nick: string | boolean;
+    pending: boolean;
+    premium_since: string | undefined;
+    roles: string[];
+  } | undefined;
   mention_everyone: boolean;
   mention_roles: string[];
-  mentions: string[];
+  mentions: UserJSON[];
+  message_reference: {
+    guild_id?: string;
+    channel_id: string;
+    message_id: string;
+  } | undefined;
   nonce: string | undefined;
   pinned: boolean;
   referenced_message: MessageJSON | undefined;
