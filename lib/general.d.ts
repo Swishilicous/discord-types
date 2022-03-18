@@ -52,6 +52,14 @@ export class User {
   toString(): string;
 }
 
+export interface UserJSON {
+  avatar: string;
+  discriminator: string;
+  id: string;
+  publicFlags: number;
+  username: string;
+}
+
 export class Channel {
   constructor(channel: object);
   application_id: number | undefined;
@@ -311,7 +319,7 @@ interface JSMessage extends Message {
 /** @note A smaller Message object found in FluxDispatcher and elsewhere. */
 export interface MessageJSON {
   attachments: MessageAttachment[];
-  author: User;
+  author: UserJSON;
   channel_id: string;
   components: unknown[];
   content: string;
@@ -324,11 +332,7 @@ export interface MessageJSON {
   mentions: string[];
   nonce: string | undefined;
   pinned: boolean;
-  referenced_message: {
-    guild_id?: string;
-    channel_id: string;
-    message_id: string;
-  } | undefined;
+  referenced_message: MessageJSON | undefined;
   timestamp: string;
   tts: boolean;
   type: number;

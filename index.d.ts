@@ -22,6 +22,7 @@ export type Member = General.Member;
 export type Channel = General.Channel;
 export type Message = General.Message;
 
+export type UserJSON = General.UserJSON;
 export type MessageJSON = General.MessageJSON;
 export type CommandOptions = General.CommandOptions;
 export type MessageAttachment = General.MessageAttachment;
