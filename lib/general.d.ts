@@ -263,6 +263,7 @@ export class Message {
   mentioned: boolean;
   mentions: string[];
   messageReference: {
+    guild_id?: string;
     channel_id: string;
     message_id: string;
   } | undefined;
@@ -297,13 +298,40 @@ export class Message {
   isEdited(): boolean;
   isSystemDM(): boolean;
 
-  /** @note Returns the entire object (minus the prototype functions) but with 3 additional props that are aliases. */
-  toJS(): {
-    webkhook_id: string | undefined;
-    edited_timestamp: moment.Moment;
-    mention_everyone: boolean;
-    [key: string]: any;
-  };
+  /** @note Returns the entire object (minus the prototype functions because it's not a class anymore) but with 3 additional props that are aliases. */
+  toJS(): JSMessage;
+}
+
+interface JSMessage extends Message {
+  webkhook_id: string | undefined;
+  edited_timestamp: moment.Moment;
+  mention_everyone: boolean;
+}
+
+/** @note A smaller Message object found in FluxDispatcher and elsewhere. */
+export interface MessageJSON {
+  attachments: MessageAttachment[];
+  author: User;
+  channel_id: string;
+  components: unknown[];
+  content: string;
+  edited_timestamp: string;
+  embeds: Embed[];
+  flags: number;
+  id: string;
+  mention_everyone: boolean;
+  mention_roles: string[];
+  mentions: string[];
+  nonce: string | undefined;
+  pinned: boolean;
+  referenced_message: {
+    guild_id?: string;
+    channel_id: string;
+    message_id: string;
+  } | undefined;
+  timestamp: string;
+  tts: boolean;
+  type: number;
 }
 
 export interface Embed {

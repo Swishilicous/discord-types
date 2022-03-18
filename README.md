@@ -22,6 +22,8 @@ Help would be greatly appreciated.
 - - Selected Store*
 - Other
 - - Constants
+- - CommandOptions
+- - MessageJSON (smaller message object)
 
 \* Most of it is typed but some if it is typed as "unknown"
 
