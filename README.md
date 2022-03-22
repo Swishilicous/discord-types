@@ -25,11 +25,12 @@ Help would be greatly appreciated.
 - - CommandOptions
 - - JSON Generals (smaller general objects)
 - - - UserJSON
+- - - EmbedJSON
 - - - MessageJSON
 
 \* Most of it is typed but some if it is typed as "unknown"
 
-`Last updated: 3/17/2022`
+`Last updated: 3/21/2022`
 
 ---
 
@@ -40,6 +41,6 @@ pnpm add discord-types
 ```
 
 ## Intended Usage
-```js
+```ts
 import type { User, MemberStore, constants } from 'discord-types';
 ```

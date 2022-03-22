@@ -324,7 +324,7 @@ export interface MessageJSON {
   components: unknown[];
   content: string;
   edited_timestamp: string;
-  embeds: Embed[];
+  embeds: EmbedJSON[];
   flags: number;
   guild_id: string | undefined;
   id: string;
@@ -385,6 +385,36 @@ export interface Embed {
   video?: {
     height: number;
     proxyURL: string | undefined;
+    url: string;
+    width: number;
+  };
+}
+
+export interface EmbedJSON {
+  author?: {
+    icon_url: string;
+    name: string;
+    proxy_icon_url: string;
+    url: string;
+  };
+  title: string;
+  color: string;
+  description: string;
+  type: string;
+  url: string | undefined;
+  provider?: {
+    name: string;
+    url: string;
+  };
+  thumbnail?: {
+    height: number;
+    proxy_url: string | undefined;
+    url: string;
+    width: number;
+  };
+  video?: {
+    height: number;
+    proxy_url: string | undefined;
     url: string;
     width: number;
   };
