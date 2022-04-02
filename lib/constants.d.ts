@@ -123,6 +123,7 @@ export const constants: {
         UNKNOWN_WEBHOOK: number;
         USER_BANNED: number;
         USER_NOT_AUTHORIZED_FOR_APPLICATION: number;
+        VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS: number;
     };
     Accessibility: {
         FONT_SIZES: number[];
@@ -152,7 +153,7 @@ export const constants: {
         ACCESSIBILITY_SET_ZOOM: string;
         ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: string;
         ACCESSIBILITY_SUPPORT_CHANGED: string;
-        ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED: string;
+        ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: string;
         ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: string;
         ACK_APPROVED_GUILD_JOIN_REQUEST: string;
         ACTIVATE_RAGING_DEMON: string;
@@ -216,6 +217,7 @@ export const constants: {
         APPLICATION_COMMAND_QUERY_LIST_REQUEST: string;
         APPLICATION_COMMAND_QUERY_REQUEST: string;
         APPLICATION_COMMAND_QUERY_SEARCH_MANAGER: string;
+        APPLICATION_COMMAND_SEARCH_MANAGER_UPDATE: string;
         APPLICATION_COMMAND_SET_ACTIVE_COMMAND: string;
         APPLICATION_COMMAND_SET_PREFERRED_COMMAND: string;
         APPLICATION_COMMAND_UPDATE: string;
@@ -228,6 +230,7 @@ export const constants: {
         APPLICATION_FETCH_SUCCESS: string;
         APPLICATION_STORE_ACCEPT_EULA: string;
         APPLICATION_STORE_ACCEPT_STORE_TERMS: string;
+        APPLICATION_STORE_ACCEPT_WITHDRAWAL_WAIVER: string;
         APPLICATION_STORE_CLEAR_DATA: string;
         APPLICATION_STORE_DIRECTORY_FETCH_FAILURE: string;
         APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: string;
@@ -413,6 +416,7 @@ export const constants: {
         CHECKING_FOR_UPDATES: string;
         CHECK_LAUNCHABLE_GAME: string;
         CLEAR_AUTHENTICATION_ERRORS: string;
+        CLEAR_CACHES: string;
         CLEAR_GUILD_DISCOVERY_COMMANDS: string;
         CLEAR_GUILD_HASHES: string;
         CLEAR_INTERACTION_MODAL_STATE: string;
@@ -627,6 +631,7 @@ export const constants: {
         GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: string;
         GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: string;
         GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: string;
+        GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: string;
         GUILD_APPLICATIONS_FETCH_SUCCESS: string;
         GUILD_APPLICATION_COMMANDS_UPDATE: string;
         GUILD_APPLICATION_COMMAND_COUNTS_UPDATE: string;
@@ -636,6 +641,7 @@ export const constants: {
         GUILD_APPLY_BOOST_SUCCESS: string;
         GUILD_BAN_ADD: string;
         GUILD_BAN_REMOVE: string;
+        GUILD_BOOSTING_AFFINITY_CHANNEL_NOTICE_DISMISS: string;
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: string;
         GUILD_BOOST_SLOT_CREATE: string;
         GUILD_BOOST_SLOT_UPDATE: string;
@@ -678,6 +684,7 @@ export const constants: {
         GUILD_DISCOVERY_SEARCH_INIT: string;
         GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS: string;
         GUILD_DISCOVERY_SELECT_CATEGORY: string;
+        GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: string;
         GUILD_EMOJIS_UPDATE: string;
         GUILD_FEATURE_ACK: string;
         GUILD_FEED_FETCH_FAILURE: string;
@@ -898,6 +905,7 @@ export const constants: {
         INSTANT_INVITE_REVOKE_SUCCESS: string;
         INTEGRATION_CREATE: string;
         INTEGRATION_DELETE: string;
+        INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: string;
         INTEGRATION_PERMISSION_SETTINGS_CLEAR: string;
         INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: string;
         INTEGRATION_PERMISSION_SETTINGS_EDIT: string;
@@ -1087,11 +1095,13 @@ export const constants: {
         MFA_CLEAR_BACKUP_CODES: string;
         MFA_DISABLE_SUCCESS: string;
         MFA_ENABLE_SUCCESS: string;
+        MFA_SEND_VERIFICATION_KEY: string;
         MFA_SMS_TOGGLE: string;
         MFA_SMS_TOGGLE_COMPLETE: string;
         MFA_VIEW_BACKUP_CODES: string;
         MOBILE_SURVEY_ACK: string;
         MOBILE_SURVEY_DISMISS: string;
+        MOBILE_VOICE_OVERLAY_STATE_CHANGED: string;
         MODAL_POP: string;
         MODAL_POP_ALL: string;
         MODAL_PUSH: string;
@@ -1299,6 +1309,7 @@ export const constants: {
         SEARCH_START: string;
         SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: string;
         SELECT_INTENT_HOME: string;
+        SELF_PRESENCE_STORE_UPDATE: string;
         SESSIONS_REPLACE: string;
         SET_CHANNEL_BITRATE: string;
         SET_CHANNEL_INFO_TAB: string;
@@ -1482,11 +1493,13 @@ export const constants: {
         USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: string;
+        USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: string;
         USER_SETTINGS_ACCOUNT_SUBMIT: string;
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: string;
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: string;
+        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: string;
         USER_SETTINGS_MODAL_CLOSE: string;
         USER_SETTINGS_MODAL_INIT: string;
         USER_SETTINGS_MODAL_OPEN: string;
@@ -1617,6 +1630,7 @@ export const constants: {
         ACCOUNT_LINK_FAILED: string;
         ACCOUNT_LINK_STEP: string;
         ACK_MESSAGES: string;
+        ACTIVE_CHANNELS_LOADED: string;
         ACTIVE_CHANNEL_CLICKED: string;
         ACTIVITY_FEED_CUSTOMIZATION_OPENED: string;
         ACTIVITY_FEED_CUSTOMIZATION_SAVED: string;
@@ -1732,9 +1746,9 @@ export const constants: {
         EXTERNAL_FINGERPRINT_DROPPED: string;
         FAILED_MESSAGE_RESOLVED: string;
         FEED_ITEM_INTERACTED: string;
-        FEED_ITEM_SEEN: string;
         FEED_ITEM_SEEN_BATCH: string;
         FEED_LOADED: string;
+        FEED_SHOWN: string;
         FILE_SIZE_LIMIT_EXCEEDED: string;
         FILE_UPLOAD_ALERT_VIEWED: string;
         FRIENDS_LIST_VIEWED: string;
@@ -1748,6 +1762,7 @@ export const constants: {
         GIFT_CODE_SENT: string;
         GIF_FAVORITED: string;
         GIF_UNFAVORITED: string;
+        GUILD_AUTOMOD_FEEDBACK: string;
         GUILD_CREATION_INTENT_SELECTED: string;
         GUILD_DEFAULT_DMS_UPDATED: string;
         GUILD_DIRECTORY_CHANNEL_VIEWED: string;
@@ -1842,6 +1857,7 @@ export const constants: {
         NEWS_LINK_COPIED: string;
         NEWS_LINK_SHARED: string;
         NEWS_UPDATED: string;
+        NEW_MEMBER_MENTION_CTA_CLICKED: string;
         NOISE_CANCELLATION_LINK_CLICKED: string;
         NOTIFICATION_CLICKED: string;
         NOTIFICATION_CTA_CLICKED: string;
@@ -1964,6 +1980,7 @@ export const constants: {
         STREAM_WARNING_TRIGGERED: string;
         SURVEY_SUBMITTED: string;
         TEXT_COPIED: string;
+        TEXT_IN_VOICE_OPENED: string;
         TEXT_SHARED: string;
         THREAD_BROWSER_TAB_CHANGED: string;
         THREAD_CREATION_STARTED: string;
@@ -2081,10 +2098,12 @@ export const constants: {
     };
     AnalyticsObjects: {
         ACTIONED_BY_USER: string;
+        ACTIVITIES_BOOSTING_UPSELL: string;
         ALTERNATIVE_SKU: string;
         AVATAR: string;
         BADGE: string;
         BOOSTING_BANNER: string;
+        BOOSTING_LOWER_PRICE_EXPERIMENT_CTA: string;
         BOOST_ANNOUNCEMENT_UPSELL: string;
         BOOST_GEM_ICON: string;
         BOOST_LEVEL_UPSELL_BUTTON: string;
@@ -2204,6 +2223,7 @@ export const constants: {
         APPLICATION_EMBED: string;
         AVATAR_UPSELL_MODAL: string;
         BODY: string;
+        BOOSTING_LOWER_PRICE_EXPERIMENT_TOOLTIP: string;
         BOOST_AUDIO_QUALITY_UPSELL: string;
         CHANGE_GUILD_MEMBER_AVATAR: string;
         CHANNEL: string;
@@ -2337,6 +2357,7 @@ export const constants: {
         SETTINGS_CHANGE_PASSWORD: string;
         SETTINGS_CHANGE_USERNAME: string;
         SETTINGS_CONFIRM_PASSWORD: string;
+        SETTINGS_CONFIRM_VIEW_BACKUP_CODES: string;
         SETTINGS_CONNECTIONS: string;
         SETTINGS_CONNECTIONS_XBOX: string;
         SETTINGS_CUSTOMIZE_PROFILE: string;
@@ -2596,6 +2617,7 @@ export const constants: {
         HOIST: string;
         ICON_HASH: string;
         ID: string;
+        IMAGE_HASH: string;
         INVITABLE: string;
         INVITER_ID: string;
         LOCATION: string;
@@ -2740,6 +2762,7 @@ export const constants: {
         WIN64: string;
     };
     CACHED_LOCALE_STRINGS_KEY: string;
+    CACHE_STORE_CHANNELS_LAZY_KEY: string;
     CACHE_STORE_KEY: string;
     CACHE_STORE_LAZY_KEY: string;
     CATEGORY_ICON_SIZE: number;
@@ -2824,6 +2847,7 @@ export const constants: {
         CHANGE_CATEGORY: string;
         CHANGE_RTC_REGION: string;
         DELETE: string;
+        EDIT_FORUM_TAG: string;
         EDIT_WEBHOOK: string;
         INSTANT_INVITES: string;
         INTEGRATIONS: string;
@@ -2843,6 +2867,7 @@ export const constants: {
         DIVIDER: string;
         DIVIDER_NEW_MESSAGES: string;
         DIVIDER_TIME_STAMP: string;
+        FORUM_POST_ACTION_BAR: string;
         JUMP_TARGET: string;
         MESSAGE: string;
         MESSAGE_GROUP: string;
@@ -2909,6 +2934,7 @@ export const constants: {
         GUILD_TEXT_ONLY: number[];
         GUILD_THREADED: number[];
         GUILD_TOPICAL: number[];
+        GUILD_USER_CONTENT: number[];
         GUILD_VOCAL: number[];
         GUILD_WEBHOOKS: number[];
         INVITABLE: number[];
@@ -2953,6 +2979,7 @@ export const constants: {
         BLACK_260: string;
         BLACK_300: string;
         BLACK_330: string;
+        BLACK_345: string;
         BLACK_360: string;
         BLACK_400: string;
         BLACK_430: string;
@@ -2979,6 +3006,7 @@ export const constants: {
         BRAND_260: string;
         BRAND_300: string;
         BRAND_330: string;
+        BRAND_345: string;
         BRAND_360: string;
         BRAND_400: string;
         BRAND_430: string;
@@ -3005,6 +3033,7 @@ export const constants: {
         BRAND_NEW_260: string;
         BRAND_NEW_300: string;
         BRAND_NEW_330: string;
+        BRAND_NEW_345: string;
         BRAND_NEW_360: string;
         BRAND_NEW_400: string;
         BRAND_NEW_430: string;
@@ -3037,6 +3066,7 @@ export const constants: {
         FOCUS_PRIMARY_260: string;
         FOCUS_PRIMARY_300: string;
         FOCUS_PRIMARY_330: string;
+        FOCUS_PRIMARY_345: string;
         FOCUS_PRIMARY_360: string;
         FOCUS_PRIMARY_400: string;
         FOCUS_PRIMARY_430: string;
@@ -3060,16 +3090,21 @@ export const constants: {
         GOLD_500: string;
         GUILD_BOOSTING_BLUE: string;
         GUILD_BOOSTING_BLUE_500: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500: string;
         GUILD_BOOSTING_PINK: string;
         GUILD_BOOSTING_PINK_500: string;
         GUILD_BOOSTING_PURPLE: string;
         GUILD_BOOSTING_PURPLE_500: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500: string;
         HYPESQUAD_HOUSE_1: string;
         HYPESQUAD_HOUSE_1_500: string;
         HYPESQUAD_HOUSE_2: string;
         HYPESQUAD_HOUSE_2_500: string;
         HYPESQUAD_HOUSE_3: string;
         HYPESQUAD_HOUSE_3_500: string;
+        INPUT_PLACEHOLDER_TEXT_DARK: string;
         LINK: string;
         LINK_100: string;
         LINK_130: string;
@@ -3079,6 +3114,7 @@ export const constants: {
         LINK_260: string;
         LINK_300: string;
         LINK_330: string;
+        LINK_345: string;
         LINK_360: string;
         LINK_400: string;
         LINK_430: string;
@@ -3105,6 +3141,7 @@ export const constants: {
         LINK_LIGHT_260: string;
         LINK_LIGHT_300: string;
         LINK_LIGHT_330: string;
+        LINK_LIGHT_345: string;
         LINK_LIGHT_360: string;
         LINK_LIGHT_400: string;
         LINK_LIGHT_430: string;
@@ -3131,6 +3168,7 @@ export const constants: {
         LINK_LOW_SATURATION_260: string;
         LINK_LOW_SATURATION_300: string;
         LINK_LOW_SATURATION_330: string;
+        LINK_LOW_SATURATION_345: string;
         LINK_LOW_SATURATION_360: string;
         LINK_LOW_SATURATION_400: string;
         LINK_LOW_SATURATION_430: string;
@@ -3191,6 +3229,7 @@ export const constants: {
         PRIMARY_DARK_260: string;
         PRIMARY_DARK_300: string;
         PRIMARY_DARK_330: string;
+        PRIMARY_DARK_345: string;
         PRIMARY_DARK_360: string;
         PRIMARY_DARK_400: string;
         PRIMARY_DARK_430: string;
@@ -3217,6 +3256,7 @@ export const constants: {
         PRIMARY_LIGHT_260: string;
         PRIMARY_LIGHT_300: string;
         PRIMARY_LIGHT_330: string;
+        PRIMARY_LIGHT_345: string;
         PRIMARY_LIGHT_360: string;
         PRIMARY_LIGHT_400: string;
         PRIMARY_LIGHT_430: string;
@@ -3238,6 +3278,8 @@ export const constants: {
         REDDIT_500: string;
         SAMSUNG: string;
         SAMSUNG_500: string;
+        SCROLLBAR_THUMB_DARK: string;
+        SCROLLBAR_THUMB_LIGHT: string;
         SKYPE: string;
         SKYPE_500: string;
         SPOTIFY: string;
@@ -3251,6 +3293,7 @@ export const constants: {
         STATUS_GREEN_260: string;
         STATUS_GREEN_300: string;
         STATUS_GREEN_330: string;
+        STATUS_GREEN_345: string;
         STATUS_GREEN_360: string;
         STATUS_GREEN_400: string;
         STATUS_GREEN_430: string;
@@ -3277,6 +3320,7 @@ export const constants: {
         STATUS_GREY_260: string;
         STATUS_GREY_300: string;
         STATUS_GREY_330: string;
+        STATUS_GREY_345: string;
         STATUS_GREY_360: string;
         STATUS_GREY_400: string;
         STATUS_GREY_430: string;
@@ -3303,6 +3347,7 @@ export const constants: {
         STATUS_ORANGE_260: string;
         STATUS_ORANGE_300: string;
         STATUS_ORANGE_330: string;
+        STATUS_ORANGE_345: string;
         STATUS_ORANGE_360: string;
         STATUS_ORANGE_400: string;
         STATUS_ORANGE_430: string;
@@ -3329,6 +3374,7 @@ export const constants: {
         STATUS_RED_260: string;
         STATUS_RED_300: string;
         STATUS_RED_330: string;
+        STATUS_RED_345: string;
         STATUS_RED_360: string;
         STATUS_RED_400: string;
         STATUS_RED_430: string;
@@ -3355,6 +3401,7 @@ export const constants: {
         STATUS_YELLOW_260: string;
         STATUS_YELLOW_300: string;
         STATUS_YELLOW_330: string;
+        STATUS_YELLOW_345: string;
         STATUS_YELLOW_360: string;
         STATUS_YELLOW_400: string;
         STATUS_YELLOW_430: string;
@@ -3388,6 +3435,7 @@ export const constants: {
         WHITE_260: string;
         WHITE_300: string;
         WHITE_330: string;
+        WHITE_345: string;
         WHITE_360: string;
         WHITE_400: string;
         WHITE_430: string;
@@ -3427,6 +3475,7 @@ export const constants: {
         FAVORITE_GIF: string;
         FOCUS_ATTACHMENT_AREA: string;
         FOCUS_CHANNEL_TEXT_AREA: string;
+        FOCUS_CHAT_BUTTON: string;
         FOCUS_FRIEND_SEARCH: string;
         FOCUS_MESSAGES: string;
         FOCUS_SEARCH: string;
@@ -3459,7 +3508,9 @@ export const constants: {
         SEARCH_RESULTS_CLOSE: string;
         SET_SEARCH_QUERY: string;
         SHAKE_APP: string;
+        SHOW_ACTIVITIES_BOOSTING_UPSELL: string;
         SHOW_OAUTH2_MODAL: string;
+        SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP: string;
         TEXTAREA_BLUR: string;
         TEXTAREA_FOCUS: string;
         TOGGLE_CHANNEL_PINS: string;
@@ -3530,6 +3581,8 @@ export const constants: {
         GBP: string;
         JPY: string;
         NOK: string;
+        PEN: string;
+        PHP: string;
         PLN: string;
         RUB: string;
         TRY: string;
@@ -3825,6 +3878,8 @@ export const constants: {
         ME: string;
         MENTIONS: string;
         MFA_CODES: string;
+        MFA_CODES_VERIFICATION: string;
+        MFA_SEND_VERIFICATION_KEY: string;
         MFA_SMS_DISABLE: string;
         MFA_SMS_ENABLE: string;
         MFA_TOTP_DISABLE: string;
@@ -3973,6 +4028,7 @@ export const constants: {
         SUGGESTIONS: string;
     };
     GAME_REPORT_VERSION: number;
+    GESTURE_HANDLER_ROOT_VIEW_ID: string;
     GIFPickerResultTypes: {
         FAVORITES: string;
         SEARCH: string;
@@ -4143,6 +4199,7 @@ export const constants: {
         COMMUNITY_WELCOME: string;
         DELETE: string;
         DISCOVERY: string;
+        DISCOVERY_LANDING_PAGE: string;
         EDIT_WEBHOOK: string;
         EMOJI: string;
         GUILD_AUTOMOD: string;
@@ -4166,7 +4223,6 @@ export const constants: {
         ROLE_EDIT_REFRESH: string;
         ROLE_PERMISSIONS: string;
         ROLE_SUBSCRIPTIONS: string;
-        ROLE_SUBSCRIPTIONS_ADVANCED: string;
         ROLE_SUBSCRIPTIONS_BASIC: string;
         ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION: string;
         ROLE_SUBSCRIPTIONS_PAYMENTS: string;
@@ -4200,6 +4256,7 @@ export const constants: {
         BLACK_260: string;
         BLACK_300: string;
         BLACK_330: string;
+        BLACK_345: string;
         BLACK_360: string;
         BLACK_400: string;
         BLACK_430: string;
@@ -4226,6 +4283,7 @@ export const constants: {
         BRAND_260: string;
         BRAND_300: string;
         BRAND_330: string;
+        BRAND_345: string;
         BRAND_360: string;
         BRAND_400: string;
         BRAND_430: string;
@@ -4252,6 +4310,7 @@ export const constants: {
         BRAND_NEW_260: string;
         BRAND_NEW_300: string;
         BRAND_NEW_330: string;
+        BRAND_NEW_345: string;
         BRAND_NEW_360: string;
         BRAND_NEW_400: string;
         BRAND_NEW_430: string;
@@ -4284,6 +4343,7 @@ export const constants: {
         FOCUS_PRIMARY_260: string;
         FOCUS_PRIMARY_300: string;
         FOCUS_PRIMARY_330: string;
+        FOCUS_PRIMARY_345: string;
         FOCUS_PRIMARY_360: string;
         FOCUS_PRIMARY_400: string;
         FOCUS_PRIMARY_430: string;
@@ -4307,16 +4367,21 @@ export const constants: {
         GOLD_500: string;
         GUILD_BOOSTING_BLUE: string;
         GUILD_BOOSTING_BLUE_500: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500: string;
         GUILD_BOOSTING_PINK: string;
         GUILD_BOOSTING_PINK_500: string;
         GUILD_BOOSTING_PURPLE: string;
         GUILD_BOOSTING_PURPLE_500: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500: string;
         HYPESQUAD_HOUSE_1: string;
         HYPESQUAD_HOUSE_1_500: string;
         HYPESQUAD_HOUSE_2: string;
         HYPESQUAD_HOUSE_2_500: string;
         HYPESQUAD_HOUSE_3: string;
         HYPESQUAD_HOUSE_3_500: string;
+        INPUT_PLACEHOLDER_TEXT_DARK: string;
         LINK: string;
         LINK_100: string;
         LINK_130: string;
@@ -4326,6 +4391,7 @@ export const constants: {
         LINK_260: string;
         LINK_300: string;
         LINK_330: string;
+        LINK_345: string;
         LINK_360: string;
         LINK_400: string;
         LINK_430: string;
@@ -4352,6 +4418,7 @@ export const constants: {
         LINK_LIGHT_260: string;
         LINK_LIGHT_300: string;
         LINK_LIGHT_330: string;
+        LINK_LIGHT_345: string;
         LINK_LIGHT_360: string;
         LINK_LIGHT_400: string;
         LINK_LIGHT_430: string;
@@ -4378,6 +4445,7 @@ export const constants: {
         LINK_LOW_SATURATION_260: string;
         LINK_LOW_SATURATION_300: string;
         LINK_LOW_SATURATION_330: string;
+        LINK_LOW_SATURATION_345: string;
         LINK_LOW_SATURATION_360: string;
         LINK_LOW_SATURATION_400: string;
         LINK_LOW_SATURATION_430: string;
@@ -4438,6 +4506,7 @@ export const constants: {
         PRIMARY_DARK_260: string;
         PRIMARY_DARK_300: string;
         PRIMARY_DARK_330: string;
+        PRIMARY_DARK_345: string;
         PRIMARY_DARK_360: string;
         PRIMARY_DARK_400: string;
         PRIMARY_DARK_430: string;
@@ -4464,6 +4533,7 @@ export const constants: {
         PRIMARY_LIGHT_260: string;
         PRIMARY_LIGHT_300: string;
         PRIMARY_LIGHT_330: string;
+        PRIMARY_LIGHT_345: string;
         PRIMARY_LIGHT_360: string;
         PRIMARY_LIGHT_400: string;
         PRIMARY_LIGHT_430: string;
@@ -4485,6 +4555,8 @@ export const constants: {
         REDDIT_500: string;
         SAMSUNG: string;
         SAMSUNG_500: string;
+        SCROLLBAR_THUMB_DARK: string;
+        SCROLLBAR_THUMB_LIGHT: string;
         SKYPE: string;
         SKYPE_500: string;
         SPOTIFY: string;
@@ -4498,6 +4570,7 @@ export const constants: {
         STATUS_GREEN_260: string;
         STATUS_GREEN_300: string;
         STATUS_GREEN_330: string;
+        STATUS_GREEN_345: string;
         STATUS_GREEN_360: string;
         STATUS_GREEN_400: string;
         STATUS_GREEN_430: string;
@@ -4524,6 +4597,7 @@ export const constants: {
         STATUS_GREY_260: string;
         STATUS_GREY_300: string;
         STATUS_GREY_330: string;
+        STATUS_GREY_345: string;
         STATUS_GREY_360: string;
         STATUS_GREY_400: string;
         STATUS_GREY_430: string;
@@ -4550,6 +4624,7 @@ export const constants: {
         STATUS_ORANGE_260: string;
         STATUS_ORANGE_300: string;
         STATUS_ORANGE_330: string;
+        STATUS_ORANGE_345: string;
         STATUS_ORANGE_360: string;
         STATUS_ORANGE_400: string;
         STATUS_ORANGE_430: string;
@@ -4576,6 +4651,7 @@ export const constants: {
         STATUS_RED_260: string;
         STATUS_RED_300: string;
         STATUS_RED_330: string;
+        STATUS_RED_345: string;
         STATUS_RED_360: string;
         STATUS_RED_400: string;
         STATUS_RED_430: string;
@@ -4602,6 +4678,7 @@ export const constants: {
         STATUS_YELLOW_260: string;
         STATUS_YELLOW_300: string;
         STATUS_YELLOW_330: string;
+        STATUS_YELLOW_345: string;
         STATUS_YELLOW_360: string;
         STATUS_YELLOW_400: string;
         STATUS_YELLOW_430: string;
@@ -4635,6 +4712,7 @@ export const constants: {
         WHITE_260: string;
         WHITE_300: string;
         WHITE_330: string;
+        WHITE_345: string;
         WHITE_360: string;
         WHITE_400: string;
         WHITE_430: string;
@@ -4736,6 +4814,14 @@ export const constants: {
         WEBHOOKS: string;
         WEBHOOKS_INTRODUCTION: string;
         YOUTUBE_INTEGRATION: string;
+    };
+    HighlightSettings: {
+        "0": string;
+        "1": string;
+        "2": string;
+        DISABLED: number;
+        ENABLED: number;
+        NULL: number;
     };
     HorizontalGradient: {
         END: {
@@ -4874,6 +4960,7 @@ export const constants: {
         MODAL_CAROUSEL_PREV: string;
         NAVIGATE_BACK: string;
         NAVIGATE_FORWARD: string;
+        POP_LAYER: string;
         QUICKSWITCHER_HIDE: string;
         QUICKSWITCHER_SHOW: string;
         RETURN_TO_AUDIO_CHANNEL: string;
@@ -4933,6 +5020,7 @@ export const constants: {
         BACKSPACE: number;
         COMMA: number;
         D: number;
+        DELETE: number;
         DIGIT_0: number;
         DIGIT_1: number;
         DIGIT_2: number;
@@ -5295,6 +5383,7 @@ export const constants: {
         NONE: number;
     };
     MOBILE_WEB_HANDOFF_DEEP_LINK: string;
+    MULTI_MONTH_PLANS: string[];
     MacosKeyToCode: {
         "'": number;
         ",": number;
@@ -5651,6 +5740,7 @@ export const constants: {
     };
     NoticeTypes: {
         APPLICATION_TEST_MODE: string;
+        BACK_TO_PREVIOUS_SCREEN: string;
         CONNECT_PLAYSTATION: string;
         CONNECT_SPOTIFY: string;
         CORRUPT_INSTALLATION: string;
@@ -5958,6 +6048,7 @@ export const constants: {
         USE_VAD: string;
         VIEW_AUDIT_LOG: string;
         VIEW_CHANNEL: string;
+        VIEW_CREATOR_MONETIZATION_ANALYTICS: string;
         VIEW_GUILD_ANALYTICS: string;
     };
     PictureInPictureComponents: {
@@ -7038,8 +7129,58 @@ export const constants: {
         BACKGROUND_SECONDARY: string[];
         BACKGROUND_SECONDARY_ALT: string[];
         BACKGROUND_TERTIARY: string[];
+        BUTTON_DANGER_BACKGROUND: string[];
+        BUTTON_DANGER_BACKGROUND_ACTIVE: string[];
+        BUTTON_DANGER_BACKGROUND_DISABLED: string[];
+        BUTTON_DANGER_BACKGROUND_HOVER: string[];
+        BUTTON_OUTLINE_BRAND_BACKGROUND: string[];
+        BUTTON_OUTLINE_BRAND_BACKGROUND_ACTIVE: string[];
+        BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER: string[];
+        BUTTON_OUTLINE_BRAND_BORDER: string[];
+        BUTTON_OUTLINE_BRAND_BORDER_ACTIVE: string[];
+        BUTTON_OUTLINE_BRAND_BORDER_HOVER: string[];
+        BUTTON_OUTLINE_BRAND_TEXT: string[];
+        BUTTON_OUTLINE_BRAND_TEXT_ACTIVE: string[];
+        BUTTON_OUTLINE_BRAND_TEXT_HOVER: string[];
+        BUTTON_OUTLINE_DANGER_BACKGROUND: string[];
+        BUTTON_OUTLINE_DANGER_BACKGROUND_ACTIVE: string[];
+        BUTTON_OUTLINE_DANGER_BACKGROUND_HOVER: string[];
+        BUTTON_OUTLINE_DANGER_BORDER: string[];
+        BUTTON_OUTLINE_DANGER_BORDER_ACTIVE: string[];
+        BUTTON_OUTLINE_DANGER_BORDER_HOVER: string[];
+        BUTTON_OUTLINE_DANGER_TEXT: string[];
+        BUTTON_OUTLINE_DANGER_TEXT_ACTIVE: string[];
+        BUTTON_OUTLINE_DANGER_TEXT_HOVER: string[];
+        BUTTON_OUTLINE_POSITIVE_BACKGROUND: string[];
+        BUTTON_OUTLINE_POSITIVE_BACKGROUND_ACTIVE: string[];
+        BUTTON_OUTLINE_POSITIVE_BACKGROUND_HOVER: string[];
+        BUTTON_OUTLINE_POSITIVE_BORDER: string[];
+        BUTTON_OUTLINE_POSITIVE_BORDER_ACTIVE: string[];
+        BUTTON_OUTLINE_POSITIVE_BORDER_HOVER: string[];
+        BUTTON_OUTLINE_POSITIVE_TEXT: string[];
+        BUTTON_OUTLINE_POSITIVE_TEXT_ACTIVE: string[];
+        BUTTON_OUTLINE_POSITIVE_TEXT_HOVER: string[];
+        BUTTON_OUTLINE_PRIMARY_BACKGROUND: string[];
+        BUTTON_OUTLINE_PRIMARY_BACKGROUND_ACTIVE: string[];
+        BUTTON_OUTLINE_PRIMARY_BACKGROUND_HOVER: string[];
+        BUTTON_OUTLINE_PRIMARY_BORDER: string[];
+        BUTTON_OUTLINE_PRIMARY_BORDER_ACTIVE: string[];
+        BUTTON_OUTLINE_PRIMARY_BORDER_HOVER: string[];
+        BUTTON_OUTLINE_PRIMARY_TEXT: string[];
+        BUTTON_OUTLINE_PRIMARY_TEXT_ACTIVE: string[];
+        BUTTON_OUTLINE_PRIMARY_TEXT_HOVER: string[];
+        BUTTON_POSITIVE_BACKGROUND: string[];
+        BUTTON_POSITIVE_BACKGROUND_ACTIVE: string[];
+        BUTTON_POSITIVE_BACKGROUND_DISABLED: string[];
+        BUTTON_POSITIVE_BACKGROUND_HOVER: string[];
+        BUTTON_SECONDARY_BACKGROUND: string[];
+        BUTTON_SECONDARY_BACKGROUND_ACTIVE: string[];
+        BUTTON_SECONDARY_BACKGROUND_DISABLED: string[];
+        BUTTON_SECONDARY_BACKGROUND_HOVER: string[];
         CHANNELS_DEFAULT: string[];
         CHANNELTEXTAREA_BACKGROUND: string[];
+        CHANNEL_ICON: string[];
+        CHANNEL_TEXT_AREA_PLACEHOLDER: string[];
         CONTROL_BRAND_FOREGROUND: string[];
         CONTROL_BRAND_FOREGROUND_NEW: string[];
         DEPRECATED_CARD_BG: string[];
@@ -7072,6 +7213,8 @@ export const constants: {
         INFO_WARNING_BACKGROUND: string[];
         INFO_WARNING_FOREGROUND: string[];
         INFO_WARNING_TEXT: string[];
+        INPUT_BACKGROUND: string[];
+        INPUT_PLACEHOLDER_TEXT: string[];
         INTERACTIVE_ACTIVE: string[];
         INTERACTIVE_HOVER: string[];
         INTERACTIVE_MUTED: string[];
@@ -7085,10 +7228,13 @@ export const constants: {
         SCROLLBAR_THIN_TRACK: string[];
         SPOILER_HIDDEN_BACKGROUND: string[];
         SPOILER_REVEALED_BACKGROUND: string[];
+        STATUS_DANGER: string[];
         STATUS_DANGER_BACKGROUND: string[];
         STATUS_DANGER_TEXT: string[];
+        STATUS_POSITIVE: string[];
         STATUS_POSITIVE_BACKGROUND: string[];
         STATUS_POSITIVE_TEXT: string[];
+        STATUS_WARNING: string[];
         STATUS_WARNING_BACKGROUND: string[];
         STATUS_WARNING_TEXT: string[];
         TEXTBOX_MARKDOWN_SYNTAX: string[];
@@ -7234,6 +7380,7 @@ export const constants: {
         ACCOUNT_CHANGE_PASSWORD: string;
         ACCOUNT_CHANGE_USERNAME: string;
         ACCOUNT_CONFIRM_PASSWORD: string;
+        ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: string;
         ACTIVITY_STATUS: string;
         ADVANCED: string;
         APPEARANCE: string;
@@ -7368,6 +7515,7 @@ export const constants: {
         BLACK_260: string;
         BLACK_300: string;
         BLACK_330: string;
+        BLACK_345: string;
         BLACK_360: string;
         BLACK_400: string;
         BLACK_430: string;
@@ -7394,6 +7542,7 @@ export const constants: {
         BRAND_260: string;
         BRAND_300: string;
         BRAND_330: string;
+        BRAND_345: string;
         BRAND_360: string;
         BRAND_400: string;
         BRAND_430: string;
@@ -7420,6 +7569,7 @@ export const constants: {
         BRAND_NEW_260: string;
         BRAND_NEW_300: string;
         BRAND_NEW_330: string;
+        BRAND_NEW_345: string;
         BRAND_NEW_360: string;
         BRAND_NEW_400: string;
         BRAND_NEW_430: string;
@@ -7452,6 +7602,7 @@ export const constants: {
         FOCUS_PRIMARY_260: string;
         FOCUS_PRIMARY_300: string;
         FOCUS_PRIMARY_330: string;
+        FOCUS_PRIMARY_345: string;
         FOCUS_PRIMARY_360: string;
         FOCUS_PRIMARY_400: string;
         FOCUS_PRIMARY_430: string;
@@ -7475,16 +7626,21 @@ export const constants: {
         GOLD_500: string;
         GUILD_BOOSTING_BLUE: string;
         GUILD_BOOSTING_BLUE_500: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500: string;
         GUILD_BOOSTING_PINK: string;
         GUILD_BOOSTING_PINK_500: string;
         GUILD_BOOSTING_PURPLE: string;
         GUILD_BOOSTING_PURPLE_500: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS: string;
+        GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500: string;
         HYPESQUAD_HOUSE_1: string;
         HYPESQUAD_HOUSE_1_500: string;
         HYPESQUAD_HOUSE_2: string;
         HYPESQUAD_HOUSE_2_500: string;
         HYPESQUAD_HOUSE_3: string;
         HYPESQUAD_HOUSE_3_500: string;
+        INPUT_PLACEHOLDER_TEXT_DARK: string;
         LINK: string;
         LINK_100: string;
         LINK_130: string;
@@ -7494,6 +7650,7 @@ export const constants: {
         LINK_260: string;
         LINK_300: string;
         LINK_330: string;
+        LINK_345: string;
         LINK_360: string;
         LINK_400: string;
         LINK_430: string;
@@ -7520,6 +7677,7 @@ export const constants: {
         LINK_LIGHT_260: string;
         LINK_LIGHT_300: string;
         LINK_LIGHT_330: string;
+        LINK_LIGHT_345: string;
         LINK_LIGHT_360: string;
         LINK_LIGHT_400: string;
         LINK_LIGHT_430: string;
@@ -7546,6 +7704,7 @@ export const constants: {
         LINK_LOW_SATURATION_260: string;
         LINK_LOW_SATURATION_300: string;
         LINK_LOW_SATURATION_330: string;
+        LINK_LOW_SATURATION_345: string;
         LINK_LOW_SATURATION_360: string;
         LINK_LOW_SATURATION_400: string;
         LINK_LOW_SATURATION_430: string;
@@ -7606,6 +7765,7 @@ export const constants: {
         PRIMARY_DARK_260: string;
         PRIMARY_DARK_300: string;
         PRIMARY_DARK_330: string;
+        PRIMARY_DARK_345: string;
         PRIMARY_DARK_360: string;
         PRIMARY_DARK_400: string;
         PRIMARY_DARK_430: string;
@@ -7632,6 +7792,7 @@ export const constants: {
         PRIMARY_LIGHT_260: string;
         PRIMARY_LIGHT_300: string;
         PRIMARY_LIGHT_330: string;
+        PRIMARY_LIGHT_345: string;
         PRIMARY_LIGHT_360: string;
         PRIMARY_LIGHT_400: string;
         PRIMARY_LIGHT_430: string;
@@ -7653,6 +7814,8 @@ export const constants: {
         REDDIT_500: string;
         SAMSUNG: string;
         SAMSUNG_500: string;
+        SCROLLBAR_THUMB_DARK: string;
+        SCROLLBAR_THUMB_LIGHT: string;
         SKYPE: string;
         SKYPE_500: string;
         SPOTIFY: string;
@@ -7666,6 +7829,7 @@ export const constants: {
         STATUS_GREEN_260: string;
         STATUS_GREEN_300: string;
         STATUS_GREEN_330: string;
+        STATUS_GREEN_345: string;
         STATUS_GREEN_360: string;
         STATUS_GREEN_400: string;
         STATUS_GREEN_430: string;
@@ -7692,6 +7856,7 @@ export const constants: {
         STATUS_GREY_260: string;
         STATUS_GREY_300: string;
         STATUS_GREY_330: string;
+        STATUS_GREY_345: string;
         STATUS_GREY_360: string;
         STATUS_GREY_400: string;
         STATUS_GREY_430: string;
@@ -7718,6 +7883,7 @@ export const constants: {
         STATUS_ORANGE_260: string;
         STATUS_ORANGE_300: string;
         STATUS_ORANGE_330: string;
+        STATUS_ORANGE_345: string;
         STATUS_ORANGE_360: string;
         STATUS_ORANGE_400: string;
         STATUS_ORANGE_430: string;
@@ -7744,6 +7910,7 @@ export const constants: {
         STATUS_RED_260: string;
         STATUS_RED_300: string;
         STATUS_RED_330: string;
+        STATUS_RED_345: string;
         STATUS_RED_360: string;
         STATUS_RED_400: string;
         STATUS_RED_430: string;
@@ -7770,6 +7937,7 @@ export const constants: {
         STATUS_YELLOW_260: string;
         STATUS_YELLOW_300: string;
         STATUS_YELLOW_330: string;
+        STATUS_YELLOW_345: string;
         STATUS_YELLOW_360: string;
         STATUS_YELLOW_400: string;
         STATUS_YELLOW_430: string;
@@ -7803,6 +7971,7 @@ export const constants: {
         WHITE_260: string;
         WHITE_300: string;
         WHITE_330: string;
+        WHITE_345: string;
         WHITE_360: string;
         WHITE_400: string;
         WHITE_430: string;
@@ -7845,6 +8014,7 @@ export const constants: {
         DOWNLOADS: string;
         ERROR_404: string;
         GUIDELINES: string;
+        GUIDELINES_MAY_2020: string;
         HYPESQUAD: string;
         HYPESQUAD_RIOT: string;
         INDEX: string;
@@ -7855,6 +8025,7 @@ export const constants: {
         JOBS: string;
         LEAGUE_CLUBS: string;
         LEGACY_DEV_NEWSLETTER: string;
+        LEGAL_ARCHIVE: string;
         LICENSES: string;
         MOD_ACADEMY_ARTICLE: string;
         MOD_ACADEMY_EXAM: string;
@@ -7864,6 +8035,7 @@ export const constants: {
         OPEN_SOURCE: string;
         PARTNERS: string;
         PRIVACY: string;
+        PRIVACY_JUNE_2020: string;
         REFRESH_ACKNOWLEDGEMENTS: string;
         REFRESH_BRANDING: string;
         REFRESH_COMPANY: string;
@@ -7892,6 +8064,7 @@ export const constants: {
         STORE_TERMS: string;
         STREAMKIT: string;
         TERMS: string;
+        TERMS_MAY_2020: string;
         TOS: string;
         TV: string;
         VERIFICATION: string;
