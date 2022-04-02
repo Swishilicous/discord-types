@@ -72,7 +72,7 @@ export class MessageStore extends Store<unknown> {
   getMessage(channelId: string, messageId: string): Message;
   /** @guh This return object is fucking huge; I'll type it later. */
   getMessages(channelId: string): unknown;
-  /** @note Not full message objects; uses MessageJSON type. */
+  /** Not full message objects; uses MessageJSON type. */
   getRawMessages(channelId: string): Record<string | number, MessageJSON>;
   hasCurrentUserSentMessage(channelId: string): boolean;
   hasPresent(channelId: string): boolean;

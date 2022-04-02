@@ -291,13 +291,13 @@ export class Message {
   type: number;
   webhookId: string | undefined;
 
-  /** @note Doesn't actually update the original message; it just returns a new message instance with the added reaction. */
+  /** Doesn't actually update the original message; it just returns a new message instance with the added reaction. */
   addReaction(emoji: ReactionEmoji, fromCurrentUser: boolean): Message;
-  /** @note Searches each reaction and if the provided string has an index above -1 it'll return the reaction object. */
+  /** Searches each reaction and if the provided string has an index above -1 it'll return the reaction object. */
   getReaction(name: string): MessageReaction;
-  /** @note Doesn't actually update the original message; it just returns the message instance without the reaction searched with the provided emoji object.  */
+  /** Doesn't actually update the original message; it just returns the message instance without the reaction searched with the provided emoji object.  */
   removeReactionsForEmoji(emoji: ReactionEmoji): Message;
-  /** @note Doesn't actually update the original message; it just returns the message instance without the reaction.*/
+  /** Doesn't actually update the original message; it just returns the message instance without the reaction.*/
   removeReaction(emoji: ReactionEmoji, fromCurrentUser: boolean): Message;
 
   getChannelId(): string;
@@ -306,7 +306,7 @@ export class Message {
   isEdited(): boolean;
   isSystemDM(): boolean;
 
-  /** @note Returns the entire object (minus the prototype functions because it's not a class anymore) but with 3 additional props that are aliases. */
+  /** Returns the entire object (minus the prototype functions because it's not a class anymore) but with 3 additional props that are aliases. */
   toJS(): JSMessage;
 }
 
@@ -316,7 +316,7 @@ interface JSMessage extends Message {
   mention_everyone: boolean;
 }
 
-/** @note A smaller Message object found in FluxDispatcher and elsewhere. */
+/** A smaller Message object found in FluxDispatcher and elsewhere. */
 export interface MessageJSON {
   attachments: MessageAttachment[];
   author: UserJSON;
