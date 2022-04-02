@@ -1,4 +1,10 @@
-/* Webpack.getByProps('AbortCodes'); */
+/* 
+  const constants = YOUR_WEBPACK.getByProps('AbortCodes');
+  const formatted = JSON.stringify(constants, null, '\t');
+  
+  // Copy to clipboard
+  DiscordNative.clipboard.copy(formatted);
+*/
 
 const DiscordConstants = {
   "ACTIVITY_PLATFORM_TYPES": [
@@ -40,6 +46,7 @@ const DiscordConstants = {
     "SLOWMODE_RATE_LIMITED": 20016,
     "CHANNEL_FOLLOWING_EDIT_RATE_LIMITED": 20022,
     "UNDER_MINIMUM_AGE": 20024,
+    "VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS": 20040,
     "TOO_MANY_USER_GUILDS": 30001,
     "TOO_MANY_BOT_GUILDS": 30001,
     "TOO_MANY_FRIENDS": 30002,
@@ -435,6 +442,7 @@ const DiscordConstants = {
     "MFA_ENABLE_SUCCESS": "MFA_ENABLE_SUCCESS",
     "MFA_DISABLE_SUCCESS": "MFA_DISABLE_SUCCESS",
     "MFA_VIEW_BACKUP_CODES": "MFA_VIEW_BACKUP_CODES",
+    "MFA_SEND_VERIFICATION_KEY": "MFA_SEND_VERIFICATION_KEY",
     "MFA_CLEAR_BACKUP_CODES": "MFA_CLEAR_BACKUP_CODES",
     "OAUTH2_TOKEN_REVOKE": "OAUTH2_TOKEN_REVOKE",
     "MFA_SMS_TOGGLE": "MFA_SMS_TOGGLE",
@@ -478,6 +486,7 @@ const DiscordConstants = {
     "CONNECTION_CLOSED": "CONNECTION_CLOSED",
     "CONNECTION_INTERRUPTED": "CONNECTION_INTERRUPTED",
     "CLEAR_GUILD_HASHES": "CLEAR_GUILD_HASHES",
+    "CLEAR_CACHES": "CLEAR_CACHES",
     "WINDOW_FOCUS": "WINDOW_FOCUS",
     "WINDOW_RESIZED": "WINDOW_RESIZED",
     "PRESENCE_UPDATES": "PRESENCE_UPDATES",
@@ -485,6 +494,7 @@ const DiscordConstants = {
     "SESSIONS_REPLACE": "SESSIONS_REPLACE",
     "FORCE_INVISIBLE": "FORCE_INVISIBLE",
     "LOCAL_ACTIVITY_UPDATE": "LOCAL_ACTIVITY_UPDATE",
+    "SELF_PRESENCE_STORE_UPDATE": "SELF_PRESENCE_STORE_UPDATE",
     "VOICE_STATE_UPDATES": "VOICE_STATE_UPDATES",
     "VOICE_SERVER_UPDATE": "VOICE_SERVER_UPDATE",
     "SPEAKING": "SPEAKING",
@@ -730,6 +740,7 @@ const DiscordConstants = {
     "USER_SETTINGS_MODAL_SUBMIT_COMPLETE": "USER_SETTINGS_MODAL_SUBMIT_COMPLETE",
     "USER_SETTINGS_MODAL_RESET": "USER_SETTINGS_MODAL_RESET",
     "USER_SETTINGS_MODAL_SET_SECTION": "USER_SETTINGS_MODAL_SET_SECTION",
+    "USER_SETTINGS_MODAL_CLEAR_SUBSECTION": "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
     "USER_SETTINGS_MODAL_UPDATE_ACCOUNT": "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
     "USER_SETTINGS_MODAL_UPDATE_AUTHORIZED_APPS": "USER_SETTINGS_MODAL_UPDATE_AUTHORIZED_APPS",
     "RTC_DEBUG_MODAL_OPEN": "RTC_DEBUG_MODAL_OPEN",
@@ -747,6 +758,7 @@ const DiscordConstants = {
     "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE": "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
     "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT": "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR": "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
+    "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION": "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER": "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR": "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO": "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
@@ -829,6 +841,7 @@ const DiscordConstants = {
     "PARTNER_REQUIREMENTS_FETCH_START": "PARTNER_REQUIREMENTS_FETCH_START",
     "PARTNER_REQUIREMENTS_FETCH_FAILURE": "PARTNER_REQUIREMENTS_FETCH_FAILURE",
     "PARTNER_REQUIREMENTS_FETCH_SUCCESS": "PARTNER_REQUIREMENTS_FETCH_SUCCESS",
+    "INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE": "INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE",
     "INTEGRATION_PERMISSION_SETTINGS_CLEAR": "INTEGRATION_PERMISSION_SETTINGS_CLEAR",
     "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE": "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE",
     "INTEGRATION_PERMISSION_SETTINGS_EDIT": "INTEGRATION_PERMISSION_SETTINGS_EDIT",
@@ -978,7 +991,7 @@ const DiscordConstants = {
     "ACCESSIBILITY_DETECTION_MODAL_SEEN": "ACCESSIBILITY_DETECTION_MODAL_SEEN",
     "ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING": "ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING",
     "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED": "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
-    "ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED": "ACCESSIBILITY_SYSTEM_PREFERS_COLOR_SCHEME_CHANGED",
+    "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED": "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED",
     "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION": "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
     "ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE": "ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE",
     "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN": "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN",
@@ -993,6 +1006,7 @@ const DiscordConstants = {
     "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE": "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE",
     "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS": "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS",
     "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE": "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE",
+    "GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS": "GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS",
     "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS": "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
     "ALERT_OPEN": "ALERT_OPEN",
     "ALERT_CLOSE": "ALERT_CLOSE",
@@ -1051,6 +1065,7 @@ const DiscordConstants = {
     "BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS": "BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS",
     "PUBLIC_UPSELL_NOTICE_DISMISS": "PUBLIC_UPSELL_NOTICE_DISMISS",
     "MAX_MEMBER_COUNT_NOTICE_DISMISS": "MAX_MEMBER_COUNT_NOTICE_DISMISS",
+    "GUILD_BOOSTING_AFFINITY_CHANNEL_NOTICE_DISMISS": "GUILD_BOOSTING_AFFINITY_CHANNEL_NOTICE_DISMISS",
     "WEBHOOKS_UPDATE": "WEBHOOKS_UPDATE",
     "WEBHOOKS_FETCHING": "WEBHOOKS_FETCHING",
     "WEBHOOK_CREATE": "WEBHOOK_CREATE",
@@ -1232,6 +1247,7 @@ const DiscordConstants = {
     "APPLICATION_STORE_DIRECTORY_SEARCH_UPDATE": "APPLICATION_STORE_DIRECTORY_SEARCH_UPDATE",
     "APPLICATION_STORE_ACCEPT_STORE_TERMS": "APPLICATION_STORE_ACCEPT_STORE_TERMS",
     "APPLICATION_STORE_ACCEPT_EULA": "APPLICATION_STORE_ACCEPT_EULA",
+    "APPLICATION_STORE_ACCEPT_WITHDRAWAL_WAIVER": "APPLICATION_STORE_ACCEPT_WITHDRAWAL_WAIVER",
     "APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS": "APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS",
     "APPLICATION_STORE_DIRECTORY_FETCH_FAILURE": "APPLICATION_STORE_DIRECTORY_FETCH_FAILURE",
     "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_START": "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_START",
@@ -1320,6 +1336,7 @@ const DiscordConstants = {
     "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL": "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL",
     "GUILD_UPDATE_DISCOVERY_METADATA": "GUILD_UPDATE_DISCOVERY_METADATA",
     "GUILD_UPDATE_DISCOVERY_METADATA_FAIL": "GUILD_UPDATE_DISCOVERY_METADATA_FAIL",
+    "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS": "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS",
     "DISCOVER_GUILDS_FETCH_START": "DISCOVER_GUILDS_FETCH_START",
     "DISCOVER_GUILDS_FETCH_SUCCESS": "DISCOVER_GUILDS_FETCH_SUCCESS",
     "DISCOVER_GUILDS_FETCH_FAILURE": "DISCOVER_GUILDS_FETCH_FAILURE",
@@ -1498,6 +1515,7 @@ const DiscordConstants = {
     "GUILD_APPLICATION_COMMANDS_UPDATE": "GUILD_APPLICATION_COMMANDS_UPDATE",
     "DM_APPLICATION_COMMANDS_UPDATE": "DM_APPLICATION_COMMANDS_UPDATE",
     "APPLICATION_COMMAND_QUERY_SEARCH_MANAGER": "APPLICATION_COMMAND_QUERY_SEARCH_MANAGER",
+    "APPLICATION_COMMAND_SEARCH_MANAGER_UPDATE": "APPLICATION_COMMAND_SEARCH_MANAGER_UPDATE",
     "INTERACTION_QUEUE": "INTERACTION_QUEUE",
     "INTERACTION_CREATE": "INTERACTION_CREATE",
     "INTERACTION_CANCEL": "INTERACTION_CANCEL",
@@ -1582,7 +1600,8 @@ const DiscordConstants = {
     "GUILD_FEED_FETCH_FAILURE": "GUILD_FEED_FETCH_FAILURE",
     "GUILD_FEED_ITEM_SEEN": "GUILD_FEED_ITEM_SEEN",
     "GUILD_FEED_ITEM_UNSEEN": "GUILD_FEED_ITEM_UNSEEN",
-    "GUILD_HOME_SET_SCROLL_POSITION": "GUILD_HOME_SET_SCROLL_POSITION"
+    "GUILD_HOME_SET_SCROLL_POSITION": "GUILD_HOME_SET_SCROLL_POSITION",
+    "MOBILE_VOICE_OVERLAY_STATE_CHANGED": "MOBILE_VOICE_OVERLAY_STATE_CHANGED"
   },
   "ActivityActionStates": {
     "LOADING": "LOADING",
@@ -2034,14 +2053,18 @@ const DiscordConstants = {
     "GUILD_JOIN_FEEDBACK": "guild_join_feedback",
     "FEED_LOADED": "feed_loaded",
     "FEED_ITEM_INTERACTED": "feed_item_interacted",
-    "FEED_ITEM_SEEN": "feed_item_seen",
     "FEED_ITEM_SEEN_BATCH": "feed_item_seen_batch",
+    "FEED_SHOWN": "feed_shown",
     "ACTIVE_CHANNEL_CLICKED": "active_channel_clicked",
+    "ACTIVE_CHANNELS_LOADED": "active_channels_loaded",
     "MOBILE_WEB_HANDOFF_FAILURE": "mobile_web_handoff_failure",
     "PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED": "premium_uncancel_winback_modal_viewed",
     "STARTER_CHANNELS_CTA_CLICKED": "starter_channels_cta_clicked",
     "STARTER_CHANNEL_ROW_SELECTED": "starter_channel_row_selected",
-    "PREMIUM_FEATURE_USAGE": "premium_feature_usage"
+    "PREMIUM_FEATURE_USAGE": "premium_feature_usage_v2",
+    "TEXT_IN_VOICE_OPENED": "text_in_voice_opened",
+    "GUILD_AUTOMOD_FEEDBACK": "guild_automod_feedback",
+    "NEW_MEMBER_MENTION_CTA_CLICKED": "new_member_mention_cta_clicked"
   },
   "AnalyticsGameOpenTypes": {
     "JOIN": "join",
@@ -2182,7 +2205,9 @@ const DiscordConstants = {
     "SERVER_BANNER_TOOLTIP": "Server Banner Tooltip",
     "THREAD_ARCHIVE_DURATION_DROPDOWN": "Thread Archive Duration Dropdown",
     "BOOST_SERVER_CTA": "Boost This Server CTA",
-    "SERVER_STATUS_CTA": "See Server Status CTA"
+    "SERVER_STATUS_CTA": "See Server Status CTA",
+    "ACTIVITIES_BOOSTING_UPSELL": "ACTIVITIES_BOOSTING_UPSELL",
+    "BOOSTING_LOWER_PRICE_EXPERIMENT_CTA": "Boosting Low Price Experiment CTA"
   },
   "AnalyticsOverlayLocations": {
     "OVERLAY_UNLOCKED": "overlay_unlocked",
@@ -2314,6 +2339,7 @@ const DiscordConstants = {
     "SETTINGS_CHANGE_PASSWORD": "Change Password",
     "SETTINGS_CUSTOMIZE_PROFILE": "Profile Customization",
     "SETTINGS_BACKUP_CODES": "Backup Codes",
+    "SETTINGS_CONFIRM_VIEW_BACKUP_CODES": "Confirm View Backup Codes",
     "SETTINGS_PRIVACY_AND_SAFETY": "Privacy & Safety",
     "SETTINGS_AUTHORIZED_APPS": "Authorized Apps",
     "SETTINGS_CONNECTIONS": "Connections",
@@ -2376,6 +2402,7 @@ const DiscordConstants = {
     "GUILD_AVATAR": "Guild Avatar",
     "ANIMATED_GUILD_BANNER_UPSELL": "Animated Guild Banner Upsell",
     "ANIMATED_GUILD_AVATAR_UPSELL": "Animated Guild Icon Upsell",
+    "BOOSTING_LOWER_PRICE_EXPERIMENT_TOOLTIP": "Boosting Lower Price Tooltip",
     "STREAM_VIEWER_POPOUT": "Stream Viewer Popout",
     "STREAM_SETTINGS": "Stream Settings",
     "STREAM_QUALITY_INDICATOR": "Stream Quality Indicator",
@@ -2597,6 +2624,7 @@ const DiscordConstants = {
     "SPLASH_HASH": "splash_hash",
     "DISCOVERY_SPLASH_HASH": "discovery_splash_hash",
     "BANNER_HASH": "banner_hash",
+    "IMAGE_HASH": "image_hash",
     "OWNER_ID": "owner_id",
     "REGION": "region",
     "PREFERRED_LOCALE": "preferred_locale",
@@ -2881,7 +2909,8 @@ const DiscordConstants = {
     "CHANGE_CATEGORY": "CHANGE_CATEGORY",
     "WEBHOOKS": "WEBHOOKS",
     "EDIT_WEBHOOK": "EDIT_WEBHOOK",
-    "CHANGE_RTC_REGION": "CHANGE_RTC_REGION"
+    "CHANGE_RTC_REGION": "CHANGE_RTC_REGION",
+    "EDIT_FORUM_TAG": "EDIT_FORUM_TAG"
   },
   "ChannelSettingsSubsections": {
     "TOPIC": "TOPIC"
@@ -2893,6 +2922,7 @@ const DiscordConstants = {
     "THREAD_STARTER_MESSAGE": "THREAD_STARTER_MESSAGE",
     "DIVIDER": "DIVIDER",
     "JUMP_TARGET": "JUMP_TARGET",
+    "FORUM_POST_ACTION_BAR": "FORUM_POST_ACTION_BAR",
     "MESSAGE_GROUP": "MESSAGE_GROUP",
     "DIVIDER_TIME_STAMP": "DIVIDER_TIME_STAMP",
     "DIVIDER_NEW_MESSAGES": "DIVIDER_NEW_MESSAGES"
@@ -3044,6 +3074,15 @@ const DiscordConstants = {
       12,
       15
     ],
+    "GUILD_USER_CONTENT": [
+      0,
+      2,
+      5,
+      10,
+      11,
+      12,
+      15
+    ],
     "GUILD_TOPICAL": [
       0,
       5,
@@ -3142,6 +3181,7 @@ const DiscordConstants = {
     "PRIMARY_DARK_260": "hsl(210, calc(var(--saturation-factor, 1) * 3.6%), 78.4%)",
     "PRIMARY_DARK_300": "hsl(216, calc(var(--saturation-factor, 1) * 3.7%), 73.5%)",
     "PRIMARY_DARK_330": "hsl(214, calc(var(--saturation-factor, 1) * 4%), 65.3%)",
+    "PRIMARY_DARK_345": "hsl(223, calc(var(--saturation-factor, 1) * 3.4%), 60.2%)",
     "PRIMARY_DARK_360": "hsl(213, calc(var(--saturation-factor, 1) * 4.1%), 57.5%)",
     "PRIMARY_DARK_400": "hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)",
     "PRIMARY_DARK_430": "hsl(213, calc(var(--saturation-factor, 1) * 5%), 42.9%)",
@@ -3168,6 +3208,7 @@ const DiscordConstants = {
     "PRIMARY_LIGHT_260": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 83.9%)",
     "PRIMARY_LIGHT_300": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 80%)",
     "PRIMARY_LIGHT_330": "hsl(214, calc(var(--saturation-factor, 1) * 10.6%), 74.1%)",
+    "PRIMARY_LIGHT_345": "hsl(216, calc(var(--saturation-factor, 1) * 9.9%), 70.4%)",
     "PRIMARY_LIGHT_360": "hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 68.2%)",
     "PRIMARY_LIGHT_400": "hsl(213, calc(var(--saturation-factor, 1) * 9.9%), 60.4%)",
     "PRIMARY_LIGHT_430": "hsl(214, calc(var(--saturation-factor, 1) * 9.7%), 57.5%)",
@@ -3194,6 +3235,7 @@ const DiscordConstants = {
     "BRAND_260": "hsl(235, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "BRAND_300": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "BRAND_330": "hsl(235, calc(var(--saturation-factor, 1) * 85.1%), 81.6%)",
+    "BRAND_345": "hsl(235, calc(var(--saturation-factor, 1) * 85.2%), 78.8%)",
     "BRAND_360": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%)",
     "BRAND_400": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "BRAND_430": "hsl(235, calc(var(--saturation-factor, 1) * 85.7%), 69.8%)",
@@ -3220,6 +3262,7 @@ const DiscordConstants = {
     "BRAND_NEW_260": "hsl(235, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "BRAND_NEW_300": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "BRAND_NEW_330": "hsl(235, calc(var(--saturation-factor, 1) * 85.1%), 81.6%)",
+    "BRAND_NEW_345": "hsl(235, calc(var(--saturation-factor, 1) * 85.2%), 78.8%)",
     "BRAND_NEW_360": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%)",
     "BRAND_NEW_400": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "BRAND_NEW_430": "hsl(235, calc(var(--saturation-factor, 1) * 85.7%), 69.8%)",
@@ -3246,6 +3289,7 @@ const DiscordConstants = {
     "STATUS_RED_260": "hsl(359, calc(var(--saturation-factor, 1) * 82.1%), 86.9%)",
     "STATUS_RED_300": "hsl(358, calc(var(--saturation-factor, 1) * 83.1%), 83.7%)",
     "STATUS_RED_330": "hsl(359, calc(var(--saturation-factor, 1) * 83.3%), 78.8%)",
+    "STATUS_RED_345": "hsl(359, calc(var(--saturation-factor, 1) * 82.3%), 75.7%)",
     "STATUS_RED_360": "hsl(359, calc(var(--saturation-factor, 1) * 82%), 73.9%)",
     "STATUS_RED_400": "hsl(359, calc(var(--saturation-factor, 1) * 83%), 67.6%)",
     "STATUS_RED_430": "hsl(359, calc(var(--saturation-factor, 1) * 83.1%), 65.3%)",
@@ -3272,6 +3316,7 @@ const DiscordConstants = {
     "STATUS_YELLOW_260": "hsl(37, calc(var(--saturation-factor, 1) * 94.7%), 85.1%)",
     "STATUS_YELLOW_300": "hsl(37, calc(var(--saturation-factor, 1) * 95.7%), 81.6%)",
     "STATUS_YELLOW_330": "hsl(38, calc(var(--saturation-factor, 1) * 95.1%), 76.1%)",
+    "STATUS_YELLOW_345": "hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 72.5%)",
     "STATUS_YELLOW_360": "hsl(38, calc(var(--saturation-factor, 1) * 96%), 70.6%)",
     "STATUS_YELLOW_400": "hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 63.3%)",
     "STATUS_YELLOW_430": "hsl(37, calc(var(--saturation-factor, 1) * 96%), 60.8%)",
@@ -3298,6 +3343,7 @@ const DiscordConstants = {
     "STATUS_GREEN_260": "hsl(138, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "STATUS_GREEN_300": "hsl(138, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "STATUS_GREEN_330": "hsl(139, calc(var(--saturation-factor, 1) * 85.3%), 81.4%)",
+    "STATUS_GREEN_345": "hsl(139, calc(var(--saturation-factor, 1) * 85.3%), 78.6%)",
     "STATUS_GREEN_360": "hsl(139, calc(var(--saturation-factor, 1) * 86.2%), 77.3%)",
     "STATUS_GREEN_400": "hsl(138, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "STATUS_GREEN_430": "hsl(138, calc(var(--saturation-factor, 1) * 85.8%), 69.6%)",
@@ -3324,6 +3370,7 @@ const DiscordConstants = {
     "STATUS_GREY_260": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 83.9%)",
     "STATUS_GREY_300": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 80%)",
     "STATUS_GREY_330": "hsl(214, calc(var(--saturation-factor, 1) * 10.6%), 74.1%)",
+    "STATUS_GREY_345": "hsl(216, calc(var(--saturation-factor, 1) * 9.9%), 70.4%)",
     "STATUS_GREY_360": "hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 68.2%)",
     "STATUS_GREY_400": "hsl(213, calc(var(--saturation-factor, 1) * 9.9%), 60.4%)",
     "STATUS_GREY_430": "hsl(214, calc(var(--saturation-factor, 1) * 9.7%), 57.5%)",
@@ -3350,6 +3397,7 @@ const DiscordConstants = {
     "STATUS_ORANGE_260": "hsl(22, calc(var(--saturation-factor, 1) * 91.4%), 86.3%)",
     "STATUS_ORANGE_300": "hsl(22, calc(var(--saturation-factor, 1) * 90.7%), 83.1%)",
     "STATUS_ORANGE_330": "hsl(21, calc(var(--saturation-factor, 1) * 91.1%), 78%)",
+    "STATUS_ORANGE_345": "hsl(21, calc(var(--saturation-factor, 1) * 90.7%), 74.7%)",
     "STATUS_ORANGE_360": "hsl(21, calc(var(--saturation-factor, 1) * 91.3%), 72.9%)",
     "STATUS_ORANGE_400": "hsl(21, calc(var(--saturation-factor, 1) * 90.8%), 66.1%)",
     "STATUS_ORANGE_430": "hsl(22, calc(var(--saturation-factor, 1) * 90.3%), 63.7%)",
@@ -3376,6 +3424,7 @@ const DiscordConstants = {
     "FOCUS_PRIMARY_260": "hsl(197, calc(var(--saturation-factor, 1) * 90.8%), 82.9%)",
     "FOCUS_PRIMARY_300": "hsl(197, calc(var(--saturation-factor, 1) * 92.5%), 79.2%)",
     "FOCUS_PRIMARY_330": "hsl(197, calc(var(--saturation-factor, 1) * 91.4%), 72.7%)",
+    "FOCUS_PRIMARY_345": "hsl(196, calc(var(--saturation-factor, 1) * 91.3%), 68.6%)",
     "FOCUS_PRIMARY_360": "hsl(197, calc(var(--saturation-factor, 1) * 91.8%), 66.7%)",
     "FOCUS_PRIMARY_400": "hsl(197, calc(var(--saturation-factor, 1) * 91.5%), 58.2%)",
     "FOCUS_PRIMARY_430": "hsl(197, calc(var(--saturation-factor, 1) * 92.1%), 55.5%)",
@@ -3402,6 +3451,7 @@ const DiscordConstants = {
     "LINK_260": "hsl(197, calc(var(--saturation-factor, 1) * 90.8%), 82.9%)",
     "LINK_300": "hsl(197, calc(var(--saturation-factor, 1) * 92.5%), 79.2%)",
     "LINK_330": "hsl(197, calc(var(--saturation-factor, 1) * 91.4%), 72.7%)",
+    "LINK_345": "hsl(196, calc(var(--saturation-factor, 1) * 91.3%), 68.6%)",
     "LINK_360": "hsl(197, calc(var(--saturation-factor, 1) * 91.8%), 66.7%)",
     "LINK_400": "hsl(197, calc(var(--saturation-factor, 1) * 91.5%), 58.2%)",
     "LINK_430": "hsl(197, calc(var(--saturation-factor, 1) * 92.1%), 55.5%)",
@@ -3428,6 +3478,7 @@ const DiscordConstants = {
     "LINK_LOW_SATURATION_260": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 84.7%)",
     "LINK_LOW_SATURATION_300": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 81.2%)",
     "LINK_LOW_SATURATION_330": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 75.5%)",
+    "LINK_LOW_SATURATION_345": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 71.8%)",
     "LINK_LOW_SATURATION_360": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 69.8%)",
     "LINK_LOW_SATURATION_400": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 62.4%)",
     "LINK_LOW_SATURATION_430": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 59.8%)",
@@ -3454,6 +3505,7 @@ const DiscordConstants = {
     "LINK_LIGHT_260": "hsl(212, calc(var(--saturation-factor, 1) * 78.5%), 81.8%)",
     "LINK_LIGHT_300": "hsl(213, calc(var(--saturation-factor, 1) * 78.9%), 77.6%)",
     "LINK_LIGHT_330": "hsl(212, calc(var(--saturation-factor, 1) * 78.5%), 70.8%)",
+    "LINK_LIGHT_345": "hsl(212, calc(var(--saturation-factor, 1) * 77.9%), 66.3%)",
     "LINK_LIGHT_360": "hsl(212, calc(var(--saturation-factor, 1) * 78.1%), 64.1%)",
     "LINK_LIGHT_400": "hsl(213, calc(var(--saturation-factor, 1) * 78.2%), 55.1%)",
     "LINK_LIGHT_430": "hsl(212, calc(var(--saturation-factor, 1) * 78%), 52%)",
@@ -3480,6 +3532,7 @@ const DiscordConstants = {
     "WHITE_260": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_300": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_330": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
+    "WHITE_345": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_360": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_400": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_430": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
@@ -3506,6 +3559,7 @@ const DiscordConstants = {
     "BLACK_260": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 67.5%)",
     "BLACK_300": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 60%)",
     "BLACK_330": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 47.8%)",
+    "BLACK_345": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 40%)",
     "BLACK_360": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 36.1%)",
     "BLACK_400": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 20%)",
     "BLACK_430": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 14.5%)",
@@ -3538,6 +3592,10 @@ const DiscordConstants = {
     "GUILD_BOOSTING_PURPLE": "hsl(269, calc(var(--saturation-factor, 1) * 83.8%), 71%)",
     "GUILD_BOOSTING_BLUE_500": "hsl(221, calc(var(--saturation-factor, 1) * 70%), 55.5%)",
     "GUILD_BOOSTING_BLUE": "hsl(221, calc(var(--saturation-factor, 1) * 70%), 55.5%)",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500": "hsl(269, calc(var(--saturation-factor, 1) * 91.8%), 61.8%)",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS": "hsl(269, calc(var(--saturation-factor, 1) * 91.8%), 61.8%)",
     "PREMIUM_PERK_GREEN_500": "hsl(164, calc(var(--saturation-factor, 1) * 55.1%), 69.4%)",
     "PREMIUM_PERK_GREEN": "hsl(164, calc(var(--saturation-factor, 1) * 55.1%), 69.4%)",
     "PREMIUM_PERK_YELLOW_500": "hsl(47, calc(var(--saturation-factor, 1) * 98.9%), 63.9%)",
@@ -3600,7 +3658,10 @@ const DiscordConstants = {
     "GITHUB": "hsl(0, calc(var(--saturation-factor, 1) * 4.2%), 9.4%)",
     "PLAYSTATION_500": "hsl(220, calc(var(--saturation-factor, 1) * 95.7%), 27.1%)",
     "PLAYSTATION": "hsl(220, calc(var(--saturation-factor, 1) * 95.7%), 27.1%)",
-    "TRANSPARENT": "transparent"
+    "TRANSPARENT": "transparent",
+    "SCROLLBAR_THUMB_LIGHT": "hsl(212, calc(var(--saturation-factor, 1) * 9.8%), 52.2%)",
+    "SCROLLBAR_THUMB_DARK": "hsl(220, calc(var(--saturation-factor, 1) * 3.7%), 52%)",
+    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)"
   },
   "ComponentActions": {
     "IFRAME_MOUNT": "IFRAME_MOUNT",
@@ -3661,7 +3722,10 @@ const DiscordConstants = {
     "OPEN_EXPRESSION_PICKER": "OPEN_EXPRESSION_PICKER",
     "OPEN_THREAD_NOTIFICATION_SETTINGS": "OPEN_THREAD_NOTIFICATION_SETTINGS",
     "CLEAR_TEXT": "CLEAR_TEXT",
-    "SHOW_OAUTH2_MODAL": "SHOW_OAUTH2_MODAL"
+    "SHOW_OAUTH2_MODAL": "SHOW_OAUTH2_MODAL",
+    "FOCUS_CHAT_BUTTON": "FOCUS_CHAT_BUTTON",
+    "SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP": "SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP",
+    "SHOW_ACTIVITIES_BOOSTING_UPSELL": "SHOW_ACTIVITIES_BOOSTING_UPSELL"
   },
   "ComponentActionsKeyed": {
     "TOGGLE_REACTION_POPOUT": "TOGGLE_REACTION_POPOUT",
@@ -3966,6 +4030,8 @@ const DiscordConstants = {
     "MFA_SMS_ENABLE": "/users/@me/mfa/sms/enable",
     "MFA_SMS_DISABLE": "/users/@me/mfa/sms/disable",
     "MFA_CODES": "/users/@me/mfa/codes",
+    "MFA_CODES_VERIFICATION": "/users/@me/mfa/codes-verification",
+    "MFA_SEND_VERIFICATION_KEY": "/auth/verify/view-backup-codes-challenge",
     "DISABLE_EMAIL_NOTIFICATIONS": "/users/disable-email-notifications",
     "APPLIED_GUILD_BOOST_COOLDOWN": "/users/@me/guilds/premium/subscriptions/cooldown",
     "USER_APPLIED_GUILD_BOOSTS": "/users/@me/guilds/premium/subscriptions",
@@ -4275,6 +4341,7 @@ const DiscordConstants = {
     "MODERATION": "MODERATION",
     "DELETE": "DELETE",
     "DISCOVERY": "DISCOVERY",
+    "DISCOVERY_LANDING_PAGE": "DISCOVERY_LANDING_PAGE",
     "PARTNER": "PARTNER",
     "GUILD_PREMIUM": "GUILD_PREMIUM",
     "ANALYTICS": "ANALYTICS",
@@ -4294,8 +4361,7 @@ const DiscordConstants = {
     "ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION": "ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION",
     "ROLE_SUBSCRIPTIONS_BASIC": "ROLE_SUBSCRIPTIONS_BASIC",
     "ROLE_SUBSCRIPTIONS_TIERS": "ROLE_SUBSCRIPTIONS_TIERS",
-    "ROLE_SUBSCRIPTIONS_PAYMENTS": "ROLE_SUBSCRIPTIONS_PAYMENTS",
-    "ROLE_SUBSCRIPTIONS_ADVANCED": "ROLE_SUBSCRIPTIONS_ADVANCED"
+    "ROLE_SUBSCRIPTIONS_PAYMENTS": "ROLE_SUBSCRIPTIONS_PAYMENTS"
   },
   "GuildSettingsSubsections": {
     "DISPLAY": "DISPLAY",
@@ -4315,6 +4381,7 @@ const DiscordConstants = {
     "PRIMARY_DARK_260": "#c6c8ca",
     "PRIMARY_DARK_300": "#b9bbbe",
     "PRIMARY_DARK_330": "#a3a6aa",
+    "PRIMARY_DARK_345": "#96989d",
     "PRIMARY_DARK_360": "#8e9297",
     "PRIMARY_DARK_400": "#72767d",
     "PRIMARY_DARK_430": "#686d73",
@@ -4341,6 +4408,7 @@ const DiscordConstants = {
     "PRIMARY_LIGHT_260": "#d2d6da",
     "PRIMARY_LIGHT_300": "#c7ccd1",
     "PRIMARY_LIGHT_330": "#b6bcc4",
+    "PRIMARY_LIGHT_345": "#acb2bb",
     "PRIMARY_LIGHT_360": "#a6adb6",
     "PRIMARY_LIGHT_400": "#9099a4",
     "PRIMARY_LIGHT_430": "#88919d",
@@ -4367,6 +4435,7 @@ const DiscordConstants = {
     "BRAND_260": "#c9cdfb",
     "BRAND_300": "#bcc1fa",
     "BRAND_330": "#a8aff8",
+    "BRAND_345": "#9ba3f7",
     "BRAND_360": "#949cf7",
     "BRAND_400": "#7984f5",
     "BRAND_430": "#707bf4",
@@ -4393,6 +4462,7 @@ const DiscordConstants = {
     "BRAND_NEW_260": "#c9cdfb",
     "BRAND_NEW_300": "#bcc1fa",
     "BRAND_NEW_330": "#a8aff8",
+    "BRAND_NEW_345": "#9ba3f7",
     "BRAND_NEW_360": "#949cf7",
     "BRAND_NEW_400": "#7984f5",
     "BRAND_NEW_430": "#707bf4",
@@ -4419,6 +4489,7 @@ const DiscordConstants = {
     "STATUS_RED_260": "#f9c2c3",
     "STATUS_RED_300": "#f8b3b5",
     "STATUS_RED_330": "#f69c9e",
+    "STATUS_RED_345": "#f48e90",
     "STATUS_RED_360": "#f38688",
     "STATUS_RED_400": "#f1686a",
     "STATUS_RED_430": "#f05d60",
@@ -4445,6 +4516,7 @@ const DiscordConstants = {
     "STATUS_YELLOW_260": "#fde2b5",
     "STATUS_YELLOW_300": "#fddba3",
     "STATUS_YELLOW_330": "#fcd188",
+    "STATUS_YELLOW_345": "#fcca76",
     "STATUS_YELLOW_360": "#fcc66c",
     "STATUS_YELLOW_400": "#fbb848",
     "STATUS_YELLOW_430": "#fbb33b",
@@ -4471,6 +4543,7 @@ const DiscordConstants = {
     "STATUS_GREEN_260": "#c9fbd8",
     "STATUS_GREEN_300": "#bcfacf",
     "STATUS_GREEN_330": "#a7f8c0",
+    "STATUS_GREEN_345": "#9af7b7",
     "STATUS_GREEN_360": "#93f7b2",
     "STATUS_GREEN_400": "#79f59f",
     "STATUS_GREEN_430": "#6ff498",
@@ -4497,6 +4570,7 @@ const DiscordConstants = {
     "STATUS_GREY_260": "#d2d6da",
     "STATUS_GREY_300": "#c7ccd1",
     "STATUS_GREY_330": "#b6bcc4",
+    "STATUS_GREY_345": "#acb2bb",
     "STATUS_GREY_360": "#a6adb6",
     "STATUS_GREY_400": "#9099a4",
     "STATUS_GREY_430": "#88919d",
@@ -4523,6 +4597,7 @@ const DiscordConstants = {
     "STATUS_ORANGE_260": "#fcd3bc",
     "STATUS_ORANGE_300": "#fbc9ad",
     "STATUS_ORANGE_330": "#fab894",
+    "STATUS_ORANGE_345": "#f9ad84",
     "STATUS_ORANGE_360": "#f9a87b",
     "STATUS_ORANGE_400": "#f7925a",
     "STATUS_ORANGE_430": "#f68b4f",
@@ -4549,6 +4624,7 @@ const DiscordConstants = {
     "FOCUS_PRIMARY_260": "#ace5fb",
     "FOCUS_PRIMARY_300": "#99dffb",
     "FOCUS_PRIMARY_330": "#7ad6f9",
+    "FOCUS_PRIMARY_345": "#66d0f8",
     "FOCUS_PRIMARY_360": "#5cccf8",
     "FOCUS_PRIMARY_400": "#33c0f6",
     "FOCUS_PRIMARY_430": "#25bbf6",
@@ -4575,6 +4651,7 @@ const DiscordConstants = {
     "LINK_260": "#ace5fb",
     "LINK_300": "#99dffb",
     "LINK_330": "#7ad6f9",
+    "LINK_345": "#66d0f8",
     "LINK_360": "#5cccf8",
     "LINK_400": "#33c0f6",
     "LINK_430": "#25bbf6",
@@ -4601,6 +4678,7 @@ const DiscordConstants = {
     "LINK_LOW_SATURATION_260": "#b1e9ff",
     "LINK_LOW_SATURATION_300": "#9fe4ff",
     "LINK_LOW_SATURATION_330": "#82dcff",
+    "LINK_LOW_SATURATION_345": "#6fd7ff",
     "LINK_LOW_SATURATION_360": "#65d4ff",
     "LINK_LOW_SATURATION_400": "#3fc9ff",
     "LINK_LOW_SATURATION_430": "#32c6ff",
@@ -4627,6 +4705,7 @@ const DiscordConstants = {
     "LINK_LIGHT_260": "#accef5",
     "LINK_LIGHT_300": "#99c2f3",
     "LINK_LIGHT_330": "#7ab0ef",
+    "LINK_LIGHT_345": "#66a4ec",
     "LINK_LIGHT_360": "#5c9eeb",
     "LINK_LIGHT_400": "#3385e6",
     "LINK_LIGHT_430": "#257de4",
@@ -4653,6 +4732,7 @@ const DiscordConstants = {
     "WHITE_260": "#ffffff",
     "WHITE_300": "#ffffff",
     "WHITE_330": "#ffffff",
+    "WHITE_345": "#ffffff",
     "WHITE_360": "#ffffff",
     "WHITE_400": "#ffffff",
     "WHITE_430": "#ffffff",
@@ -4679,6 +4759,7 @@ const DiscordConstants = {
     "BLACK_260": "#acacac",
     "BLACK_300": "#999999",
     "BLACK_330": "#7a7a7a",
+    "BLACK_345": "#666666",
     "BLACK_360": "#5c5c5c",
     "BLACK_400": "#333333",
     "BLACK_430": "#252525",
@@ -4711,6 +4792,10 @@ const DiscordConstants = {
     "GUILD_BOOSTING_PURPLE": "#b377f3",
     "GUILD_BOOSTING_BLUE_500": "#3e70dd",
     "GUILD_BOOSTING_BLUE": "#3e70dd",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500": "#3442d9",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS": "#3442d9",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500": "#9b44f7",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS": "#9b44f7",
     "PREMIUM_PERK_GREEN_500": "#86dcc5",
     "PREMIUM_PERK_GREEN": "#86dcc5",
     "PREMIUM_PERK_YELLOW_500": "#fed648",
@@ -4773,7 +4858,10 @@ const DiscordConstants = {
     "GITHUB": "#191717",
     "PLAYSTATION_500": "#032f87",
     "PLAYSTATION": "#032f87",
-    "TRANSPARENT": "transparent"
+    "TRANSPARENT": "transparent",
+    "SCROLLBAR_THUMB_LIGHT": "#798491",
+    "SCROLLBAR_THUMB_DARK": "#808389",
+    "INPUT_PLACEHOLDER_TEXT_DARK": "#87898C"
   },
   "HelpdeskArticles": {
     "ENABLE_MIC_FIREFOX": "204392448",
@@ -4854,6 +4942,14 @@ const DiscordConstants = {
     "DISABLE_GUILD_COMMUNICATION": "4413305239191",
     "GUILD_AUTOMOD_BLOCKED_MESSAGE": "4421269296535",
     "BLOCKED_PAYMENTS": "4708041338391"
+  },
+  "HighlightSettings": {
+    "0": "NULL",
+    "1": "DISABLED",
+    "2": "ENABLED",
+    "NULL": 0,
+    "DISABLED": 1,
+    "ENABLED": 2
   },
   "HypeSquadHouses": {
     "HOUSE_1": "HOUSE_1",
@@ -4990,6 +5086,7 @@ const DiscordConstants = {
     "SCROLL_DOWN": "SCROLL_DOWN",
     "TEXTAREA_FOCUS": "TEXTAREA_FOCUS",
     "CLOSE_MODAL": "CLOSE_MODAL",
+    "POP_LAYER": "POP_LAYER",
     "SUBMIT": "SUBMIT",
     "EDIT_LAST_MESSAGE": "EDIT_LAST_MESSAGE",
     "JUMP_TO_GUILD": "JUMP_TO_GUILD",
@@ -5039,7 +5136,7 @@ const DiscordConstants = {
     "ARROW_UP": 38,
     "ARROW_RIGHT": 39,
     "ARROW_DOWN": 40,
-    "COMMA": 188,
+    "DELETE": 46,
     "DIGIT_0": 48,
     "DIGIT_1": 49,
     "DIGIT_2": 50,
@@ -5060,7 +5157,8 @@ const DiscordConstants = {
     "N": 78,
     "P": 80,
     "S": 83,
-    "U": 85
+    "U": 85,
+    "COMMA": 188
   },
   "LEFT_PANEL_WIDTH": 320,
   "LOCALIZED_PRICING_COUNTRIES_TO_CURRENCIES": {
@@ -5365,6 +5463,12 @@ const DiscordConstants = {
     "ELEVATED": 1
   },
   "MOBILE_WEB_HANDOFF_DEEP_LINK": "https://discordapp.com/mweb-handoff",
+  "MULTI_MONTH_PLANS": [
+    "642251038925127690",
+    "944037208325619722",
+    "944037355453415424",
+    "944037391444738048"
+  ],
   "MacosKeyToCode": {
     "0": 39,
     "1": 30,
@@ -5723,7 +5827,8 @@ const DiscordConstants = {
     "PREMIUM_PAST_DUE_INVALID_PAYMENT": "PREMIUM_PAST_DUE_INVALID_PAYMENT",
     "PREMIUM_REACTIVATE": "PREMIUM_REACTIVATE",
     "CONNECT_PLAYSTATION": "CONNECT_PLAYSTATION",
-    "LOCALIZED_PRICING": "LOCALIZED_PRICING"
+    "LOCALIZED_PRICING": "LOCALIZED_PRICING",
+    "BACK_TO_PREVIOUS_SCREEN": "BACK_TO_PREVIOUS_SCREEN"
   },
   "NotificationActionTypes": {
     "GUILD_INVITE": "Guild Invite"
@@ -6728,6 +6833,7 @@ const DiscordConstants = {
     "ACCOUNT_CHANGE_PASSWORD": "Change Password",
     "ACCOUNT_CONFIRM_PASSWORD": "Confirm Password",
     "ACCOUNT_BACKUP_CODES": "Backup Codes",
+    "ACCOUNT_CONFIRM_VIEW_BACKUP_CODES": "Backup Codes",
     "CONNECTIONS": "Connections",
     "CONNECTIONS_XBOX": "Connections Xbox",
     "AUTHORIZED_APPS": "Authorized Apps",
@@ -6944,17 +7050,19 @@ const DiscordConstants = {
     "UNKNOWN": "unknown"
   },
   "CurrencyCodes": {
-    "USD": "usd",
+    "AUD": "aud",
+    "BRL": "brl",
     "CAD": "cad",
     "EUR": "eur",
-    "AUD": "aud",
     "GBP": "gbp",
     "JPY": "jpy",
     "NOK": "nok",
-    "RUB": "rub",
-    "BRL": "brl",
+    "PEN": "pen",
+    "PHP": "php",
     "PLN": "pln",
-    "TRY": "try"
+    "RUB": "rub",
+    "TRY": "try",
+    "USD": "usd"
   },
   "DELAYED_PAYMENTS": [
     6
@@ -7124,6 +7232,7 @@ const DiscordConstants = {
     "VIEW_AUDIT_LOG": "128",
     "VIEW_CHANNEL": "1024",
     "VIEW_GUILD_ANALYTICS": "524288",
+    "VIEW_CREATOR_MONETIZATION_ANALYTICS": "2199023255552",
     "MODERATE_MEMBERS": "1099511627776",
     "SEND_MESSAGES": "2048",
     "SEND_TTS_MESSAGES": "4096",
@@ -7415,8 +7524,8 @@ const DiscordConstants = {
       "#2e3338"
     ],
     "TEXT_MUTED": [
-      "#72767d",
-      "#747f8d"
+      "#a3a6aa",
+      "#5e6772"
     ],
     "TEXT_LINK": [
       "#00b0f4",
@@ -7427,16 +7536,16 @@ const DiscordConstants = {
       "#0067e0"
     ],
     "TEXT_POSITIVE": [
-      "#4fdc7b",
-      "#3ba55c"
+      "#46c46d",
+      "#2d7d46"
     ],
     "TEXT_WARNING": [
       "#faa61a",
-      "#faa61a"
+      "#93620f"
     ],
     "TEXT_DANGER": [
-      "#ed4245",
-      "#ed4245"
+      "#f38688",
+      "#a12d2f"
     ],
     "TEXT_BRAND": [
       "#949cf7",
@@ -7476,7 +7585,7 @@ const DiscordConstants = {
     ],
     "BACKGROUND_ACCENT": [
       "#4f545c",
-      "#747f8d"
+      "#6a7480"
     ],
     "BACKGROUND_FLOATING": [
       "#18191c",
@@ -7495,28 +7604,28 @@ const DiscordConstants = {
       "#ffffff"
     ],
     "BACKGROUND_MODIFIER_HOVER": [
-      "hsla(217, 7.6%, 33.5%, 0.16)",
-      "hsla(214, 9.9%, 50.4%, 0.08)"
+      "hsla(217, 7.6%, 33.5%, 0.4)",
+      "hsla(213, 9.4%, 45.9%, 0.16)"
     ],
     "BACKGROUND_MODIFIER_ACTIVE": [
-      "hsla(217, 7.6%, 33.5%, 0.24)",
-      "hsla(214, 9.9%, 50.4%, 0.16)"
+      "hsla(217, 7.6%, 33.5%, 0.6)",
+      "hsla(213, 9.4%, 45.9%, 0.24)"
     ],
     "BACKGROUND_MODIFIER_SELECTED": [
-      "hsla(217, 7.6%, 33.5%, 0.32)",
-      "hsla(214, 9.9%, 50.4%, 0.24)"
+      "hsla(217, 7.6%, 33.5%, 0.6)",
+      "hsla(213, 9.4%, 45.9%, 0.24)"
     ],
     "BACKGROUND_MODIFIER_ACCENT": [
-      "hsla(0, 0%, 100%, 0.06)",
-      "hsla(240, 7.7%, 2.5%, 0.08)"
+      "hsla(217, 7.6%, 33.5%, 0.48)",
+      "hsla(213, 9.4%, 45.9%, 0.24)"
     ],
     "INFO_POSITIVE_BACKGROUND": [
       "hsla(139, 47.3%, 43.9%, 0.1)",
-      "hsla(139, 47.3%, 43.9%, 0.1)"
+      "hsla(139, 47.4%, 38%, 0.05)"
     ],
     "INFO_POSITIVE_FOREGROUND": [
       "#3ba55c",
-      "#3ba55c"
+      "#338f50"
     ],
     "INFO_POSITIVE_TEXT": [
       "#ffffff",
@@ -7524,11 +7633,11 @@ const DiscordConstants = {
     ],
     "INFO_WARNING_BACKGROUND": [
       "hsla(38, 95.7%, 54.1%, 0.1)",
-      "hsla(38, 95.7%, 54.1%, 0.1)"
+      "hsla(38, 80.9%, 36.9%, 0.1)"
     ],
     "INFO_WARNING_FOREGROUND": [
       "#faa61a",
-      "#faa61a"
+      "#aa7112"
     ],
     "INFO_WARNING_TEXT": [
       "#ffffff",
@@ -7536,11 +7645,11 @@ const DiscordConstants = {
     ],
     "INFO_DANGER_BACKGROUND": [
       "hsla(359, 82.6%, 59.4%, 0.1)",
-      "hsla(359, 82.6%, 59.4%, 0.1)"
+      "hsla(359, 66.7%, 54.1%, 0.1)"
     ],
     "INFO_DANGER_FOREGROUND": [
       "#ed4245",
-      "#ed4245"
+      "#d83c3f"
     ],
     "INFO_DANGER_TEXT": [
       "#ffffff",
@@ -7559,8 +7668,8 @@ const DiscordConstants = {
       "#000000"
     ],
     "STATUS_POSITIVE_BACKGROUND": [
-      "#3ba55c",
-      "#3ba55c"
+      "#2d7d46",
+      "#2d7d46"
     ],
     "STATUS_POSITIVE_TEXT": [
       "#ffffff",
@@ -7568,7 +7677,7 @@ const DiscordConstants = {
     ],
     "STATUS_WARNING_BACKGROUND": [
       "#faa61a",
-      "#faa61a"
+      "#aa7112"
     ],
     "STATUS_WARNING_TEXT": [
       "#000000",
@@ -7576,11 +7685,215 @@ const DiscordConstants = {
     ],
     "STATUS_DANGER_BACKGROUND": [
       "#ed4245",
-      "#ed4245"
+      "#d83c3f"
     ],
     "STATUS_DANGER_TEXT": [
       "#ffffff",
       "#ffffff"
+    ],
+    "STATUS_DANGER": [
+      "#ed4245",
+      "#d83c3f"
+    ],
+    "STATUS_POSITIVE": [
+      "#3ba55c",
+      "#338f50"
+    ],
+    "STATUS_WARNING": [
+      "#faa61a",
+      "#aa7112"
+    ],
+    "BUTTON_DANGER_BACKGROUND": [
+      "#d83c3f",
+      "#d83c3f"
+    ],
+    "BUTTON_DANGER_BACKGROUND_HOVER": [
+      "#a12d2f",
+      "#a12d2f"
+    ],
+    "BUTTON_DANGER_BACKGROUND_ACTIVE": [
+      "#8c2729",
+      "#8c2729"
+    ],
+    "BUTTON_DANGER_BACKGROUND_DISABLED": [
+      "#d83c3f",
+      "#d83c3f"
+    ],
+    "BUTTON_POSITIVE_BACKGROUND": [
+      "#2d7d46",
+      "#2d7d46"
+    ],
+    "BUTTON_POSITIVE_BACKGROUND_HOVER": [
+      "#215b32",
+      "#215b32"
+    ],
+    "BUTTON_POSITIVE_BACKGROUND_ACTIVE": [
+      "#1e532e",
+      "#1e532e"
+    ],
+    "BUTTON_POSITIVE_BACKGROUND_DISABLED": [
+      "#2d7d46",
+      "#2d7d46"
+    ],
+    "BUTTON_SECONDARY_BACKGROUND": [
+      "#4f545c",
+      "#6a7480"
+    ],
+    "BUTTON_SECONDARY_BACKGROUND_HOVER": [
+      "#686d73",
+      "#4f5660"
+    ],
+    "BUTTON_SECONDARY_BACKGROUND_ACTIVE": [
+      "#72767d",
+      "#444b53"
+    ],
+    "BUTTON_SECONDARY_BACKGROUND_DISABLED": [
+      "#4f545c",
+      "#6a7480"
+    ],
+    "BUTTON_OUTLINE_DANGER_TEXT": [
+      "#ffffff",
+      "#000000"
+    ],
+    "BUTTON_OUTLINE_DANGER_BORDER": [
+      "#ed4245",
+      "#d83c3f"
+    ],
+    "BUTTON_OUTLINE_DANGER_BACKGROUND": [
+      "hsla(0, 0%, 100%, 0)",
+      "hsla(0, 0%, 100%, 0)"
+    ],
+    "BUTTON_OUTLINE_DANGER_BACKGROUND_HOVER": [
+      "#d83c3f",
+      "#d83c3f"
+    ],
+    "BUTTON_OUTLINE_DANGER_TEXT_HOVER": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_DANGER_BORDER_HOVER": [
+      "#d83c3f",
+      "#d83c3f"
+    ],
+    "BUTTON_OUTLINE_DANGER_BACKGROUND_ACTIVE": [
+      "#c03538",
+      "#c03538"
+    ],
+    "BUTTON_OUTLINE_DANGER_TEXT_ACTIVE": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_DANGER_BORDER_ACTIVE": [
+      "#d83c3f",
+      "#d83c3f"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_TEXT": [
+      "#ffffff",
+      "#000000"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BORDER": [
+      "#3ba55c",
+      "#338f50"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BACKGROUND": [
+      "hsla(0, 0%, 100%, 0)",
+      "hsla(0, 0%, 100%, 0)"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BACKGROUND_HOVER": [
+      "#2d7d46",
+      "#2d7d46"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_TEXT_HOVER": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BORDER_HOVER": [
+      "#2d7d46",
+      "#2d7d46"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BACKGROUND_ACTIVE": [
+      "#215b32",
+      "#215b32"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_TEXT_ACTIVE": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_POSITIVE_BORDER_ACTIVE": [
+      "#215b32",
+      "#215b32"
+    ],
+    "BUTTON_OUTLINE_BRAND_TEXT": [
+      "#ffffff",
+      "#000000"
+    ],
+    "BUTTON_OUTLINE_BRAND_BORDER": [
+      "#5865f2",
+      "#5865f2"
+    ],
+    "BUTTON_OUTLINE_BRAND_BACKGROUND": [
+      "hsla(0, 0%, 100%, 0)",
+      "hsla(0, 0%, 100%, 0)"
+    ],
+    "BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER": [
+      "#5865f2",
+      "#5865f2"
+    ],
+    "BUTTON_OUTLINE_BRAND_TEXT_HOVER": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_BRAND_BORDER_HOVER": [
+      "#5865f2",
+      "#5865f2"
+    ],
+    "BUTTON_OUTLINE_BRAND_BACKGROUND_ACTIVE": [
+      "#4752c4",
+      "#4752c4"
+    ],
+    "BUTTON_OUTLINE_BRAND_TEXT_ACTIVE": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_BRAND_BORDER_ACTIVE": [
+      "#4752c4",
+      "#4752c4"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_TEXT": [
+      "#ffffff",
+      "#000000"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BORDER": [
+      "#4f545c",
+      "#6a7480"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BACKGROUND": [
+      "hsla(0, 0%, 100%, 0)",
+      "hsla(0, 0%, 100%, 0)"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BACKGROUND_HOVER": [
+      "#4f545c",
+      "#6a7480"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_TEXT_HOVER": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BORDER_HOVER": [
+      "#4f545c",
+      "#6a7480"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BACKGROUND_ACTIVE": [
+      "#686d73",
+      "#4f5660"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_TEXT_ACTIVE": [
+      "#ffffff",
+      "#ffffff"
+    ],
+    "BUTTON_OUTLINE_PRIMARY_BORDER_ACTIVE": [
+      "#686d73",
+      "#4f5660"
     ],
     "SCROLLBAR_THIN_THUMB": [
       "#202225",
@@ -7605,6 +7918,14 @@ const DiscordConstants = {
     "SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK": [
       "#2f3136",
       "#f2f3f5"
+    ],
+    "INPUT_BACKGROUND": [
+      "#202225",
+      "#e3e5e8"
+    ],
+    "INPUT_PLACEHOLDER_TEXT": [
+      "#87898C",
+      "#5e6772"
     ],
     "ELEVATION_STROKE": [
       "0 0 0 1px opacity(#040405, 0.15)",
@@ -7659,8 +7980,16 @@ const DiscordConstants = {
       "hsla(359, 82.6%, 59.4%, 0.1)"
     ],
     "CHANNELS_DEFAULT": [
+      "#96989d",
+      "#5e6772"
+    ],
+    "CHANNEL_ICON": [
       "#8e9297",
       "#6a7480"
+    ],
+    "CHANNEL_TEXT_AREA_PLACEHOLDER": [
+      "#72767d",
+      "#747f8d"
     ],
     "GUILD_HEADER_TEXT_SHADOW": [
       "0 1px 1px opacity(#000000, 0.4)",
@@ -7707,8 +8036,8 @@ const DiscordConstants = {
       "hsla(217, 7.6%, 33.5%, 0.3)"
     ],
     "DEPRECATED_TEXT_INPUT_BG": [
-      "hsla(0, 0%, 0%, 0.1)",
-      "hsla(217, 7.6%, 33.5%, 0.02)"
+      "#202225",
+      "#e3e5e8"
     ],
     "DEPRECATED_TEXT_INPUT_BORDER": [
       "hsla(0, 0%, 0%, 0.3)",
@@ -7795,6 +8124,7 @@ const DiscordConstants = {
     "PRIMARY_DARK_260": "hsl(210, calc(var(--saturation-factor, 1) * 3.6%), 78.4%)",
     "PRIMARY_DARK_300": "hsl(216, calc(var(--saturation-factor, 1) * 3.7%), 73.5%)",
     "PRIMARY_DARK_330": "hsl(214, calc(var(--saturation-factor, 1) * 4%), 65.3%)",
+    "PRIMARY_DARK_345": "hsl(223, calc(var(--saturation-factor, 1) * 3.4%), 60.2%)",
     "PRIMARY_DARK_360": "hsl(213, calc(var(--saturation-factor, 1) * 4.1%), 57.5%)",
     "PRIMARY_DARK_400": "hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)",
     "PRIMARY_DARK_430": "hsl(213, calc(var(--saturation-factor, 1) * 5%), 42.9%)",
@@ -7821,6 +8151,7 @@ const DiscordConstants = {
     "PRIMARY_LIGHT_260": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 83.9%)",
     "PRIMARY_LIGHT_300": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 80%)",
     "PRIMARY_LIGHT_330": "hsl(214, calc(var(--saturation-factor, 1) * 10.6%), 74.1%)",
+    "PRIMARY_LIGHT_345": "hsl(216, calc(var(--saturation-factor, 1) * 9.9%), 70.4%)",
     "PRIMARY_LIGHT_360": "hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 68.2%)",
     "PRIMARY_LIGHT_400": "hsl(213, calc(var(--saturation-factor, 1) * 9.9%), 60.4%)",
     "PRIMARY_LIGHT_430": "hsl(214, calc(var(--saturation-factor, 1) * 9.7%), 57.5%)",
@@ -7847,6 +8178,7 @@ const DiscordConstants = {
     "BRAND_260": "hsl(235, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "BRAND_300": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "BRAND_330": "hsl(235, calc(var(--saturation-factor, 1) * 85.1%), 81.6%)",
+    "BRAND_345": "hsl(235, calc(var(--saturation-factor, 1) * 85.2%), 78.8%)",
     "BRAND_360": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%)",
     "BRAND_400": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "BRAND_430": "hsl(235, calc(var(--saturation-factor, 1) * 85.7%), 69.8%)",
@@ -7873,6 +8205,7 @@ const DiscordConstants = {
     "BRAND_NEW_260": "hsl(235, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "BRAND_NEW_300": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "BRAND_NEW_330": "hsl(235, calc(var(--saturation-factor, 1) * 85.1%), 81.6%)",
+    "BRAND_NEW_345": "hsl(235, calc(var(--saturation-factor, 1) * 85.2%), 78.8%)",
     "BRAND_NEW_360": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%)",
     "BRAND_NEW_400": "hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "BRAND_NEW_430": "hsl(235, calc(var(--saturation-factor, 1) * 85.7%), 69.8%)",
@@ -7899,6 +8232,7 @@ const DiscordConstants = {
     "STATUS_RED_260": "hsl(359, calc(var(--saturation-factor, 1) * 82.1%), 86.9%)",
     "STATUS_RED_300": "hsl(358, calc(var(--saturation-factor, 1) * 83.1%), 83.7%)",
     "STATUS_RED_330": "hsl(359, calc(var(--saturation-factor, 1) * 83.3%), 78.8%)",
+    "STATUS_RED_345": "hsl(359, calc(var(--saturation-factor, 1) * 82.3%), 75.7%)",
     "STATUS_RED_360": "hsl(359, calc(var(--saturation-factor, 1) * 82%), 73.9%)",
     "STATUS_RED_400": "hsl(359, calc(var(--saturation-factor, 1) * 83%), 67.6%)",
     "STATUS_RED_430": "hsl(359, calc(var(--saturation-factor, 1) * 83.1%), 65.3%)",
@@ -7925,6 +8259,7 @@ const DiscordConstants = {
     "STATUS_YELLOW_260": "hsl(37, calc(var(--saturation-factor, 1) * 94.7%), 85.1%)",
     "STATUS_YELLOW_300": "hsl(37, calc(var(--saturation-factor, 1) * 95.7%), 81.6%)",
     "STATUS_YELLOW_330": "hsl(38, calc(var(--saturation-factor, 1) * 95.1%), 76.1%)",
+    "STATUS_YELLOW_345": "hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 72.5%)",
     "STATUS_YELLOW_360": "hsl(38, calc(var(--saturation-factor, 1) * 96%), 70.6%)",
     "STATUS_YELLOW_400": "hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 63.3%)",
     "STATUS_YELLOW_430": "hsl(37, calc(var(--saturation-factor, 1) * 96%), 60.8%)",
@@ -7951,6 +8286,7 @@ const DiscordConstants = {
     "STATUS_GREEN_260": "hsl(138, calc(var(--saturation-factor, 1) * 86.2%), 88.6%)",
     "STATUS_GREEN_300": "hsl(138, calc(var(--saturation-factor, 1) * 86.1%), 85.9%)",
     "STATUS_GREEN_330": "hsl(139, calc(var(--saturation-factor, 1) * 85.3%), 81.4%)",
+    "STATUS_GREEN_345": "hsl(139, calc(var(--saturation-factor, 1) * 85.3%), 78.6%)",
     "STATUS_GREEN_360": "hsl(139, calc(var(--saturation-factor, 1) * 86.2%), 77.3%)",
     "STATUS_GREEN_400": "hsl(138, calc(var(--saturation-factor, 1) * 86.1%), 71.8%)",
     "STATUS_GREEN_430": "hsl(138, calc(var(--saturation-factor, 1) * 85.8%), 69.6%)",
@@ -7977,6 +8313,7 @@ const DiscordConstants = {
     "STATUS_GREY_260": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 83.9%)",
     "STATUS_GREY_300": "hsl(210, calc(var(--saturation-factor, 1) * 9.8%), 80%)",
     "STATUS_GREY_330": "hsl(214, calc(var(--saturation-factor, 1) * 10.6%), 74.1%)",
+    "STATUS_GREY_345": "hsl(216, calc(var(--saturation-factor, 1) * 9.9%), 70.4%)",
     "STATUS_GREY_360": "hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 68.2%)",
     "STATUS_GREY_400": "hsl(213, calc(var(--saturation-factor, 1) * 9.9%), 60.4%)",
     "STATUS_GREY_430": "hsl(214, calc(var(--saturation-factor, 1) * 9.7%), 57.5%)",
@@ -8003,6 +8340,7 @@ const DiscordConstants = {
     "STATUS_ORANGE_260": "hsl(22, calc(var(--saturation-factor, 1) * 91.4%), 86.3%)",
     "STATUS_ORANGE_300": "hsl(22, calc(var(--saturation-factor, 1) * 90.7%), 83.1%)",
     "STATUS_ORANGE_330": "hsl(21, calc(var(--saturation-factor, 1) * 91.1%), 78%)",
+    "STATUS_ORANGE_345": "hsl(21, calc(var(--saturation-factor, 1) * 90.7%), 74.7%)",
     "STATUS_ORANGE_360": "hsl(21, calc(var(--saturation-factor, 1) * 91.3%), 72.9%)",
     "STATUS_ORANGE_400": "hsl(21, calc(var(--saturation-factor, 1) * 90.8%), 66.1%)",
     "STATUS_ORANGE_430": "hsl(22, calc(var(--saturation-factor, 1) * 90.3%), 63.7%)",
@@ -8029,6 +8367,7 @@ const DiscordConstants = {
     "FOCUS_PRIMARY_260": "hsl(197, calc(var(--saturation-factor, 1) * 90.8%), 82.9%)",
     "FOCUS_PRIMARY_300": "hsl(197, calc(var(--saturation-factor, 1) * 92.5%), 79.2%)",
     "FOCUS_PRIMARY_330": "hsl(197, calc(var(--saturation-factor, 1) * 91.4%), 72.7%)",
+    "FOCUS_PRIMARY_345": "hsl(196, calc(var(--saturation-factor, 1) * 91.3%), 68.6%)",
     "FOCUS_PRIMARY_360": "hsl(197, calc(var(--saturation-factor, 1) * 91.8%), 66.7%)",
     "FOCUS_PRIMARY_400": "hsl(197, calc(var(--saturation-factor, 1) * 91.5%), 58.2%)",
     "FOCUS_PRIMARY_430": "hsl(197, calc(var(--saturation-factor, 1) * 92.1%), 55.5%)",
@@ -8055,6 +8394,7 @@ const DiscordConstants = {
     "LINK_260": "hsl(197, calc(var(--saturation-factor, 1) * 90.8%), 82.9%)",
     "LINK_300": "hsl(197, calc(var(--saturation-factor, 1) * 92.5%), 79.2%)",
     "LINK_330": "hsl(197, calc(var(--saturation-factor, 1) * 91.4%), 72.7%)",
+    "LINK_345": "hsl(196, calc(var(--saturation-factor, 1) * 91.3%), 68.6%)",
     "LINK_360": "hsl(197, calc(var(--saturation-factor, 1) * 91.8%), 66.7%)",
     "LINK_400": "hsl(197, calc(var(--saturation-factor, 1) * 91.5%), 58.2%)",
     "LINK_430": "hsl(197, calc(var(--saturation-factor, 1) * 92.1%), 55.5%)",
@@ -8081,6 +8421,7 @@ const DiscordConstants = {
     "LINK_LOW_SATURATION_260": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 84.7%)",
     "LINK_LOW_SATURATION_300": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 81.2%)",
     "LINK_LOW_SATURATION_330": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 75.5%)",
+    "LINK_LOW_SATURATION_345": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 71.8%)",
     "LINK_LOW_SATURATION_360": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 69.8%)",
     "LINK_LOW_SATURATION_400": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 62.4%)",
     "LINK_LOW_SATURATION_430": "hsl(197, calc(var(--saturation-factor, 1) * 100%), 59.8%)",
@@ -8107,6 +8448,7 @@ const DiscordConstants = {
     "LINK_LIGHT_260": "hsl(212, calc(var(--saturation-factor, 1) * 78.5%), 81.8%)",
     "LINK_LIGHT_300": "hsl(213, calc(var(--saturation-factor, 1) * 78.9%), 77.6%)",
     "LINK_LIGHT_330": "hsl(212, calc(var(--saturation-factor, 1) * 78.5%), 70.8%)",
+    "LINK_LIGHT_345": "hsl(212, calc(var(--saturation-factor, 1) * 77.9%), 66.3%)",
     "LINK_LIGHT_360": "hsl(212, calc(var(--saturation-factor, 1) * 78.1%), 64.1%)",
     "LINK_LIGHT_400": "hsl(213, calc(var(--saturation-factor, 1) * 78.2%), 55.1%)",
     "LINK_LIGHT_430": "hsl(212, calc(var(--saturation-factor, 1) * 78%), 52%)",
@@ -8133,6 +8475,7 @@ const DiscordConstants = {
     "WHITE_260": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_300": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_330": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
+    "WHITE_345": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_360": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_400": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
     "WHITE_430": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)",
@@ -8159,6 +8502,7 @@ const DiscordConstants = {
     "BLACK_260": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 67.5%)",
     "BLACK_300": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 60%)",
     "BLACK_330": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 47.8%)",
+    "BLACK_345": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 40%)",
     "BLACK_360": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 36.1%)",
     "BLACK_400": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 20%)",
     "BLACK_430": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 14.5%)",
@@ -8191,6 +8535,10 @@ const DiscordConstants = {
     "GUILD_BOOSTING_PURPLE": "hsl(269, calc(var(--saturation-factor, 1) * 83.8%), 71%)",
     "GUILD_BOOSTING_BLUE_500": "hsl(221, calc(var(--saturation-factor, 1) * 70%), 55.5%)",
     "GUILD_BOOSTING_BLUE": "hsl(221, calc(var(--saturation-factor, 1) * 70%), 55.5%)",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "GUILD_BOOSTING_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS_500": "hsl(269, calc(var(--saturation-factor, 1) * 91.8%), 61.8%)",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS": "hsl(269, calc(var(--saturation-factor, 1) * 91.8%), 61.8%)",
     "PREMIUM_PERK_GREEN_500": "hsl(164, calc(var(--saturation-factor, 1) * 55.1%), 69.4%)",
     "PREMIUM_PERK_GREEN": "hsl(164, calc(var(--saturation-factor, 1) * 55.1%), 69.4%)",
     "PREMIUM_PERK_YELLOW_500": "hsl(47, calc(var(--saturation-factor, 1) * 98.9%), 63.9%)",
@@ -8253,7 +8601,10 @@ const DiscordConstants = {
     "GITHUB": "hsl(0, calc(var(--saturation-factor, 1) * 4.2%), 9.4%)",
     "PLAYSTATION_500": "hsl(220, calc(var(--saturation-factor, 1) * 95.7%), 27.1%)",
     "PLAYSTATION": "hsl(220, calc(var(--saturation-factor, 1) * 95.7%), 27.1%)",
-    "TRANSPARENT": "transparent"
+    "TRANSPARENT": "transparent",
+    "SCROLLBAR_THUMB_LIGHT": "hsl(212, calc(var(--saturation-factor, 1) * 9.8%), 52.2%)",
+    "SCROLLBAR_THUMB_DARK": "hsl(220, calc(var(--saturation-factor, 1) * 3.7%), 52%)",
+    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)"
   },
   "WebRoutes": {
     "INDEX": "/",
@@ -8327,7 +8678,11 @@ const DiscordConstants = {
     "LEAGUE_CLUBS": "/league-communities",
     "DISCORD_RECRUITING_SCAMS": "/discord-recruitment-scams",
     "DEV_NEWSLETTER_SIGNUP": "/dev-newsletter",
-    "LEGACY_DEV_NEWSLETTER": "/newsletter"
+    "LEGACY_DEV_NEWSLETTER": "/newsletter",
+    "LEGAL_ARCHIVE": "/archive/",
+    "TERMS_MAY_2020": "/archive/terms/may-2020",
+    "PRIVACY_JUNE_2020": "/archive/privacy/june-2020",
+    "GUIDELINES_MAY_2020": "/archive/guidelines/may-2020"
   },
   "APP_STORE_REVIEW_LINK": "itms-apps://itunes.apple.com/us/app/id985746746?mt=8&action=write-review",
   "ActivityPartyApplicationNames": {
@@ -8364,6 +8719,7 @@ const DiscordConstants = {
   "Base64JPEGPrefix": "data:image/jpeg;base64,",
   "Base64PNGPrefix": "data:image/png;base64,",
   "CACHED_LOCALE_STRINGS_KEY": "LocaleStrings",
+  "CACHE_STORE_CHANNELS_LAZY_KEY": "CacheStoreChannelsLazy",
   "CACHE_STORE_KEY": "CacheStore",
   "CACHE_STORE_LAZY_KEY": "CacheStoreLazy",
   "CATEGORY_ICON_SIZE": 24,
@@ -8424,6 +8780,7 @@ const DiscordConstants = {
     "OVERVIEW": "overview",
     "GIF_RESULTS": "gif_results"
   },
+  "GESTURE_HANDLER_ROOT_VIEW_ID": "DiscordGestureHandlerEnabledRootViewTag",
   "GIF_FETCH_LIMIT_IOS": 50,
   "GIF_RE_IOS": {},
   "Gradients": {
@@ -8436,8 +8793,8 @@ const DiscordConstants = {
       "#e292aa"
     ],
     "PREMIUM_GUILD": [
-      "#3e70dd",
-      "#b377f3"
+      "#3442d9",
+      "#9b44f7"
     ],
     "CREATOR_REVENUE": [
       "#11a574",
