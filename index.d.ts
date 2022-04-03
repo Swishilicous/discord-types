@@ -13,6 +13,7 @@ export type MemberStore = Stores.MemberStore;
 export type ChannelStore = Stores.ChannelStore;
 export type MessageStore = Stores.MessageStore;
 export type SelectedStore = Stores.SelectedStore;
+export type RelationshipStore = Stores.RelationshipStore;
 
 export type User = General.User;
 export type Role = General.Role;

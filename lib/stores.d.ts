@@ -69,7 +69,7 @@ export class GuildStore {
 
 export class MessageStore {
   getMessage(channelId: string, messageId: string): Message;
-  /** @guh This return object is fucking huge; I'll type it later. */
+  /** @returns This return object is fucking huge; I'll type it later. */
   getMessages(channelId: string): unknown;
   /** Not full message objects; uses MessageJSON type. */
   getRawMessages(channelId: string): Record<string | number, MessageJSON>;
@@ -79,4 +79,18 @@ export class MessageStore {
   jumpedMessageId(channelId: string): string | undefined;
   whenReady(e: unknown, callback: Function): void;
   initialize(): void;
+}
+
+export class RelationshipStore {
+  getFriendIDs(): string[];
+  /** Related to friend nicknames experiment. */
+  getNickname(userId: string): string;
+  getPendingCount(): number;
+  getRelationshipCount(): number;
+  /** @returns Enum value from constants.RelationshipTypes */
+  getRelationshipType(userId: string): number;
+  /** @returns Format: [userId: Enum value from constants.RelationshipTypes] */
+  getRelationships(): Record<number, number>;
+  isBlocked(userId: string): boolean;
+  isFriend(userId: string): boolean;
 }
