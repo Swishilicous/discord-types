@@ -1,4 +1,3 @@
-import { Store } from 'flux/utils';
 import {
   User,
   Guild,
@@ -8,7 +7,7 @@ import {
   MessageJSON,
 } from './general';
 
-export class UserStore extends Store<unknown> {
+export class UserStore {
   filter(filter: () => boolean, sort?: boolean): Record<string, User>;
   findByTag(username: string, discriminator: string): User;
   forEach(action: Function): void;
@@ -19,10 +18,10 @@ export class UserStore extends Store<unknown> {
 }
 
 /* The real name is GuildMember//GuildMemberStore but it's shortened here for convenience */
-export class MemberStore extends Store<unknown> {
+export class MemberStore {
   getAllGuildsAndMembers(): Record<string, Record<string, Member>>;
-  /** @format guildId-userId: Timestamp (number) */
-  getCommunicationDisabledUserMap(): (string | undefined)[];
+  /** @returns Format: [guildId-userId: Timestamp (string)] */
+  getCommunicationDisabledUserMap(): Record<string, string>;
   getCommunicationDisabledVersion(): number;
   getKeyedMembers(guildId: string): Record<string, Member>;
   getMember(guildId: string, userId: string): Member;
@@ -36,7 +35,7 @@ export class MemberStore extends Store<unknown> {
   initialize(): void;
 }
 
-export class ChannelStore extends Store<unknown> {
+export class ChannelStore {
   getAllThreadsForParent(channelId: string): Channel[];
   getChannel(channelId: string): Channel;
   getDMFromUserId(userId: string): string;
@@ -53,7 +52,7 @@ export class ChannelStore extends Store<unknown> {
   initialize(): void;
 }
 
-export class SelectedStore extends Store<unknown> {
+export class SelectedStore {
   getChannelId(e?: unknown): string;
   getLastChannelFollowingDestination(): unknown;
   getLastSelectedChannelId(): string;
@@ -62,13 +61,13 @@ export class SelectedStore extends Store<unknown> {
   initialize(): void;
 }
 
-export class GuildStore extends Store<unknown> {
+export class GuildStore {
   getGuild(guildId: string): Guild;
   getGuildCount(): number;
   getGuilds(): Record<string, Guild>;
 }
 
-export class MessageStore extends Store<unknown> {
+export class MessageStore {
   getMessage(channelId: string, messageId: string): Message;
   /** @guh This return object is fucking huge; I'll type it later. */
   getMessages(channelId: string): unknown;
