@@ -1,10 +1,11 @@
 import * as Other from './lib/other';
 import * as Stores from './lib/stores';
 import * as General from './lib/general';
+import * as Actions from './lib/actions';
 
 import constants from './lib/constants';
 
-export { Stores, General, Other };
+export { Stores, General, Actions, Other };
 
 export type constants = typeof constants;
 
@@ -29,5 +30,7 @@ export type EmbedJSON = General.EmbedJSON;
 export type MessageJSON = General.MessageJSON;
 export type CommandOptions = General.CommandOptions;
 export type MessageAttachment = General.MessageAttachment;
+
+export type UserActions = typeof Actions.UserActions;
 
 export type FluxDispatcher = Other.FluxDispatcher;
