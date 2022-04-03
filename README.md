@@ -9,10 +9,10 @@ Help would be greatly appreciated.
 - - User Class*
 - - Guild Class*
 - - Role Object*
-- - Embed Object*
-- - Member Object
 - - Channel Class*
+- - Embed Object*
 - - Message Class*
+- - Member Object
 - Flux Stores
 - - User Store
 - - Guild Store
@@ -20,24 +20,29 @@ Help would be greatly appreciated.
 - - Channel Store
 - - Message Store*
 - - Selected Store*
+- - Relationships Store
 - Other
 - - Constants
+- - FluxDispatcher*
 - - CommandOptions
+- - Actions
+- - - UserActions*
 - - JSON Generals (smaller general objects)
 - - - UserJSON
 - - - EmbedJSON
 - - - MessageJSON
 
-\* Most of it is typed but some if it is typed as "unknown"
+\* Most of it is typed but some if it is either typed as "unknown" or is just not even typed.
 
-`Last updated: 3/21/2022`
+`Last updated: 4/3/2022`
 
 ---
 
 ## Installation
 ```
-npm install discord-types
-pnpm add discord-types
+npm i -D discord-types
+pnpm i -D discord-types
+yarn add -D discord-types
 ```
 
 ## Intended Usage
