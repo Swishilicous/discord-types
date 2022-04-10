@@ -174,7 +174,7 @@ export class Guild {
   splash: string;
   systemChannelFlags: number;
   systemChannelId: string;
-  vanityURLCode: null;
+  vanityURLCode: string | undefined;
   verificationLevel: number;
 
   get acronym(): string;
@@ -193,13 +193,6 @@ export class Guild {
   toString(): string; // override that is identical to Guild.name
 }
 
-/*
-  If you want to help find the unknown props:
-  
-  Object.values(Webpack.getModule(m => m._channelMessages)._channelMessages)
-    .map(v => v._array.map(v => v.{PUT THE VALUE HERE})
-      .filter(v => Array.isArray(v) ? v.length : !!v)).filter(v => v.length)
-*/
 export class Message {
   constructor(message: object);
   activity: unknown;

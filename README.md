@@ -16,11 +16,11 @@ Help would be greatly appreciated.
 - Flux Stores
 - - User Store
 - - Guild Store
-- - Member Store
 - - Channel Store
 - - Message Store*
-- - Selected Store*
 - - Relationships Store
+- - Guild Member Store
+- - Selected Channel Store*
 - Other
 - - Constants
 - - FluxDispatcher*
@@ -34,7 +34,7 @@ Help would be greatly appreciated.
 
 \* Most of it is typed but some if it is either typed as "unknown" or is just not even typed.
 
-`Last updated: 4/3/2022`
+`Last updated: 4/10/2022`
 
 ---
 
@@ -49,3 +49,6 @@ yarn add -D discord-types
 ```ts
 import type { User, MemberStore, constants } from 'discord-types';
 ```
+
+## Contributing
+See [search_tools](https://github.com/Swishilicous/discord-types/blob/main/search_tools.md) for tools to find types.

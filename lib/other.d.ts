@@ -56,7 +56,7 @@ export class FluxDispatcher {
    * 
    * It runs the function with no arguments and you can use it to essentially log when nothing is being dispatched.
    * 
-   * Like a "run this when it stops dispatching" function.
+   * Like a "run this when dispatcher stops dispatching" function.
    */
   wait(callback: () => any): void;
 }
