@@ -17,7 +17,9 @@ DiscordNative.clipboard.copy(formatted);
 ### Search for a value in all cached guilds:
 ```js
 const searchGuilds = (value) => {
-  return Object.values(Webpack.getModule(m => m.getGuildCount).getGuilds()).map(g => g[value]).filter(v => Array.isArray(v) ? v.length : v);
+  return Object.values(Webpack.getModule(m => m.getGuildCount).getGuilds())
+    .map(g => g[value])
+      .filter(v => Array.isArray(v) ? v.length : v);
 };
 
 searchGuilds('banner');
@@ -28,7 +30,8 @@ searchGuilds('banner');
 const searchMessages = (value) => {
   return Object.values(Webpack.getModule(m => m._channelMessages)._channelMessages)
     .map(v => v._array.map(m => m[value])
-      .filter(v => Array.isArray(v) ? v.length : v)).filter(v => v.length);
+      .filter(v => Array.isArray(v) ? v.length : v))
+        .filter(v => v.length);
 };
 
 searchMessages('content');
@@ -37,7 +40,9 @@ searchMessages('content');
 ### Search for a value in all cached users:
 ```js
 const searchUsers = (value) => {
-  return Object.values(Webpack.getModule(m => m.getCurrentUser && m.getUser).getUsers()).map(u => u[value]).filter(v => Array.isArray(v) ? v.length : v);
+  return Object.values(Webpack.getModule(m => m.getCurrentUser && m.getUser).getUsers())
+    .map(u => u[value])
+      .filter(v => Array.isArray(v) ? v.length : v);
 };
 
 searchUsers('username');
@@ -47,10 +52,15 @@ searchUsers('username');
 Doesn't search DM channels as I'm using the GuildChannelStore. I'll make one for DM channels eventually but laaazy.
 ```js
 const searchGuildChannels = (value) => {
-  // https://1loc.dev/array/flatten-an-array/
-  const flat = (arr) => arr.reduce((a, b) => (Array.isArray(b) ? [...a, ...flat(b)] : [...a, b]), []);
   const ChannelStore = Webpack.getModule(m => m.getDMUserIds);
-  return flat(Object.values(Object.fromEntries(Object.entries(Webpack.getModule(m => m.getAllGuilds).getAllGuilds()).filter(([key]) => key !== '@favorites'))).map(g => g && Object.values(g).map(c => Array.isArray(c) && c.map(subc => subc && ChannelStore.getAllThreadsForParent(subc.channel.id).concat(subc.channel).map(c => c[value]))))).filter(Boolean);
+  const GuildChannelStore = Webpack.getModule(m => m.getAllGuilds).getAllGuilds();
+
+  return Object.values(Object.fromEntries(Object.entries(GuildChannelStore).filter(([key]) => key !== '@favorites')))
+    .map(g => g && Object.values(g)
+      .map(c => Array.isArray(c) && c
+        .map(subc => subc && ChannelStore.getAllThreadsForParent(subc.channel.id)
+          .concat(subc.channel).map(c => c[value]))))
+    .flat(Infinity).filter(Boolean);
 };
 
 searchGuildChannels('rtcRegion');

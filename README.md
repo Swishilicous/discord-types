@@ -32,7 +32,7 @@ Help would be greatly appreciated.
 - - - EmbedJSON
 - - - MessageJSON
 
-\* Most of it is typed but some if it is either typed as "unknown" or is just not even typed.
+\* Most of it is typed but some if it is either typed as "unknown" or is just missing.
 
 `Last updated: 4/10/2022`
 
