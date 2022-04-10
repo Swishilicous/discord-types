@@ -17,8 +17,7 @@ export class UserStore {
   initialize(): void;
 }
 
-/* The real name is GuildMember//GuildMemberStore but it's shortened here for convenience */
-export class MemberStore {
+export class GuildMemberStore {
   getAllGuildsAndMembers(): Record<string, Record<string, Member>>;
   /** @returns Format: [guildId-userId: Timestamp (string)] */
   getCommunicationDisabledUserMap(): Record<string, string>;
@@ -52,7 +51,7 @@ export class ChannelStore {
   initialize(): void;
 }
 
-export class SelectedStore {
+export class SelectedChannelStore {
   getChannelId(e?: unknown): string;
   getLastChannelFollowingDestination(): unknown;
   getLastSelectedChannelId(): string;

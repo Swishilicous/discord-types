@@ -11,11 +11,11 @@ export type constants = typeof constants;
 
 export type UserStore = Stores.UserStore;
 export type GuildStore = Stores.GuildStore;
-export type MemberStore = Stores.MemberStore;
 export type ChannelStore = Stores.ChannelStore;
 export type MessageStore = Stores.MessageStore;
-export type SelectedStore = Stores.SelectedStore;
+export type GuildMemberStore = Stores.GuildMemberStore;
 export type RelationshipStore = Stores.RelationshipStore;
+export type SelectedChannelStore = Stores.SelectedChannelStore;
 
 export type User = General.User;
 export type Role = General.Role;
