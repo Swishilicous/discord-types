@@ -705,6 +705,7 @@ export const constants: {
         GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: string;
         GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: string;
         GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: string;
+        GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: string;
         GUILD_IDENTITY_SETTINGS_SUBMIT: string;
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: string;
         GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: string;
@@ -1124,7 +1125,6 @@ export const constants: {
         NEW_SUBSCRIBER_SURVEY_OPEN_MODAL: string;
         NEW_SUBSCRIBER_SURVEY_SET_WINDOW: string;
         NEW_SUBSCRIBER_SURVEY_SUBMIT_RESULTS: string;
-        NOISE_DETECTED: string;
         NOTICE_DISABLE: string;
         NOTICE_DISMISS: string;
         NOTICE_SHOW: string;
@@ -1496,6 +1496,7 @@ export const constants: {
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: string;
         USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: string;
+        USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: string;
         USER_SETTINGS_ACCOUNT_SUBMIT: string;
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: string;
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: string;
@@ -1690,6 +1691,7 @@ export const constants: {
         CHANNEL_AUTOCOMPLETE_SELECTED: string;
         CHANNEL_INFORMATION_OPENED: string;
         CHANNEL_INFORMATION_TAB_CLICKED: string;
+        CHANNEL_LINK_PREVIEW_JOINED: string;
         CHANNEL_MEMBER_KICKED: string;
         CHANNEL_NOTICE_CLOSED: string;
         CHANNEL_NOTICE_CTA_CLICKED: string;
@@ -1766,7 +1768,6 @@ export const constants: {
         GUILD_CREATION_INTENT_SELECTED: string;
         GUILD_DEFAULT_DMS_UPDATED: string;
         GUILD_DIRECTORY_CHANNEL_VIEWED: string;
-        GUILD_DIRECTORY_ENTRY_REPORTED: string;
         GUILD_DIRECTORY_SEARCH: string;
         GUILD_DISCOVERY_EXITED: string;
         GUILD_DISCOVERY_GUILD_JOIN_CLICKED: string;
@@ -1776,7 +1777,6 @@ export const constants: {
         GUILD_JOIN_FEEDBACK: string;
         GUILD_MEMBERSHIP_GATE_SETTINGS_UPDATED: string;
         GUILD_OUTAGE_VIEWED: string;
-        GUILD_REPORTED: string;
         GUILD_SCHEDULED_EVENT_LINK_COPIED: string;
         GUILD_SCHEDULED_EVENT_PURCHASE_INITIATED: string;
         GUILD_SCHEDULED_EVENT_VIEWED: string;
@@ -1947,15 +1947,6 @@ export const constants: {
         SPOTIFY_BUTTON_CLICKED: string;
         SPOTIFY_LISTEN_ALONG_ENDED: string;
         SPOTIFY_LISTEN_ALONG_STARTED: string;
-        STAGE_CHANNEL_REPORTED: string;
-        STAGE_DISCOVERY_EXITED: string;
-        STAGE_DISCOVERY_LOADED: string;
-        STAGE_DISCOVERY_RELOADED: string;
-        STAGE_DISCOVERY_STAGE_EXITED: string;
-        STAGE_DISCOVERY_STAGE_JOINED: string;
-        STAGE_DISCOVERY_STAGE_OPENED: string;
-        STAGE_DISCOVERY_START_STAGE_CLICKED: string;
-        STAGE_DISCOVERY_START_STAGE_COMPLETED: string;
         STANDALONE_MANAGE_SUBSCRIPTION_PAGE_VIEWED: string;
         STARTER_CHANNELS_CTA_CLICKED: string;
         STARTER_CHANNEL_ROW_SELECTED: string;
@@ -2256,6 +2247,7 @@ export const constants: {
         DISCOVER_GAMES_YOU_PLAY: string;
         DISCOVER_POPULAR: string;
         DISCOVER_SEARCH: string;
+        EMBEDDED_ACTIVITY_LAUNCH_FAIL: string;
         EMOJI_PICKER_POPOUT: string;
         EMOJI_UPSELL_POPOUT: string;
         EMPTY_STICKER_PICKER_UPSELL: string;
@@ -2943,6 +2935,7 @@ export const constants: {
         PUBLIC_THREADS: number[];
         READABLE: number[];
         SEARCHABLE: number[];
+        STICKERS: number[];
         TEXTUAL: number[];
         THREADS: number[];
     };
@@ -5365,6 +5358,8 @@ export const constants: {
     MAX_REASON_LENGTH: number;
     MAX_REQUEST_SIZE: number;
     MAX_ROLE_LENGTH: number;
+    MAX_STAFF_ATTACHMENT_SIZE: number;
+    MAX_STAFF_REQUEST_SIZE: number;
     MAX_TIMEOUT_MS: number;
     MAX_TYPING_USERS: number;
     MAX_UPLOAD_COUNT: number;
@@ -5756,7 +5751,6 @@ export const constants: {
         LOCALIZED_PRICING: string;
         LURKING_GUILD: string;
         MFA_SMS_BACKUP: string;
-        NOISE_DETECTED: string;
         NO_INPUT_DETECTED: string;
         OUTBOUND_PROMOTION: string;
         PENDING_MEMBER: string;
@@ -6379,10 +6373,6 @@ export const constants: {
         STREAMS_INBOUND: string;
         STREAMS_OUTBOUND: string;
         TRANSPORT: string;
-    };
-    RTCVoiceExperiments: {
-        BWE_CONSERVATIVE_LINK_ESTIMATE: string;
-        BWE_REMOTE_LOCUS_CLIENT: string;
     };
     RecentMentionsFilters: {
         ALL_SERVERS: string;
