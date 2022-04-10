@@ -1,11 +1,3 @@
-/* 
-  const constants = YOUR_WEBPACK.getByProps('AbortCodes');
-  const formatted = JSON.stringify(constants, null, '\t');
-  
-  // Copy to clipboard
-  DiscordNative.clipboard.copy(formatted);
-*/
-
 const DiscordConstants = {
   "ACTIVITY_PLATFORM_TYPES": [
     "spotify",
@@ -549,7 +541,6 @@ const DiscordConstants = {
     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS": "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START": "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START",
     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR": "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR",
-    "NOISE_DETECTED": "NOISE_DETECTED",
     "USER_SETTINGS_UPDATE": "USER_SETTINGS_UPDATE",
     "USER_SETTINGS_PROTO_UPDATE": "USER_SETTINGS_PROTO_UPDATE",
     "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO": "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO",
@@ -762,6 +753,7 @@ const DiscordConstants = {
     "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER": "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR": "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO": "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
+    "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS": "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     "USER_SETTINGS_RESET_ALL_PENDING": "USER_SETTINGS_RESET_ALL_PENDING",
     "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL": "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
     "HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS": "HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS",
@@ -1566,6 +1558,7 @@ const DiscordConstants = {
     "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR": "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR",
     "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER": "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
     "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO": "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
+    "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS": "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
     "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME": "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
     "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING": "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING",
     "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT": "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
@@ -1698,6 +1691,7 @@ const DiscordConstants = {
     "INVITE_LOGIN_SUCCESSFUL": "invite_login_successful",
     "INSTANT_INVITE_SHARED": "instant_invite_shared",
     "COPY_INSTANT_INVITE": "copy_instant_invite",
+    "CHANNEL_LINK_PREVIEW_JOINED": "channel_link_preview_joined",
     "VERIFY_ACCOUNT_APP_OPENED": "verify_account_app_opened",
     "QUICKSWITCHER_OPENED": "quickswitcher_opened",
     "QUICKSWITCHER_CLOSED": "quickswitcher_closed",
@@ -1928,9 +1922,6 @@ const DiscordConstants = {
     "GUILD_WELCOME_SCREEN_SETTINGS_UPDATED": "guild_welcome_screen_settings_updated",
     "GUILD_WELCOME_SCREEN_OPTION_SELECTED": "guild_welcome_screen_option_selected",
     "MESSAGE_REPORTED": "message_reported",
-    "GUILD_REPORTED": "guild_reported",
-    "STAGE_CHANNEL_REPORTED": "stage_channel_reported",
-    "GUILD_DIRECTORY_ENTRY_REPORTED": "guild_directory_entry_reported",
     "EXPRESSION_PICKER_TAB_CLICKED": "expression_picker_tab_clicked",
     "EXPRESSION_PICKER_OPENED": "expression_picker_opened",
     "EXPRESSION_PICKER_CATEGORY_SELECTED": "expression_picker_category_selected",
@@ -1948,14 +1939,6 @@ const DiscordConstants = {
     "GUILD_MEMBERSHIP_GATE_SETTINGS_UPDATED": "guild_membership_gate_settings_updated",
     "REQUEST_TO_SPEAK_INITIATED": "request_to_speak_initiated",
     "PROMOTED_TO_SPEAKER": "promoted_to_speaker",
-    "STAGE_DISCOVERY_LOADED": "stage_discovery_loaded",
-    "STAGE_DISCOVERY_EXITED": "stage_discovery_exited",
-    "STAGE_DISCOVERY_RELOADED": "stage_discovery_reloaded",
-    "STAGE_DISCOVERY_STAGE_JOINED": "stage_discovery_stage_joined",
-    "STAGE_DISCOVERY_STAGE_EXITED": "stage_discovery_stage_exited",
-    "STAGE_DISCOVERY_STAGE_OPENED": "stage_discovery_stage_opened",
-    "STAGE_DISCOVERY_START_STAGE_CLICKED": "stage_discovery_start_stage_clicked",
-    "STAGE_DISCOVERY_START_STAGE_COMPLETED": "stage_discovery_start_stage_completed",
     "START_STAGE_OPENED": "start_stage_opened",
     "MKTG_APPLICATION_STEP": "mktg_application_step",
     "SERVER_SETUP_CTA_CLICKED": "server_setup_cta_clicked",
@@ -2463,7 +2446,8 @@ const DiscordConstants = {
     "INVITE_LINK": "Invite Link",
     "RTC_CONNECTION_PANEL": "RTC Connection Panel",
     "VOICE_CHANNEL_TILE": "Voice Channel Tile",
-    "VOICE_CONTROL_TRAY": "Voice Control Tray"
+    "VOICE_CONTROL_TRAY": "Voice Control Tray",
+    "EMBEDDED_ACTIVITY_LAUNCH_FAIL": "Embedded Activity Launch Fail"
   },
   "AnalyticsUserStatusTypes": {
     "ONLINE_DESKTOP": "online-desktop",
@@ -2986,6 +2970,17 @@ const DiscordConstants = {
       10,
       11,
       12
+    ],
+    "STICKERS": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      10,
+      11,
+      12,
+      15
     ],
     "READABLE": [
       0,
@@ -5413,6 +5408,8 @@ const DiscordConstants = {
   "MAX_REASON_LENGTH": 512,
   "MAX_REQUEST_SIZE": 104857600,
   "MAX_ROLE_LENGTH": 32,
+  "MAX_STAFF_ATTACHMENT_SIZE": 209715200,
+  "MAX_STAFF_REQUEST_SIZE": 209715200,
   "MAX_TIMEOUT_MS": 2147483647,
   "MAX_TYPING_USERS": 5,
   "MAX_UPLOAD_COUNT": 10,
@@ -5818,7 +5815,6 @@ const DiscordConstants = {
     "PREMIUM_TIER_2_TRIAL_ENDING": "PREMIUM_TIER_2_TRIAL_ENDING",
     "LURKING_GUILD": "LURKING_GUILD",
     "VIEWING_ROLES": "VIEWING_ROLES",
-    "NOISE_DETECTED": "NOISE_DETECTED",
     "INVITED_TO_SPEAK": "INVITED_TO_SPEAK",
     "OUTBOUND_PROMOTION": "OUTBOUND_PROMOTION",
     "PREMIUM_UNCANCEL": "PREMIUM_UNCANCEL",
@@ -6184,10 +6180,6 @@ const DiscordConstants = {
     "STREAMS_OUTBOUND": "STREAMS_OUTBOUND",
     "STREAMS_INBOUND": "STREAMS_INBOUND",
     "CAMERA": "CAMERA"
-  },
-  "RTCVoiceExperiments": {
-    "BWE_CONSERVATIVE_LINK_ESTIMATE": "bwe_conservative_link_estimate",
-    "BWE_REMOTE_LOCUS_CLIENT": "bwe_remote_locus_client"
   },
   "RecentMentionsFilters": {
     "ALL_SERVERS": "ALL_SERVERS",

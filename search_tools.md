@@ -6,6 +6,14 @@ Also these methods don't only pertain to typing stuff so if you understand what 
 Also yes, I know how getByProps works I'm just using a predicate filter because it's more universal and I don't know maybe someones using a shitty webpack search like powerCord's to search these.
 
 ---
+### Copy constants to your clipboard:
+```js
+const constants = Webpack.getModule(m => m.AbortCodes);
+const formatted = JSON.stringify(constants, null, '\t');
+
+DiscordNative.clipboard.copy(formatted);
+```
+---
 ### Search for a value in all cached guilds:
 ```js
 const searchGuilds = (value) => {
@@ -35,7 +43,7 @@ const searchUsers = (value) => {
 searchUsers('username');
 ```
 ---
-### Search all cached guild channels and threads.
+### Search for a value in all cached guild channels and threads:
 Doesn't search DM channels as I'm using the GuildChannelStore. I'll make one for DM channels eventually but laaazy.
 ```js
 const searchGuildChannels = (value) => {
