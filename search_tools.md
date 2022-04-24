@@ -53,10 +53,10 @@ Doesn't search DM channels as I'm using the GuildChannelStore. I'll make one for
 ```js
 const searchGuildChannels = (value) => {
   const ChannelStore = Webpack.getModule(m => m.getDMUserIds);
-  const GuildChannelStore = Webpack.getModule(m => m.getAllGuilds).getAllGuilds();
+  const GuildChannelStore = Webpack.getModule(m => m.getAllGuilds);
 
-  return Object.values(Object.fromEntries(Object.entries(GuildChannelStore).filter(([key]) => key !== '@favorites')))
-    .map(g => g && Object.values(g)
+  return Object.values(Object.fromEntries(Object.entries(GuildChannelStore.getAllGuilds())
+    .filter(([key]) => key !== '@favorites'))).map(g => g && Object.values(g)
       .map(c => Array.isArray(c) && c
         .map(subc => subc && ChannelStore.getAllThreadsForParent(subc.channel.id)
           .concat(subc.channel).map(c => c[value]))))

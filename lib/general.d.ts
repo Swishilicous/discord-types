@@ -321,6 +321,7 @@ export interface MessageJSON {
   flags: number;
   guild_id: string | undefined;
   id: string;
+  loggingName: unknown;
   member: {
     avatar: string | undefined;
     communication_disabled_until: string | undefined;
@@ -345,6 +346,7 @@ export interface MessageJSON {
   nonce: string | undefined;
   pinned: boolean;
   referenced_message: MessageJSON | undefined;
+  state: string;
   timestamp: string;
   tts: boolean;
   type: number;
