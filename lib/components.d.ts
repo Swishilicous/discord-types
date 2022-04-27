@@ -109,7 +109,7 @@ export type Checkbox = JSX.Element & {
 };
 
 export type Clickable = JSX.Element & {
-  contextType: React.Context; // React context
+  contextType: any; // React context
   defaultProps: {
     tag: 'div',
     role: 'button',
@@ -449,7 +449,7 @@ export type Spinner = JSX.Element & {
   displayName: 'Spinner';
 };
 
-enum Looks {
+declare enum Looks {
   GREY,
   BRAND,
   CUSTOM
@@ -465,7 +465,7 @@ export type TabBar = JSX.Element & {
     };
   };
 
-  Looks: Looks;
+  Looks: typeof Looks;
   Panel: JSX.Element;
   Separator: NamedComponent<'Separator'>;
   Types: {
