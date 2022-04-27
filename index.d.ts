@@ -2,10 +2,11 @@ import * as Other from './lib/other';
 import * as Stores from './lib/stores';
 import * as General from './lib/general';
 import * as Actions from './lib/actions';
+import * as Components from './lib/components';
 
 import constants from './lib/constants';
 
-export { Stores, General, Actions, Other };
+export { Components, Stores, General, Actions, Other };
 
 export type constants = typeof constants;
 
