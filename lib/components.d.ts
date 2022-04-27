@@ -1,6 +1,6 @@
 type NamedComponent<T> = JSX.Element & { displayName: T; };
 
-export type Button = JSX.Element & {
+export type DropdownButton = JSX.Element & {
   Colors: {
     BLACK: string;
     BRAND: string;
@@ -56,7 +56,7 @@ export type Card = JSX.Element & {
   defaultProps: {
     editable: false;
     outline: false;
-    type: Card.Types.PRIMARY;
+    type: string; // Card.Types.PRIMARY
   };
 
   displayName: 'Card';
@@ -78,18 +78,21 @@ export type Checkbox = JSX.Element & {
     CENTER: string;
     TOP: string;
   };
+
   Shapes: {
     BOX: string;
     ROUND: string;
   };
+
   Types: {
     DEFAULT: string;
     GHOST: string;
     INVERTED: string;
     ROW: string;
   };
+
   defaultProps: {
-    align: Checkbox.Aligns.CENTER;
+    align: string; // Checkbox.Aligns.CENTER
     color: string;
     disabled: false;
     displayOnly: false;
@@ -98,33 +101,25 @@ export type Checkbox = JSX.Element & {
     reverse: false;
     shape: string;
     size: 24;
-    type: Checkbox.Types.DEFAULT;
+    type: string; // Checkbox.Types.DEFAULT;
     value: false;
   };
 
   displayName: 'Checkbox';
 };
 
-type Clickable = JSX.Element & {
-  contextType: any; // React context
+export type Clickable = JSX.Element & {
+  contextType: React.Context; // React context
   defaultProps: {
     tag: 'div',
     role: 'button',
     tabIndex: 0;
   };
+
   displayName: 'Clickable';
 };
 
-type Divider = JSX.Element & {
-  Directions: {
-    HORIZONTAL: string;
-    VERTICAL: string;
-  };
-
-  name: 'Divider';
-};
-
-type Flex = JSX.Element & {
+export type Flex = JSX.Element & {
   Align: {
     START: string;
     END: string;
@@ -172,7 +167,7 @@ type Flex = JSX.Element & {
   displayName: 'Flex';
 };
 
-type FormItem = JSX.Element & {
+export type FormItem = JSX.Element & {
   Tags: {
     H1: string;
     H2: string;
@@ -184,7 +179,7 @@ type FormItem = JSX.Element & {
   displayName: 'FormItem';
 };
 
-type FormNotice = JSX.Element & {
+export type FormNotice = JSX.Element & {
   Types: {
     BRAND: string;
     CUSTOM: string;
@@ -197,7 +192,7 @@ type FormNotice = JSX.Element & {
   displayName: 'FormNotice';
 };
 
-type FormText = JSX.Element & {
+export type FormText = JSX.Element & {
   Types: {
     DEFAULT: string;
     DESCRIPTION: string;
@@ -212,7 +207,7 @@ type FormText = JSX.Element & {
   displayName: 'FormText';
 };
 
-type FormTitle = JSX.Element & {
+export type FormTitle = JSX.Element & {
   Tags: {
     H1: string;
     H2: string;
@@ -224,7 +219,7 @@ type FormTitle = JSX.Element & {
   displayName: 'FormTitle';
 };
 
-type HeaderBar = JSX.Element & {
+export type HeaderBar = JSX.Element & {
   Caret: JSX.Element;
   Divider: NamedComponent<'Divider'>;
   Icon: NamedComponent<'Icon'>;
@@ -233,7 +228,7 @@ type HeaderBar = JSX.Element & {
   displayName: 'HeaderBar';
 };
 
-type Menu = JSX.Element & {
+export type Menu = JSX.Element & {
   Menu: NamedComponent<'Menu'>;
   MenuCheckboxItem: JSX.Element;
   MenuControlItem: JSX.Element;
@@ -248,7 +243,7 @@ type Menu = JSX.Element & {
   };
 };
 
-type Modal = {
+export type Modal = {
   ModalCloseButton: NamedComponent<'ModalCloseButton'>;
   ModalContent: NamedComponent<'ModalContent'>;
   ModalFooter: NamedComponent<'ModalFooter'>;
@@ -265,7 +260,7 @@ type Modal = {
   default: JSX.Element;
 };
 
-type Notice = {
+export type Notice = {
   Notice: NamedComponent<'Notice'>;
   NoticeButton: NamedComponent<'NoticeButton'>;
   NoticeButtonAnchor: NamedComponent<'NoticeButtonAnchor'>;
@@ -286,4 +281,230 @@ type Notice = {
     STREAMER_MODE: string;
     WARNING: string;
   };
+};
+
+export type Popout = JSX.Element & {
+  Align: {
+    BOTTOM: string;
+    CENTER: string;
+    LEFT: string;
+    RIGHT: string;
+    TOP: string;
+  };
+
+  Animation: {
+    NONE: string;
+    TRANSLATE: string;
+    SCALE: string;
+    FADE: string;
+  };
+
+  Positions: {
+    TOP: string;
+    LEFT: string;
+    RIGHT: string;
+    BOTTOM: string;
+    CENTER: string;
+  };
+
+  defaultProps: {
+    animation: string; // Popout.Animation.TRANSLATE
+    autoInvert: true;
+    nudgeAlignIntoViewport: true;
+    position: string; // Popout.Positions.RIGHT
+    positionKey: undefined;
+    spacing: 8;
+  };
+
+  displayName: 'Popout';
+};
+
+export type RadioGroup = JSX.Element & {
+  Sizes: {
+    MEDIUM: string;
+    NONE: string;
+    NOT_SET: string;
+    SMALL: string;
+  };
+
+  displayName: 'RadioGroup';
+};
+
+export type Tooltip = JSX.Element & {
+  Colors: {
+    BLACK: string;
+    BRAND: string;
+    CUSTOM: string;
+    GREEN: string;
+    GREY: string;
+    PRIMARY: string;
+    RED: string;
+    YELLOW: string;
+  };
+
+  Positions: {
+    BOTTOM: string;
+    CENTER: string;
+    LEFT: string;
+    RIGHT: string;
+    TOP: string;
+  };
+
+  defaultProps: {
+    allowOverflow: false;
+    color: string; // Tooltip.Colors.PRIMARY
+    disableTooltipPointerEvents: true;
+    forceOpen: false;
+    hideOnClick: true;
+    position: string; // Tooltip.Positions.TOP
+    shouldShow: true;
+    spacing: number;
+  };
+
+  displayName: 'Tooltip';
+};
+
+export type Scrollers = {
+  AdvancedScrollerAuto: JSX.Element;
+  AdvancedScrollerNone: JSX.Element;
+  AdvancedScrollerThin: JSX.Element;
+};
+
+export type SearchBar = JSX.Element & {
+  Sizes: {
+    LARGE: string;
+    MEDIUM: string;
+    SMALL: string;
+  };
+
+  defaultProps: {
+    autoFocus: false;
+    disabled: false;
+    gridResults: false;
+    preventEscapePropagation: true;
+    query: '';
+    sections: [];
+    selectedColumn: -1;
+    selectedRow: -1;
+    selectedSection: 0;
+    size: string; // SearchBar.Sizes.SMALL
+    useKeyboardNavigation: true;
+  };
+
+  displayName: 'SearchBar';
+};
+
+export type SelectTempWrapper = JSX.Element & {
+  MenuPlacements: {
+    BOTTOM: string;
+    TOP: string;
+  };
+
+  displayName: 'SelectTempWrapper';
+};
+
+export type Slider = JSX.Element & {
+  defaultProps: {
+    disabled: false;
+    fillStyles: {};
+    handleSize: 10;
+    initialValue: 10;
+    keyboardStep: 1;
+    maxValue: 100;
+    minValue: 0;
+    stickToMarkers: false;
+  };
+
+  displayName: 'Slider';
+};
+
+export type Spinner = JSX.Element & {
+  Type: {
+    CHASING_DOTS: string;
+    LOW_MOTION: string;
+    PULSING_ELLIPSIS: string;
+    SPINNING_CIRCLE: string;
+    WANDERING_CUBES: string;
+  };
+
+
+  displayName: 'Spinner';
+};
+
+enum Looks {
+  GREY,
+  BRAND,
+  CUSTOM
+}
+
+export type TabBar = JSX.Element & {
+  Header: NamedComponent<'Header'>;
+  Item: NamedComponent<'Item'> & {
+    defaultProps: {
+      disableItemStyles: false;
+      disabled: false;
+      look: 0;
+    };
+  };
+
+  Looks: Looks;
+  Panel: JSX.Element;
+  Separator: NamedComponent<'Separator'>;
+  Types: {
+    SIDE: string;
+    TOP: string;
+  };
+
+  displayName: 'TabBar';
+};
+
+export type Text = JSX.Element & {
+  Colors: {
+    ALWAYS_WHITE: string;
+    BRAND: string;
+    CUSTOM: string | undefined;
+    ERROR: string;
+    HEADER_PRIMARY: string;
+    HEADER_SECONDARY: string;
+    INTERACTIVE_ACTIVE: string;
+    INTERACTIVE_NORMAL: string;
+    LINK: string;
+    MUTED: string;
+    STANDARD: string;
+    STATUS_GREEN: string;
+    STATUS_RED: string;
+    STATUS_YELLOW: string;
+  };
+
+  Sizes: {
+    SIZE_10: string;
+    SIZE_12: string;
+    SIZE_14: string;
+    SIZE_16: string;
+    SIZE_20: string;
+    SIZE_24: string;
+    SIZE_32: string;
+  };
+
+  displayName: 'Text';
+};
+
+export type TextInput = JSX.Element & {
+  Sizes: {
+    DEFAULT: string;
+    MINI: string;
+  };
+
+  defaultProps: {
+    autoFocus: false;
+    disabled: false;
+    maxLength: 999;
+    name: '';
+    placeholder: '';
+    size: string; // TextInput.Sizes.DEFAULT
+    type: 'text';
+  };
+
+  contextType: any;
+  displayName: 'TextInput';
 };
