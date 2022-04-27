@@ -228,6 +228,24 @@ export type HeaderBar = JSX.Element & {
   displayName: 'HeaderBar';
 };
 
+export type Markdown = JSX.Element & {
+  defaultProps: {
+    output: Function;
+    parser: Function;
+  };
+
+  rules: Record<string, {
+    html: Function | undefined;
+    match: Function | undefined;
+    order: number;
+    parse: Function | undefined;
+    quality?: Function;
+    react: Function | undefined;
+  }>;
+
+  displayName: 'Markdown';
+};
+
 export type Menu = JSX.Element & {
   Menu: NamedComponent<'Menu'>;
   MenuCheckboxItem: JSX.Element;
