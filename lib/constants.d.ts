@@ -16,6 +16,7 @@ export const constants: {
         ACCOUNT_DISABLED: number;
         ACCOUNT_SCHEDULED_FOR_DELETION: number;
         AUTOMOD_MESSAGE_BLOCKED: number;
+        BILLING_NON_REFUNDABLE_PAYMENT_SOURCE: number;
         BOT_DISALLOWED: number;
         BOT_REQUIRED: number;
         CHANNEL_FOLLOWING_EDIT_RATE_LIMITED: number;
@@ -142,6 +143,7 @@ export const constants: {
         ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: string;
         ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: string;
         ACCESSIBILITY_DETECTION_MODAL_SEEN: string;
+        ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: string;
         ACCESSIBILITY_KEYBOARD_MODE_DISABLE: string;
         ACCESSIBILITY_KEYBOARD_MODE_ENABLE: string;
         ACCESSIBILITY_LOW_CONTRAST_TOGGLE: string;
@@ -150,6 +152,7 @@ export const constants: {
         ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: string;
         ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: string;
         ACCESSIBILITY_SET_SATURATION: string;
+        ACCESSIBILITY_SET_SYNC_FORCED_COLORS: string;
         ACCESSIBILITY_SET_ZOOM: string;
         ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: string;
         ACCESSIBILITY_SUPPORT_CHANGED: string;
@@ -157,6 +160,9 @@ export const constants: {
         ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: string;
         ACK_APPROVED_GUILD_JOIN_REQUEST: string;
         ACTIVATE_RAGING_DEMON: string;
+        ACTIVE_CHANNELS_FETCH_FAILURE: string;
+        ACTIVE_CHANNELS_FETCH_START: string;
+        ACTIVE_CHANNELS_FETCH_SUCCESS: string;
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH: string;
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: string;
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: string;
@@ -183,6 +189,7 @@ export const constants: {
         ACTIVITY_UPDATE_SUCCESS: string;
         ACTIVITY_USER_ACTION: string;
         ADD_STICKER_PREVIEW: string;
+        ADMIN_ONBOARDING_GUIDE_DISMISS: string;
         AFK: string;
         AGE_GATE_FAILURE_MODAL_OPEN: string;
         AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: string;
@@ -370,6 +377,7 @@ export const constants: {
         CHANGE_VANITY_URL_MODAL_OPEN: string;
         CHANGE_VANITY_URL_MODAL_SUBMIT: string;
         CHANGE_VANITY_URL_MODAL_SUBMIT_FAILURE: string;
+        CHANNELS_SET_STARRED: string;
         CHANNEL_ACK: string;
         CHANNEL_CALL_POPOUT_WINDOW_OPEN: string;
         CHANNEL_COLLAPSE: string;
@@ -410,8 +418,10 @@ export const constants: {
         CHANNEL_SETTINGS_SUBMIT_FAILURE: string;
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: string;
         CHANNEL_SETTINGS_UPDATE: string;
+        CHANNEL_STARRED: string;
         CHANNEL_TOGGLE_MEMBERS_SECTION: string;
         CHANNEL_UNREAD_UPDATE: string;
+        CHANNEL_UNSTARRED: string;
         CHANNEL_UPDATES: string;
         CHECKING_FOR_UPDATES: string;
         CHECK_LAUNCHABLE_GAME: string;
@@ -513,9 +523,9 @@ export const constants: {
         EMBEDDED_ACTIVITY_DEFERRED_OPEN: string;
         EMBEDDED_ACTIVITY_DISCONNECT: string;
         EMBEDDED_ACTIVITY_DISMISS_FREE_INDICATOR: string;
-        EMBEDDED_ACTIVITY_FETCH_APPS: string;
-        EMBEDDED_ACTIVITY_FETCH_APPS_FAIL: string;
-        EMBEDDED_ACTIVITY_FETCH_APPS_SUCCESS: string;
+        EMBEDDED_ACTIVITY_FETCH_SHELF: string;
+        EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: string;
+        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: string;
         EMBEDDED_ACTIVITY_FREE_ACTIVITY_UPDATE: string;
         EMBEDDED_ACTIVITY_INBOUND_UPDATE: string;
         EMBEDDED_ACTIVITY_LAUNCH_FAIL: string;
@@ -641,11 +651,12 @@ export const constants: {
         GUILD_APPLY_BOOST_SUCCESS: string;
         GUILD_BAN_ADD: string;
         GUILD_BAN_REMOVE: string;
-        GUILD_BOOSTING_AFFINITY_CHANNEL_NOTICE_DISMISS: string;
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: string;
         GUILD_BOOST_SLOT_CREATE: string;
         GUILD_BOOST_SLOT_UPDATE: string;
         GUILD_BOOST_SLOT_UPDATE_SUCCESS: string;
+        GUILD_CHANNELS_COLLAPSED: string;
+        GUILD_CHANNELS_EXPANDED: string;
         GUILD_CREATE: string;
         GUILD_DELETE: string;
         GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: string;
@@ -687,6 +698,7 @@ export const constants: {
         GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: string;
         GUILD_EMOJIS_UPDATE: string;
         GUILD_FEATURE_ACK: string;
+        GUILD_FEED_FEATURE_MESSAGE: string;
         GUILD_FEED_FETCH_FAILURE: string;
         GUILD_FEED_FETCH_START: string;
         GUILD_FEED_FETCH_SUCCESS: string;
@@ -695,6 +707,7 @@ export const constants: {
         GUILD_FEED_ITEM_SEEN: string;
         GUILD_FEED_ITEM_UNHIDE: string;
         GUILD_FEED_ITEM_UNSEEN: string;
+        GUILD_FEED_UNFEATURE_MESSAGE: string;
         GUILD_FOLDER_COLLAPSE: string;
         GUILD_HOME_SET_SCROLL_POSITION: string;
         GUILD_IDENTITY_SETTINGS_CLOSE: string;
@@ -750,6 +763,18 @@ export const constants: {
         GUILD_ROLE_MEMBER_COUNT_FETCH_START: string;
         GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: string;
         GUILD_ROLE_MEMBER_REMOVE: string;
+        GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: string;
+        GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING: string;
+        GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: string;
+        GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: string;
+        GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: string;
+        GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: string;
+        GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: string;
+        GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: string;
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: string;
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: string;
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: string;
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: string;
         GUILD_ROLE_UPDATE: string;
         GUILD_SCHEDULED_EVENT_CREATE: string;
         GUILD_SCHEDULED_EVENT_DELETE: string;
@@ -834,6 +859,7 @@ export const constants: {
         GUILD_SOUNDBOARD_SOUND_PLAY_END: string;
         GUILD_SOUNDBOARD_SOUND_PLAY_START: string;
         GUILD_SOUNDBOARD_SOUND_REQUEST_PLAY: string;
+        GUILD_SOUNDBOARD_UPDATE_SUCCESS: string;
         GUILD_SOUNDBOARD_UPLOAD_SUCCESS: string;
         GUILD_STICKERS_CREATE_SUCCESS: string;
         GUILD_STICKERS_FETCH_SUCCESS: string;
@@ -908,6 +934,8 @@ export const constants: {
         INTEGRATION_DELETE: string;
         INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: string;
         INTEGRATION_PERMISSION_SETTINGS_CLEAR: string;
+        INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE: string;
+        INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS: string;
         INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: string;
         INTEGRATION_PERMISSION_SETTINGS_EDIT: string;
         INTEGRATION_PERMISSION_SETTINGS_INIT: string;
@@ -1035,7 +1063,6 @@ export const constants: {
         LOGIN_MFA_STEP: string;
         LOGIN_MODAL_CLOSE: string;
         LOGIN_MODAL_OPEN: string;
-        LOGIN_PASSWORDLESS_REQUEST_CODE: string;
         LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: string;
         LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: string;
         LOGIN_RESET: string;
@@ -1134,6 +1161,7 @@ export const constants: {
         NOTIFICATIONS_SET_PERMISSION_STATE: string;
         NOTIFICATIONS_SET_TASKBAR_FLASH: string;
         NOTIFICATIONS_SET_TTS_TYPE: string;
+        NOTIFICATIONS_TOGGLE_ALL_DISABLED: string;
         NOTIFICATION_CLICK: string;
         NOTIFICATION_CREATE: string;
         NOTIFICATION_SETTINGS_MODAL_CLOSE: string;
@@ -1184,7 +1212,6 @@ export const constants: {
         PARTNER_REQUIREMENTS_FETCH_FAILURE: string;
         PARTNER_REQUIREMENTS_FETCH_START: string;
         PARTNER_REQUIREMENTS_FETCH_SUCCESS: string;
-        PASSWORDLESS_SET_DEFAULT_LOGIN_METHOD: string;
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: string;
         PAYMENT_AUTHENTICATION_ERROR: string;
         PAYMENT_UPDATE: string;
@@ -1203,6 +1230,7 @@ export const constants: {
         PICTURE_IN_PICTURE_UPDATE_RECT: string;
         PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: string;
         POGGERMODE_SETTINGS_UPDATE: string;
+        POGGERMODE_UPDATE_COMBO: string;
         POPOUT_WINDOW_CLOSE: string;
         POPOUT_WINDOW_OPEN: string;
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: string;
@@ -1278,6 +1306,7 @@ export const constants: {
         RTC_DEBUG_MODAL_SET_SECTION: string;
         RTC_DEBUG_MODAL_UPDATE: string;
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: string;
+        RTC_DEBUG_POPOUT_WINDOW_OPEN: string;
         RTC_DEBUG_SET_RECORDING_FLAG: string;
         RTC_LATENCY_TEST_COMPLETE: string;
         RUNNING_GAMES_CHANGE: string;
@@ -1481,6 +1510,7 @@ export const constants: {
         USER_NOTE_LOADED: string;
         USER_NOTE_LOAD_START: string;
         USER_NOTE_UPDATE: string;
+        USER_PASSWORD_UPDATE: string;
         USER_PAYMENT_CLIENT_ADD: string;
         USER_PROFILE_FETCH_FAILURE: string;
         USER_PROFILE_FETCH_START: string;
@@ -1553,6 +1583,7 @@ export const constants: {
         WELCOME_SCREEN_UPDATE: string;
         WELCOME_SCREEN_VIEW: string;
         WINDOW_FOCUS: string;
+        WINDOW_HIDDEN: string;
         WINDOW_RESIZED: string;
     };
     ActivityActionStates: {
@@ -1633,6 +1664,7 @@ export const constants: {
         ACK_MESSAGES: string;
         ACTIVE_CHANNELS_LOADED: string;
         ACTIVE_CHANNEL_CLICKED: string;
+        ACTIVITY_ENABLE_HARDWARE_ACCELERATION: string;
         ACTIVITY_FEED_CUSTOMIZATION_OPENED: string;
         ACTIVITY_FEED_CUSTOMIZATION_SAVED: string;
         ACTIVITY_FEED_DM_VISITED: string;
@@ -1791,10 +1823,14 @@ export const constants: {
         GUILD_WELCOME_SCREEN_OPTION_SELECTED: string;
         GUILD_WELCOME_SCREEN_SETTINGS_UPDATED: string;
         HELP_CLICKED: string;
+        HOME_EVENT_CLICKED: string;
+        HOME_EXITED: string;
         HOOK_RESULT: string;
         HOVER_MENU_OPENED: string;
         HUB_ONBOARDING_CAROUSEL_SCROLLED: string;
         HUB_STUDENT_PROMPT_CLICKED: string;
+        IAR_BLOCK_USER_BUTTON_CLICKED: string;
+        IAR_LEAVE_GUILD_BUTTON_CLICKED: string;
         INBOX_CHANNEL_ACKED: string;
         INBOX_CHANNEL_CLICKED: string;
         INBOX_CHANNEL_COLLAPSED: string;
@@ -1843,6 +1879,9 @@ export const constants: {
         MIC_TESTING_STOPPED: string;
         MKTG_APPLICATION_STEP: string;
         MOBILE_APP_DOWNLOAD_MODAL_ACKED: string;
+        MOBILE_OVERLAY_CLOSED: string;
+        MOBILE_OVERLAY_OPENED: string;
+        MOBILE_OVERLAY_TOGGLED: string;
         MOBILE_WEB_HANDOFF_FAILURE: string;
         MODAL_DISMISSED: string;
         MULTI_ACCOUNT_ACCOUNT_REMOVE: string;
@@ -1892,6 +1931,7 @@ export const constants: {
         PAYMENT_FLOW_STEP: string;
         PERMISSIONS_ACKED: string;
         PERMISSIONS_REQUESTED: string;
+        POGGERMODE_SETTINGS_UPDATED: string;
         PREMIUM_CHANGELOG_CTA_CLICKED: string;
         PREMIUM_EDUCATION_VIEWED: string;
         PREMIUM_FEATURE_USAGE: string;
@@ -1948,6 +1988,8 @@ export const constants: {
         SPOTIFY_LISTEN_ALONG_ENDED: string;
         SPOTIFY_LISTEN_ALONG_STARTED: string;
         STANDALONE_MANAGE_SUBSCRIPTION_PAGE_VIEWED: string;
+        STARRED_CHANNELS_LAYOUT_TOGGLED: string;
+        STARRED_CHANNELS_UPDATED: string;
         STARTER_CHANNELS_CTA_CLICKED: string;
         STARTER_CHANNEL_ROW_SELECTED: string;
         START_LISTENING: string;
@@ -1970,6 +2012,7 @@ export const constants: {
         STREAM_SETTINGS_UPDATE: string;
         STREAM_WARNING_TRIGGERED: string;
         SURVEY_SUBMITTED: string;
+        TEXT_AREA_CTA_CLICKED: string;
         TEXT_COPIED: string;
         TEXT_IN_VOICE_OPENED: string;
         TEXT_SHARED: string;
@@ -2003,6 +2046,7 @@ export const constants: {
         VIDEO_STREAM_ENDED: string;
         VIDEO_STREAM_STARTED: string;
         VIEW_AS_ROLES_SELECTED: string;
+        VOICE_CHANNEL_INVITE_SENT: string;
         VOICE_CHANNEL_SELECTED: string;
         VOICE_CONNECTION_FAILURE: string;
         VOICE_CONNECTION_SUCCESS: string;
@@ -2020,6 +2064,7 @@ export const constants: {
     AnalyticsLocations: {
         ACTIVITY_PANEL: string;
         ACTIVITY_RPC: string;
+        ACTIVITY_SHELF: string;
         ADD_FRIENDS_TO_DM: string;
         APPLICATION_CONTEXT_MENU_PLAY: string;
         APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL: string;
@@ -2075,6 +2120,7 @@ export const constants: {
         VOICE_PANEL: string;
     };
     AnalyticsObjectTypes: {
+        ACTIVITY: string;
         BOX_ART: string;
         BUY: string;
         FPS: string;
@@ -2094,7 +2140,6 @@ export const constants: {
         AVATAR: string;
         BADGE: string;
         BOOSTING_BANNER: string;
-        BOOSTING_LOWER_PRICE_EXPERIMENT_CTA: string;
         BOOST_ANNOUNCEMENT_UPSELL: string;
         BOOST_GEM_ICON: string;
         BOOST_LEVEL_UPSELL_BUTTON: string;
@@ -2209,14 +2254,10 @@ export const constants: {
         ACTIVITY_FEED_NOW_PLAYING_CONTEXT_MENU: string;
         ACTIVITY_FEED_NOW_PLAYING_HOVER_POPOUT: string;
         ACTIVITY_PANEL: string;
-        ANIMATED_GUILD_AVATAR_UPSELL: string;
         ANIMATED_GUILD_BANNER_UPSELL: string;
         APPLICATION_EMBED: string;
         AVATAR_UPSELL_MODAL: string;
         BODY: string;
-        BOOSTING_LOWER_PRICE_EXPERIMENT_TOOLTIP: string;
-        BOOST_AUDIO_QUALITY_UPSELL: string;
-        CHANGE_GUILD_MEMBER_AVATAR: string;
         CHANNEL: string;
         CHANNEL_HEADER: string;
         CHANNEL_LIST: string;
@@ -2259,7 +2300,6 @@ export const constants: {
         GAME_POPOUT: string;
         GIFT_CODE_EMBED: string;
         GIF_PICKER_AVATAR_OR_BANNER_MODAL: string;
-        GUILD_AVATAR: string;
         GUILD_BANNER: string;
         GUILD_BOOSTING: string;
         GUILD_BOTTOM_SHEET: string;
@@ -2376,6 +2416,7 @@ export const constants: {
         SETTINGS_PAYMENT_FLOW_MODAL_TEST_PAGE: string;
         SETTINGS_POGGERMODE: string;
         SETTINGS_PREMIUM: string;
+        SETTINGS_PREMIUM_BANNER: string;
         SETTINGS_PREMIUM_GIFTING: string;
         SETTINGS_PREMIUM_PLAN_SELECT: string;
         SETTINGS_PRIVACY_AND_SAFETY: string;
@@ -2697,8 +2738,6 @@ export const constants: {
         LOGIN: string;
         LOGIN_PASSWORD: string;
         MFA: string;
-        PASSWORDLESS_CODE: string;
-        PASSWORDLESS_INTRO: string;
         REGISTER: string;
         REGISTER_ACCOUNT_INFORMATION: string;
         REGISTER_IDENTITY: string;
@@ -2806,7 +2845,6 @@ export const constants: {
     ChannelNoticeCtaSources: {
         ENABLE_PUBLIC_GUILD_UPSELL_NOTICE: string;
         GRACE_PERIOD_NOTICE: string;
-        GUILD_AFFINITY_SUGGESTION: string;
         GUILD_BANNER_NOTICE: string;
         GUILD_MFA_WARNING: string;
         GUILD_SUBSCRIPTION_NOTICE: string;
@@ -2818,7 +2856,6 @@ export const constants: {
         GUILD_BANNER: string;
         GUILD_BOOSTING: string;
         GUILD_BOOSTING_GRACE_PERIOD: string;
-        GUILD_BOOSTING_GUILD_AFFINITY: string;
         HUB_LINK: string;
         INVITE: string;
         MAX_MEMBER_COUNT: string;
@@ -3469,6 +3506,7 @@ export const constants: {
         FOCUS_ATTACHMENT_AREA: string;
         FOCUS_CHANNEL_TEXT_AREA: string;
         FOCUS_CHAT_BUTTON: string;
+        FOCUS_COMPOSER_TITLE: string;
         FOCUS_FRIEND_SEARCH: string;
         FOCUS_MESSAGES: string;
         FOCUS_SEARCH: string;
@@ -3502,6 +3540,8 @@ export const constants: {
         SET_SEARCH_QUERY: string;
         SHAKE_APP: string;
         SHOW_ACTIVITIES_BOOSTING_UPSELL: string;
+        SHOW_ACTIVITIES_CHANNEL_SELECTOR: string;
+        SHOW_EMBEDDED_ACTIVITY_SCREEN: string;
         SHOW_OAUTH2_MODAL: string;
         SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP: string;
         TEXTAREA_BLUR: string;
@@ -3567,19 +3607,188 @@ export const constants: {
         JoinGuild: number;
     };
     CurrencyCodes: {
+        AED: string;
+        AFN: string;
+        ALL: string;
+        AMD: string;
+        ANG: string;
+        AOA: string;
+        ARS: string;
         AUD: string;
+        AWG: string;
+        AZN: string;
+        BAM: string;
+        BBD: string;
+        BDT: string;
+        BGN: string;
+        BHD: string;
+        BIF: string;
+        BMD: string;
+        BND: string;
+        BOB: string;
+        BOV: string;
         BRL: string;
+        BSD: string;
+        BTN: string;
+        BWP: string;
+        BYN: string;
+        BYR: string;
+        BZD: string;
         CAD: string;
+        CDF: string;
+        CHE: string;
+        CHF: string;
+        CHW: string;
+        CLF: string;
+        CLP: string;
+        CNY: string;
+        COP: string;
+        COU: string;
+        CRC: string;
+        CUC: string;
+        CUP: string;
+        CVE: string;
+        CZK: string;
+        DJF: string;
+        DKK: string;
+        DOP: string;
+        DZD: string;
+        EGP: string;
+        ERN: string;
+        ETB: string;
         EUR: string;
+        FJD: string;
+        FKP: string;
         GBP: string;
+        GEL: string;
+        GHS: string;
+        GIP: string;
+        GMD: string;
+        GNF: string;
+        GTQ: string;
+        GYD: string;
+        HKD: string;
+        HNL: string;
+        HRK: string;
+        HTG: string;
+        HUF: string;
+        IDR: string;
+        ILS: string;
+        INR: string;
+        IQD: string;
+        IRR: string;
+        ISK: string;
+        JMD: string;
+        JOD: string;
         JPY: string;
+        KES: string;
+        KGS: string;
+        KHR: string;
+        KMF: string;
+        KPW: string;
+        KRW: string;
+        KWD: string;
+        KYD: string;
+        KZT: string;
+        LAK: string;
+        LBP: string;
+        LKR: string;
+        LRD: string;
+        LSL: string;
+        LTL: string;
+        LVL: string;
+        LYD: string;
+        MAD: string;
+        MDL: string;
+        MGA: string;
+        MKD: string;
+        MMK: string;
+        MNT: string;
+        MOP: string;
+        MRO: string;
+        MUR: string;
+        MVR: string;
+        MWK: string;
+        MXN: string;
+        MXV: string;
+        MYR: string;
+        MZN: string;
+        NAD: string;
+        NGN: string;
+        NIO: string;
         NOK: string;
+        NPR: string;
+        NZD: string;
+        OMR: string;
+        PAB: string;
         PEN: string;
+        PGK: string;
         PHP: string;
+        PKR: string;
         PLN: string;
+        PYG: string;
+        QAR: string;
+        RON: string;
+        RSD: string;
         RUB: string;
+        RWF: string;
+        SAR: string;
+        SBD: string;
+        SCR: string;
+        SDG: string;
+        SEK: string;
+        SGD: string;
+        SHP: string;
+        SLL: string;
+        SOS: string;
+        SRD: string;
+        SSP: string;
+        STD: string;
+        SVC: string;
+        SYP: string;
+        SZL: string;
+        THB: string;
+        TJS: string;
+        TMT: string;
+        TND: string;
+        TOP: string;
         TRY: string;
+        TTD: string;
+        TWD: string;
+        TZS: string;
+        UAH: string;
+        UGX: string;
         USD: string;
+        USN: string;
+        USS: string;
+        UYI: string;
+        UYU: string;
+        UZS: string;
+        VEF: string;
+        VND: string;
+        VUV: string;
+        WST: string;
+        XAF: string;
+        XAG: string;
+        XAU: string;
+        XBA: string;
+        XBB: string;
+        XBC: string;
+        XBD: string;
+        XCD: string;
+        XDR: string;
+        XFU: string;
+        XOF: string;
+        XPD: string;
+        XPF: string;
+        XPT: string;
+        XSU: string;
+        XTS: string;
+        XUA: string;
+        YER: string;
+        ZAR: string;
+        ZMW: string;
+        ZWL: string;
     };
     CustomDiscordApplicationId: string;
     DEFAULT_CHAT_SIDEBAR_WIDTH: number;
@@ -3850,7 +4059,6 @@ export const constants: {
         GUILD_DISCOVERY_CATEGORIES: string;
         GUILD_DISCOVERY_VALID_TERM: string;
         GUILD_EVENTS: string;
-        GUILD_MEMBERSHIP_AUTOMATION_VERIFY: string;
         HANDOFF: string;
         HANDOFF_EXCHANGE: string;
         HUB_EMAIL_VERIFY: string;
@@ -3888,7 +4096,6 @@ export const constants: {
         OUTBOUND_PROMOTIONS_PREVIEW: string;
         PARTNERS_APPLY: string;
         PARTNERS_CONNECTIONS: string;
-        PASSWORDLESS_LOGIN_CODE: string;
         PHONE: string;
         PHONE_VERIFY_NO_PASSWORD: string;
         PREMIUM_USAGE: string;
@@ -4118,8 +4325,6 @@ export const constants: {
         ANIMATED_BANNER: string;
         ANIMATED_ICON: string;
         BANNER: string;
-        BOOSTING_TIERS_EXPERIMENT_MEDIUM_GUILD: string;
-        BOOSTING_TIERS_EXPERIMENT_SMALL_GUILD: string;
         COMMERCE: string;
         COMMUNITY: string;
         CREATOR_MONETIZABLE: string;
@@ -4143,11 +4348,9 @@ export const constants: {
         ROLE_ICONS: string;
         ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE: string;
         ROLE_SUBSCRIPTIONS_ENABLED: string;
-        SEVEN_DAY_THREAD_ARCHIVE: string;
         TEXT_IN_VOICE_ENABLED: string;
         THREADS_ENABLED: string;
         THREADS_ENABLED_TESTING: string;
-        THREE_DAY_THREAD_ARCHIVE: string;
         VANITY_URL: string;
         VERIFIED: string;
         VIP_REGIONS: string;
@@ -4196,6 +4399,7 @@ export const constants: {
         EDIT_WEBHOOK: string;
         EMOJI: string;
         GUILD_AUTOMOD: string;
+        GUILD_AUTOMOD_MESSAGE_FILTER: string;
         GUILD_PREMIUM: string;
         GUILD_TEMPLATES: string;
         INSTANT_INVITES: string;
@@ -4231,6 +4435,7 @@ export const constants: {
     GuildSettingsSubsections: {
         DEFAULT_NOTIFICATIONS: string;
         DISPLAY: string;
+        INVITE: string;
     };
     GuildsBarDragTypes: {
         FOLDER: string;
@@ -4741,12 +4946,15 @@ export const constants: {
         BUILD_OVERRIDE_EMBED: string;
         CHANNEL_FOLLOWING: string;
         CORRUPT_INSTALLATION: string;
+        CREATOR_FAQ: string;
+        CREATOR_TERMS: string;
         DATA_PRIVACY_CONTROLS: string;
         DISABLE_GUILD_COMMUNICATION: string;
         DM_COULD_NOT_BE_DELIVERED: string;
         ENABLE_MIC_CHROME: string;
         ENABLE_MIC_FIREFOX: string;
         EPHEMERAL_MESSAGES: string;
+        FORCED_COLORS: string;
         FUNIMATION_PROMOTION: string;
         GDPR_ACCOUNT_DELETE: string;
         GDPR_ACCOUNT_DISABLE: string;
@@ -4760,6 +4968,7 @@ export const constants: {
         GUILD_INVITE_SPLASH: string;
         GUILD_SUBSCRIPTIONS: string;
         GUILD_VANITY_URL: string;
+        HIGHLIGHTS: string;
         HOLIDAY_PROMOTION_BOGO: string;
         INTEGRATIONS: string;
         INVALID_INVITES: string;
@@ -4785,6 +4994,7 @@ export const constants: {
         QUICK_SWITCHER_TUTORIAL: string;
         REDUCED_MOTION: string;
         RICH_PRESENCE_INTRODUCTION: string;
+        ROLE_SUBSCRIPTION_TRIAL: string;
         SEARCH_INDEXING: string;
         SERVER_DISCOVERY: string;
         SERVER_DISCOVERY_GUIDELINES: string;
@@ -4843,6 +5053,7 @@ export const constants: {
     IS_SEARCH_FILTER_TOKEN: {
     };
     InAppNotificationTypes: {
+        FORUM_THREAD_CREATED: string;
         MESSAGE: string;
     };
     InputModes: {
@@ -4866,6 +5077,10 @@ export const constants: {
         INVITE_SYSTEM_MESSAGE: string;
         SETTINGS_INVITE: string;
         STREAM_INVITE: string;
+        VC_MEMBER_CHANNEL_CALL: string;
+        VC_MEMBER_CONTEXT_MENU: string;
+        VC_MEMBER_GUILD_CHANNELS: string;
+        VC_MEMBER_STREAM_INVITE: string;
         WELCOME_MESSAGE: string;
     };
     IntegrationSettingsSections: {
@@ -5055,16 +5270,6 @@ export const constants: {
         regex: {
         };
     }[];
-    LOCALIZED_PRICING_COUNTRIES_TO_CURRENCIES: {
-        BR: string;
-        PL: string;
-        TR: string;
-    };
-    LOCALIZED_PRICING_CURRENCIES_TO_COUNTRIES: {
-        brl: string;
-        pln: string;
-        try: string;
-    };
     LOCAL_BOT_ID: string;
     LOCAL_PLATFORM_TYPES: string[];
     Layers: {
@@ -5155,11 +5360,13 @@ export const constants: {
         "]": number;
         "`": number;
         a: number;
+        alt: number;
         b: number;
         back: number;
         backspace: number;
         c: number;
         "caps lock": number;
+        ctrl: number;
         d: number;
         delete: number;
         down: number;
@@ -5196,12 +5403,9 @@ export const constants: {
         k: number;
         l: number;
         left: number;
-        "left alt": number;
-        "left ctrl": number;
-        "left meta": number;
-        "left shift": number;
         m: number;
         menu: number;
+        meta: number;
         n: number;
         "num lock": number;
         "numpad *": number;
@@ -5234,6 +5438,7 @@ export const constants: {
         "right meta": number;
         "right shift": number;
         s: number;
+        shift: number;
         sleep: number;
         space: number;
         stop: number;
@@ -5748,6 +5953,7 @@ export const constants: {
         H264_DISABLED: string;
         HARDWARE_MUTE: string;
         INVITED_TO_SPEAK: string;
+        LAUNCH_GAME_FAILURE: string;
         LOCALIZED_PRICING: string;
         LURKING_GUILD: string;
         MFA_SMS_BACKUP: string;
@@ -5972,8 +6178,10 @@ export const constants: {
         "5": string;
         "6": string;
         "7": string;
+        "8": string;
         "99": string;
         CARD: number;
+        GCASH: number;
         GIROPAY: number;
         PAYMENT_REQUEST: number;
         PAYPAL: number;
@@ -6088,6 +6296,7 @@ export const constants: {
     };
     PopoutWindowKeys: {
         CHANNEL_CALL_POPOUT: string;
+        RTC_DEBUG_POPOUT: string;
         SOUNDBOARD: string;
     };
     PremiumPaymentSubscriptionModes: {
@@ -6204,6 +6413,7 @@ export const constants: {
         DISCONNECT_FROM_LOBBY: string;
         DISCONNECT_FROM_LOBBY_VOICE: string;
         DISPATCH: string;
+        ENCOURAGE_HW_ACCELERATION: string;
         GET_ACTIVITY_JOIN_TICKET: string;
         GET_APPLICATION_TICKET: string;
         GET_CHANNEL: string;
@@ -6443,7 +6653,6 @@ export const constants: {
         REGISTER: string;
         RESET: string;
         VERIFY: string;
-        VERIFY_GUILD_MEMBERSHIP_AUTOMATION: string;
         VERIFY_HUB_EMAIL: string;
         VERIFY_REQUEST: string;
         XBOX_EDU: string;
@@ -7210,6 +7419,8 @@ export const constants: {
         INTERACTIVE_MUTED: string[];
         INTERACTIVE_NORMAL: string[];
         LOGO_PRIMARY: string[];
+        MODAL_BACKGROUND: string[];
+        MODAL_FOOTER_BACKGROUND: string[];
         SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB: string[];
         SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK: string[];
         SCROLLBAR_AUTO_THUMB: string[];
@@ -7306,7 +7517,6 @@ export const constants: {
         ANIMATED_AVATAR: string;
         ANIMATED_EMOJI: string;
         BADGE: string;
-        CHANGE_IDENTITY: string;
         CUSTOM_PROFILES: string;
         EMOJI_AUTOCOMPLETE: string;
         GLOBAL_EMOJI: string;
@@ -7481,6 +7691,8 @@ export const constants: {
         MKTG_PAGE_VIEWED: string;
         MKTG_VIDEO_PLAYED: string;
         MKTG_WARFRAME_CTA_CLICKED: string;
+        SEO_PAGE_CTA_CLICKED: string;
+        SEO_PAGE_VIEWED: string;
     };
     WebAnalyticsPageLoads: {
         MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN: string;
