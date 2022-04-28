@@ -3,6 +3,11 @@ interface DispatchEvent {
   [key: string]: any;
 }
 
+export interface ModalEvent {
+  onClose: () => Promise<void>,
+  transitionState: number;
+}
+
 export class FluxDispatcher {
   /**
    * I have no fucking idea what this does.

@@ -35,3 +35,4 @@ export type MessageAttachment = General.MessageAttachment;
 export type UserActions = typeof Actions.UserActions;
 
 export type FluxDispatcher = Other.FluxDispatcher;
+export type ModalEvent = Other.ModalEvent;
