@@ -25,4 +25,4 @@ export { default as Text } from './Text';
 export { default as TextInput } from './TextInput';
 export { default as Tooltip } from './Tooltip';
 
-export type NamedComponent<T> = JSX.Element & { displayName: T; };
+export type NamedComponent<T extends string> = JSX.Element & { displayName: T; };
