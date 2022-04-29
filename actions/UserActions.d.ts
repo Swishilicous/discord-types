@@ -1,7 +1,6 @@
-// update the version number in package.json
-import { User } from './general';
+import { User } from '../general';
 
-export const UserActions: {
+export default interface UserActions {
   /**
    * Sends a PATCH request to `constants.Endpoints.USER_AGREEMENTS` with a body of `terms: boolean, privacy: boolean`.
    * 
@@ -57,4 +56,4 @@ export const UserActions: {
   getUser(userId: string): Promise<User>;
 
   setFlag(e: number, t?: boolean): unknown;
-};
+}

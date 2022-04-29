@@ -1,0 +1,20 @@
+type Card = JSX.Element & {
+  Types: {
+    BRAND: string;
+    CUSTOM: string;
+    DANGER: string;
+    PRIMARY: string;
+    SUCCESS: string;
+    WARNING: string;
+  };
+
+  defaultProps: {
+    editable: false;
+    outline: false;
+    type: string; // Card.Types.PRIMARY
+  };
+
+  displayName: 'Card';
+};
+
+export default Card;

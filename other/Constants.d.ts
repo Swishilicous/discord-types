@@ -1,11 +1,11 @@
-const DiscordConstants = {
+interface Constants {
   "ACTIVITY_PLATFORM_TYPES": [
     "spotify",
     "xbox",
     "playstation"
   ],
   "ADYEN_RESULT_CODE_TYPES": {
-    "AUTHORISED": "authorised"
+    "AUTHORISED": "authorised";
   },
   "API_HOST": "discord.com",
   "AUDIT_LOG_PAGE_LIMIT": 50,
@@ -123,7 +123,7 @@ const DiscordConstants = {
     "TOO_MANY_THREAD_MEMBERS": 30033,
     "TOO_MANY_THREADS": 160006,
     "TOO_MANY_ANNOUNCEMENT_THREADS": 160007,
-    "AUTOMOD_MESSAGE_BLOCKED": 200000
+    "AUTOMOD_MESSAGE_BLOCKED": 200000;
   },
   "Accessibility": {
     "FONT_SIZE_DEFAULT": 16,
@@ -176,7 +176,7 @@ const DiscordConstants = {
       150,
       175,
       200
-    ]
+    ];
   },
   "ActionTypes": {
     "USER_UPDATE": "USER_UPDATE",
@@ -654,6 +654,15 @@ const DiscordConstants = {
     "GUILD_ROLE_MEMBER_COUNT_FETCH_START": "GUILD_ROLE_MEMBER_COUNT_FETCH_START",
     "GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS": "GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS",
     "GUILD_ROLE_MEMBER_COUNT_FETCH_FAILURE": "GUILD_ROLE_MEMBER_COUNT_FETCH_FAILURE",
+    "GUILD_ROLE_PROMPTS_CREATE_SUCCESS": "GUILD_ROLE_PROMPTS_CREATE_SUCCESS",
+    "GUILD_ROLE_PROMPTS_CREATE_FAILURE": "GUILD_ROLE_PROMPTS_CREATE_FAILURE",
+    "GUILD_ROLE_PROMPTS_FETCH_SUCCESS": "GUILD_ROLE_PROMPTS_FETCH_SUCCESS",
+    "GUILD_ROLE_PROMPTS_FETCH_FAILURE": "GUILD_ROLE_PROMPTS_FETCH_FAILURE",
+    "GUILD_ROLE_PROMPTS_UPDATE_SUCCESS": "GUILD_ROLE_PROMPTS_UPDATE_SUCCESS",
+    "GUILD_ROLE_PROMPTS_UPDATE_FAILURE": "GUILD_ROLE_PROMPTS_UPDATE_FAILURE",
+    "GUILD_ROLE_PROMPTS_DELETE_SUCCESS": "GUILD_ROLE_PROMPTS_DELETE_SUCCESS",
+    "GUILD_ROLE_PROMPTS_DELETE_FAILURE": "GUILD_ROLE_PROMPTS_DELETE_FAILURE",
+    "GUILD_SETTINGS_ROLE_PROMPT_UPDATE": "GUILD_SETTINGS_ROLE_PROMPT_UPDATE",
     "GUILD_INTEGRATIONS_UPDATE": "GUILD_INTEGRATIONS_UPDATE",
     "INTEGRATION_CREATE": "INTEGRATION_CREATE",
     "INTEGRATION_UPDATE": "INTEGRATION_UPDATE",
@@ -1501,6 +1510,7 @@ const DiscordConstants = {
     "APPLICATION_COMMAND_USED": "APPLICATION_COMMAND_USED",
     "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST": "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
     "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE": "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE",
+    "APPLICATION_COMMAND_PERMISSIONS_UPDATE": "APPLICATION_COMMAND_PERMISSIONS_UPDATE",
     "INTERACTION_MODAL_CREATE": "INTERACTION_MODAL_CREATE",
     "CREATE_PENDING_REPLY": "CREATE_PENDING_REPLY",
     "SET_PENDING_REPLY_SHOULD_MENTION": "SET_PENDING_REPLY_SHOULD_MENTION",
@@ -1625,12 +1635,12 @@ const DiscordConstants = {
     "GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING": "GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING",
     "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING": "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
     "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING": "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING",
-    "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL": "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL"
+    "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL": "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL";
   },
   "ActivityActionStates": {
     "LOADING": "LOADING",
     "COMPLETE": "COMPLETE",
-    "FAILED": "FAILED"
+    "FAILED": "FAILED";
   },
   "ActivityActionTypes": {
     "1": "JOIN",
@@ -1640,12 +1650,12 @@ const DiscordConstants = {
     "JOIN": 1,
     "LISTEN": 3,
     "WATCH": 4,
-    "JOIN_REQUEST": 5
+    "JOIN_REQUEST": 5;
   },
   "ActivityCardTypes": {
     "GAME": "game",
     "USER": "user",
-    "GROUP": "group"
+    "GROUP": "group";
   },
   "ActivityFlags": {
     "INSTANCE": 1,
@@ -1654,7 +1664,7 @@ const DiscordConstants = {
     "PLAY": 32,
     "PARTY_PRIVACY_FRIENDS": 64,
     "PARTY_PRIVACY_VOICE_CHANNEL": 128,
-    "EMBEDDED": 256
+    "EMBEDDED": 256;
   },
   "ActivityGamePlatforms": {
     "DESKTOP": "desktop",
@@ -1664,13 +1674,13 @@ const DiscordConstants = {
     "ANDROID": "android",
     "EMBEDDED": "embedded",
     "PS4": "ps4",
-    "PS5": "ps5"
+    "PS5": "ps5";
   },
   "ActivityPartyPrivacy": {
     "0": "PRIVATE",
     "1": "PUBLIC",
     "PRIVATE": 0,
-    "PUBLIC": 1
+    "PUBLIC": 1;
   },
   "ActivityTypes": {
     "0": "PLAYING",
@@ -1684,16 +1694,16 @@ const DiscordConstants = {
     "LISTENING": 2,
     "WATCHING": 3,
     "CUSTOM_STATUS": 4,
-    "COMPETING": 5
+    "COMPETING": 5;
   },
   "AddFriendTabs": {
     "USERNAME": "Username",
-    "NEARBY_SCAN": "Nearby Scan"
+    "NEARBY_SCAN": "Nearby Scan";
   },
   "AllowedMentionTypes": {
     "USERS": "users",
     "ROLES": "roles",
-    "EVERYONE": "everyone"
+    "EVERYONE": "everyone";
   },
   "AnalyticEvents": {
     "APP_OPENED": "app_opened",
@@ -2091,13 +2101,16 @@ const DiscordConstants = {
     "STARRED_CHANNELS_LAYOUT_TOGGLED": "starred_channels_layout_toggled",
     "POGGERMODE_SETTINGS_UPDATED": "poggermode_settings_updated",
     "IAR_BLOCK_USER_BUTTON_CLICKED": "iar_block_user_button_clicked",
-    "IAR_LEAVE_GUILD_BUTTON_CLICKED": "iar_leave_guild_button_clicked"
+    "IAR_LEAVE_GUILD_BUTTON_CLICKED": "iar_leave_guild_button_clicked",
+    "EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED": "emoji_upload_file_size_limit_exceeded",
+    "EMOJI_UPLOAD_STARTED": "emoji_upload_started",
+    "EMOJI_UPLOAD_COMPLETED": "emoji_upload_completed";
   },
   "AnalyticsGameOpenTypes": {
     "JOIN": "join",
     "ASK_TO_JOIN": "ask to join",
     "LAUNCH": "launch",
-    "SPECTATE": "spectate"
+    "SPECTATE": "spectate";
   },
   "AnalyticsLocations": {
     "GUILD_CREATE_INVITE_SUGGESTION": "Guild Create Invite Suggestion",
@@ -2155,7 +2168,7 @@ const DiscordConstants = {
     "MANAGE_ACCOUNTS_MODAL": "Manage Accounts Modal",
     "CONTEXT_MENU": "Context Menu",
     "GUILD_CHANNEL_LIST": "Guild Channel List",
-    "ACTIVITY_SHELF": "Activity Shelf"
+    "ACTIVITY_SHELF": "Activity Shelf";
   },
   "AnalyticsObjectTypes": {
     "GIFT": "gift",
@@ -2169,7 +2182,7 @@ const DiscordConstants = {
     "TRIAL": "trial",
     "FPS": "fps",
     "RESOLUTION": "resolution",
-    "ACTIVITY": "activity"
+    "ACTIVITY": "activity";
   },
   "AnalyticsObjects": {
     "TOOLTIP": "Tooltip",
@@ -2235,12 +2248,12 @@ const DiscordConstants = {
     "THREAD_ARCHIVE_DURATION_DROPDOWN": "Thread Archive Duration Dropdown",
     "BOOST_SERVER_CTA": "Boost This Server CTA",
     "SERVER_STATUS_CTA": "See Server Status CTA",
-    "ACTIVITIES_BOOSTING_UPSELL": "ACTIVITIES_BOOSTING_UPSELL"
+    "ACTIVITIES_BOOSTING_UPSELL": "ACTIVITIES_BOOSTING_UPSELL";
   },
   "AnalyticsOverlayLocations": {
     "OVERLAY_UNLOCKED": "overlay_unlocked",
     "OVERLAY_UNLOCKED_PINNED": "overlay_unlocked_pinned",
-    "OVERLAY_LOCKED_ACTIVATED": "overlay_locked_activated"
+    "OVERLAY_LOCKED_ACTIVATED": "overlay_locked_activated";
   },
   "AnalyticsPages": {
     "AUTH": "Auth",
@@ -2282,7 +2295,7 @@ const DiscordConstants = {
     "APPLICATION_DIRECTORY": "Application Directory",
     "GIFTING_SETTINGS": "Gifting Settings",
     "SOUNDBOARD_WHEEL": "Soundboard Wheel",
-    "SOUNDBOARD_POPOUT": "Soundboard Popout"
+    "SOUNDBOARD_POPOUT": "Soundboard Popout";
   },
   "AnalyticsSections": {
     "HERO": "Hero",
@@ -2488,21 +2501,21 @@ const DiscordConstants = {
     "RTC_CONNECTION_PANEL": "RTC Connection Panel",
     "VOICE_CHANNEL_TILE": "Voice Channel Tile",
     "VOICE_CONTROL_TRAY": "Voice Control Tray",
-    "EMBEDDED_ACTIVITY_LAUNCH_FAIL": "Embedded Activity Launch Fail"
+    "EMBEDDED_ACTIVITY_LAUNCH_FAIL": "Embedded Activity Launch Fail";
   },
   "AnalyticsUserStatusTypes": {
     "ONLINE_DESKTOP": "online-desktop",
-    "ONLINE_MOBILE": "online-mobile-only"
+    "ONLINE_MOBILE": "online-mobile-only";
   },
   "AppContext": {
     "OVERLAY": "OVERLAY",
     "APP": "APP",
-    "POPOUT": "POPOUT"
+    "POPOUT": "POPOUT";
   },
   "AppleBillingUrls": {
     "PAYMENT_SOURCE_MANAGEMENT": "https://support.apple.com/HT201266",
     "BILLING_HISTORY": "https://support.apple.com/HT201266",
-    "SUBSCRIPTION_MANAGEMENT": "https://support.apple.com/HT202039"
+    "SUBSCRIPTION_MANAGEMENT": "https://support.apple.com/HT202039";
   },
   "ApplicationCommandPermissionTypes": {
     "1": "ROLE",
@@ -2510,7 +2523,7 @@ const DiscordConstants = {
     "3": "CHANNEL",
     "ROLE": 1,
     "USER": 2,
-    "CHANNEL": 3
+    "CHANNEL": 3;
   },
   "ApplicationFlags": {
     "2": "EMBEDDED_RELEASED",
@@ -2532,12 +2545,12 @@ const DiscordConstants = {
     "GATEWAY_GUILD_MEMBERS_LIMITED": 32768,
     "VERIFICATION_PENDING_GUILD_LIMIT": 65536,
     "EMBEDDED": 131072,
-    "EMBEDDED_FIRST_PARTY": 1048576
+    "EMBEDDED_FIRST_PARTY": 1048576;
   },
   "ApplicationStreamDeleteReasons": {
     "USER_REQUESTED": "user_requested",
     "STREAM_FULL": "stream_full",
-    "UNAUTHORIZED": "unauthorized"
+    "UNAUTHORIZED": "unauthorized";
   },
   "ApplicationStreamStates": {
     "CONNECTING": "CONNECTING",
@@ -2545,7 +2558,7 @@ const DiscordConstants = {
     "RECONNECTING": "RECONNECTING",
     "ENDED": "ENDED",
     "PAUSED": "PAUSED",
-    "FAILED": "FAILED"
+    "FAILED": "FAILED";
   },
   "AppliedGuildBoostLevels": {
     "1": "LEVEL_1",
@@ -2565,25 +2578,25 @@ const DiscordConstants = {
     "LEVEL_6": 6,
     "LEVEL_7": 7,
     "LEVEL_8": 8,
-    "LEVEL_9": 9
+    "LEVEL_9": 9;
   },
   "AppliedGuildBoostsRequiredForBoostedGuildTier": {
     "0": 0,
     "1": 2,
     "2": 7,
-    "3": 14
+    "3": 14;
   },
   "Arrows": {
     "UP": "UP",
     "DOWN": "DOWN",
     "LEFT": "LEFT",
-    "RIGHT": "RIGHT"
+    "RIGHT": "RIGHT";
   },
   "AuditLogActionTypes": {
     "ALL": "ALL",
     "CREATE": "CREATE",
     "UPDATE": "UPDATE",
-    "DELETE": "DELETE"
+    "DELETE": "DELETE";
   },
   "AuditLogActions": {
     "ALL": null,
@@ -2640,7 +2653,7 @@ const DiscordConstants = {
     "AUTO_MODERATION_RULE_DELETE": 142,
     "AUTO_MODERATION_BLOCK_MESSAGE": 143,
     "CREATOR_MONETIZATION_REQUEST_CREATED": 150,
-    "CREATOR_MONETIZATION_TERMS_ACCEPTED": 151
+    "CREATOR_MONETIZATION_TERMS_ACCEPTED": 151;
   },
   "AuditLogChangeKeys": {
     "NAME": "name",
@@ -2724,11 +2737,18 @@ const DiscordConstants = {
     "UNICODE_EMOJI": "unicode_emoji",
     "LOCATION": "location",
     "COMMUNICATION_DISABLED_UNTIL": "communication_disabled_until",
-    "AUTO_MODERATION_TRIGGERED_RULE_NAME": "triggered_rule_name"
+    "AUTO_MODERATION_TRIGGERED_RULE_NAME": "triggered_rule_name",
+    "AUTO_MODERATION_TRIGGER_TYPE": "trigger_type",
+    "AUTO_MODERATION_TRIGGER_METADATA": "trigger_metadata",
+    "AUTO_MODERATION_EVENT_TYPE": "event_type",
+    "AUTO_MODERATION_ACTIONS": "actions",
+    "AUTO_MODERATION_ENABLED": "enabled",
+    "AUTO_MODERATION_EXEMPT_ROLES": "exempt_roles",
+    "AUTO_MODERATION_EXEMPT_CHANNELS": "exempt_channels";
   },
   "AuditLogSubtargetTypes": {
     "USER": "1",
-    "ROLE": "0"
+    "ROLE": "0";
   },
   "AuditLogTargetTypes": {
     "ALL": "ALL",
@@ -2746,7 +2766,8 @@ const DiscordConstants = {
     "GUILD_SCHEDULED_EVENT": "GUILD_SCHEDULED_EVENT",
     "THREAD": "THREAD",
     "STICKER": "STICKER",
-    "APPLICATION_COMMAND": "APPLICATION_COMMAND"
+    "APPLICATION_COMMAND": "APPLICATION_COMMAND",
+    "AUTO_MODERATION_RULE": "AUTO_MODERATION_RULE";
   },
   "AutoCompleteResultTypes": {
     "USER": "USER",
@@ -2759,7 +2780,7 @@ const DiscordConstants = {
     "CHOICE": "CHOICE",
     "STICKER": "STICKER",
     "CHOICE_LOADING": "CHOICE_LOADING",
-    "LABEL": "LABEL"
+    "LABEL": "LABEL";
   },
   "BIO_MAX_LENGTH": 190,
   "BITRATE_DEFAULT": 64000,
@@ -2770,7 +2791,7 @@ const DiscordConstants = {
     "CANCEL": "cancel",
     "PREMIUM": "premium",
     "PAYMENT_SOURCE": "paymentSource",
-    "UNKNOWN": "unknown"
+    "UNKNOWN": "unknown";
   },
   "BoostedGuildTiers": {
     "0": "NONE",
@@ -2780,13 +2801,13 @@ const DiscordConstants = {
     "NONE": 0,
     "TIER_1": 1,
     "TIER_2": 2,
-    "TIER_3": 3
+    "TIER_3": 3;
   },
   "BuildPlatformTypes": {
     "WIN32": "win32",
     "WIN64": "win64",
     "MACOS": "macos",
-    "LINUX": "linux"
+    "LINUX": "linux";
   },
   "CHANNEL_NOTICE_SHOW_DELAY": 86400000,
   "CHANNEL_SIDEBAR_WIDTH": 240,
@@ -2795,7 +2816,7 @@ const DiscordConstants = {
     "40002": "BOT_REQUIRES_EMAIL_VERIFICATION",
     "40003": "BOT_DM_RATE_LIMITED",
     "40004": "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
-    "50007": "BOT_DM_SEND_FAILED_WITH_HELP_LINK"
+    "50007": "BOT_DM_SEND_FAILED_WITH_HELP_LINK";
   },
   "COUNTRIES_WITHOUT_POSTAL_CODES": [
     "AE",
@@ -2876,17 +2897,17 @@ const DiscordConstants = {
     "3": "VIDEO",
     "IMG": 1,
     "YOUTUBE_VIDEO": 2,
-    "VIDEO": 3
+    "VIDEO": 3;
   },
   "ChannelLayouts": {
     "NORMAL": "normal",
     "MINIMUM": "minimum",
     "NO_CHAT": "no-chat",
-    "FULL_SCREEN": "full-screen"
+    "FULL_SCREEN": "full-screen";
   },
   "ChannelModes": {
     "VIDEO": "video",
-    "VOICE": "voice"
+    "VOICE": "voice";
   },
   "ChannelNoticeCtaSources": {
     "GUILD_BANNER_NOTICE": "Guild Banner Notice",
@@ -2896,7 +2917,7 @@ const DiscordConstants = {
     "INVITE_NOTICE": "Invite Notice",
     "GRACE_PERIOD_NOTICE": "Grace Period Notice",
     "ENABLE_PUBLIC_GUILD_UPSELL_NOTICE": "Enable Public Guild Upsell Notice",
-    "HUB_LINK_NOTICE": "Hub Link Notice"
+    "HUB_LINK_NOTICE": "Hub Link Notice";
   },
   "ChannelNoticeTypes": {
     "MFA_WARNING": "MFA_WARNING",
@@ -2910,13 +2931,13 @@ const DiscordConstants = {
     "MAX_MEMBER_COUNT": "MAX_MEMBER_COUNT",
     "STAGE_CHANNEL_EVENT": "STAGE_CHANNEL_EVENT",
     "HUB_LINK": "HUB_LINK",
-    "GUILD_BANNER": "GUILD_BANNER"
+    "GUILD_BANNER": "GUILD_BANNER";
   },
   "ChannelSections": {
     "NONE": "NONE",
     "MEMBERS": "MEMBERS",
     "SEARCH": "SEARCH",
-    "SIDEBAR_CHAT": "SIDEBAR_CHAT"
+    "SIDEBAR_CHAT": "SIDEBAR_CHAT";
   },
   "ChannelSettingsSections": {
     "OVERVIEW": "OVERVIEW",
@@ -2933,10 +2954,10 @@ const DiscordConstants = {
     "WEBHOOKS": "WEBHOOKS",
     "EDIT_WEBHOOK": "EDIT_WEBHOOK",
     "CHANGE_RTC_REGION": "CHANGE_RTC_REGION",
-    "EDIT_FORUM_TAG": "EDIT_FORUM_TAG"
+    "EDIT_FORUM_TAG": "EDIT_FORUM_TAG";
   },
   "ChannelSettingsSubsections": {
-    "TOPIC": "TOPIC"
+    "TOPIC": "TOPIC";
   },
   "ChannelStreamTypes": {
     "MESSAGE": "MESSAGE",
@@ -2948,24 +2969,24 @@ const DiscordConstants = {
     "FORUM_POST_ACTION_BAR": "FORUM_POST_ACTION_BAR",
     "MESSAGE_GROUP": "MESSAGE_GROUP",
     "DIVIDER_TIME_STAMP": "DIVIDER_TIME_STAMP",
-    "DIVIDER_NEW_MESSAGES": "DIVIDER_NEW_MESSAGES"
+    "DIVIDER_NEW_MESSAGES": "DIVIDER_NEW_MESSAGES";
   },
   "ChannelTextAreaIntegrationTypes": {
-    "GIF": "GIF"
+    "GIF": "GIF";
   },
   "ChannelTextAreaIntegrations": {
     "GIPHY": {
       "type": "GIF",
       "command": "giphy",
       "title": "Giphy",
-      "commandId": "-8"
+      "commandId": "-8";
     },
     "TENOR": {
       "type": "GIF",
       "command": "tenor",
       "title": "Tenor",
-      "commandId": "-9"
-    }
+      "commandId": "-9";
+    };
   },
   "ChannelTypes": {
     "0": "GUILD_TEXT",
@@ -2993,7 +3014,7 @@ const DiscordConstants = {
     "PRIVATE_THREAD": 12,
     "GUILD_STAGE_VOICE": 13,
     "GUILD_DIRECTORY": 14,
-    "GUILD_FORUM": 15
+    "GUILD_FORUM": 15;
   },
   "ChannelTypesSets": {
     "CALLABLE": [
@@ -3189,13 +3210,13 @@ const DiscordConstants = {
       13,
       14,
       15
-    ]
+    ];
   },
   "CloudSyncResultTypes": {
     "PULL": "PULL",
     "PUSH": "PUSH",
     "CONFLICT": "CONFLICT",
-    "NONE": "NONE"
+    "NONE": "NONE";
   },
   "CloudSyncStateTypes": {
     "DONE": "DONE",
@@ -3204,7 +3225,7 @@ const DiscordConstants = {
     "PUSHING": "PUSHING",
     "PULLING": "PULLING",
     "CONFLICT": "CONFLICT",
-    "ERROR": "ERROR"
+    "ERROR": "ERROR";
   },
   "Colors": {
     "PRIMARY_DARK_100": "hsl(240, calc(var(--saturation-factor, 1) * 5.9%), 96.7%)",
@@ -3614,12 +3635,20 @@ const DiscordConstants = {
     "BLACK_900": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 0%)",
     "PREMIUM_TIER_2_PURPLE_500": "hsl(270, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
     "PREMIUM_TIER_2_PURPLE": "hsl(270, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_500": "hsl(269, calc(var(--saturation-factor, 1) * 52.7%), 52.7%)",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS": "hsl(269, calc(var(--saturation-factor, 1) * 52.7%), 52.7%)",
     "PREMIUM_TIER_2_PINK_500": "hsl(342, calc(var(--saturation-factor, 1) * 58%), 72.9%)",
     "PREMIUM_TIER_2_PINK": "hsl(342, calc(var(--saturation-factor, 1) * 58%), 72.9%)",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS_500": "hsl(325, calc(var(--saturation-factor, 1) * 31.7%), 51.8%)",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS": "hsl(325, calc(var(--saturation-factor, 1) * 31.7%), 51.8%)",
     "PREMIUM_TIER_1_PURPLE_500": "hsl(244, calc(var(--saturation-factor, 1) * 100%), 84.1%)",
     "PREMIUM_TIER_1_PURPLE": "hsl(244, calc(var(--saturation-factor, 1) * 100%), 84.1%)",
     "PREMIUM_TIER_1_BLUE_500": "hsl(228, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
     "PREMIUM_TIER_1_BLUE": "hsl(228, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)",
     "GUILD_BOOSTING_PINK_500": "hsl(302, calc(var(--saturation-factor, 1) * 100%), 72.5%)",
     "GUILD_BOOSTING_PINK": "hsl(302, calc(var(--saturation-factor, 1) * 100%), 72.5%)",
     "GUILD_BOOSTING_PURPLE_500": "hsl(269, calc(var(--saturation-factor, 1) * 83.8%), 71%)",
@@ -3695,7 +3724,7 @@ const DiscordConstants = {
     "TRANSPARENT": "transparent",
     "SCROLLBAR_THUMB_LIGHT": "hsl(212, calc(var(--saturation-factor, 1) * 9.8%), 52.2%)",
     "SCROLLBAR_THUMB_DARK": "hsl(220, calc(var(--saturation-factor, 1) * 3.7%), 52%)",
-    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)"
+    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)";
   },
   "ComponentActions": {
     "IFRAME_MOUNT": "IFRAME_MOUNT",
@@ -3762,34 +3791,34 @@ const DiscordConstants = {
     "FOCUS_CHAT_BUTTON": "FOCUS_CHAT_BUTTON",
     "SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP": "SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP",
     "SHOW_ACTIVITIES_BOOSTING_UPSELL": "SHOW_ACTIVITIES_BOOSTING_UPSELL",
-    "SHOW_ACTIVITIES_CHANNEL_SELECTOR": "SHOW_ACTIVITIES_CHANNEL_SELECTOR"
+    "SHOW_ACTIVITIES_CHANNEL_SELECTOR": "SHOW_ACTIVITIES_CHANNEL_SELECTOR";
   },
   "ComponentActionsKeyed": {
     "TOGGLE_REACTION_POPOUT": "TOGGLE_REACTION_POPOUT",
-    "ANIMATE_CHAT_AVATAR": "ANIMATE_CHAT_AVATAR"
+    "ANIMATE_CHAT_AVATAR": "ANIMATE_CHAT_AVATAR";
   },
   "ConnectedDevicePreference": {
     "INPUT": "INPUT",
     "OUTPUT": "OUTPUT",
-    "INPUT_AND_OUTPUT": "INPUT_AND_OUTPUT"
+    "INPUT_AND_OUTPUT": "INPUT_AND_OUTPUT";
   },
   "ConnectedDeviceType": {
     "INPUT": "INPUT",
     "OUTPUT": "OUTPUT",
-    "INPUT_AND_OUTPUT": "INPUT_AND_OUTPUT"
+    "INPUT_AND_OUTPUT": "INPUT_AND_OUTPUT";
   },
   "ConnectionStatus": {
     "CONNECTED": "connected",
     "CONNECTING": "connecting",
-    "ERROR": "error"
+    "ERROR": "error";
   },
   "Consents": {
     "USAGE_STATISTICS": "usage_statistics",
-    "PERSONALIZATION": "personalization"
+    "PERSONALIZATION": "personalization";
   },
   "ContentRatingAgencies": {
     "ESRB": "1",
-    "PEGI": "2"
+    "PEGI": "2";
   },
   "CreateGuildModalScreens": {
     "0": "Choose",
@@ -3799,7 +3828,7 @@ const DiscordConstants = {
     "Choose": 0,
     "CreateGuild": 1,
     "JoinGuild": 2,
-    "AcceptInvite": 3
+    "AcceptInvite": 3;
   },
   "CustomDiscordApplicationId": "530820671283003422",
   "DEFAULT_CHAT_SIDEBAR_WIDTH": 450,
@@ -3813,7 +3842,7 @@ const DiscordConstants = {
   "DEVICE_VOIP_TOKEN": "DEVICE_VOIP_TOKEN",
   "DIRECT_ANALYTICS_LOCATION": {
     "page": "Direct",
-    "object": "Web URL"
+    "object": "Web URL";
   },
   "DISCODO_STORAGE_KEY": "discodoEasterEgg",
   "DIVERSITY_SURROGATES": [
@@ -3831,7 +3860,7 @@ const DiscordConstants = {
     "RTC": 1,
     "IOS_APP": 2,
     "WEB_APP": 3,
-    "ANDROID_APP": 4
+    "ANDROID_APP": 4;
   },
   "DefaultCloudSyncConfiguration": {
     "ROOT_PATTERN": [
@@ -3841,30 +3870,30 @@ const DiscordConstants = {
     "ROOT_PLATFORMS": {
       "macos": "macos",
       "windows": "windows",
-      "linux": "linux"
-    }
+      "linux": "linux";
+    };
   },
   "DesktopNotificationTypes": {
     "NEVER": "NEVER",
-    "ALL": "ALL"
+    "ALL": "ALL";
   },
   "DesktopUpsellTypes": {
     "GUILD_HEADER_TOOLTIP": "GUILD_HEADER_TOOLTIP",
     "CHANNEL_TEXT_AREA_CALLOUT": "CHANNEL_TEXT_AREA_CALLOUT",
-    "FEATURE_EDUCATION_TOOLTIP": "FEATURE_EDUCATION_TOOLTIP"
+    "FEATURE_EDUCATION_TOOLTIP": "FEATURE_EDUCATION_TOOLTIP";
   },
   "DeveloperPortalRelativeURLs": {},
   "DirectoryLocations": {
     "HOME": "1",
-    "BROWSE": "2"
+    "BROWSE": "2";
   },
   "DiscordConnectDeeplinks": {
     "OAUTH2_REDIRECT_FRAGMENT": "/_discord?",
     "GAME_INVITE_FRAGMENT": "/_discord/join?secret=",
-    "AUTHORIZATION_CANCEL_FRAGMENT": "/_discord/auth?cancel=true"
+    "AUTHORIZATION_CANCEL_FRAGMENT": "/_discord/auth?cancel=true";
   },
   "DiscordProtocolRoutes": {
-    "PREMIUM": "discord://app/settings/nitro"
+    "PREMIUM": "discord://app/settings/nitro";
   },
   "DispatchApplicationStages": {
     "QUEUED": "queued",
@@ -3876,11 +3905,11 @@ const DiscordConstants = {
     "VERIFYING": "verifying",
     "REPAIRING": "repairing",
     "POST_INSTALL_SCRIPTS": "running_install_scripts",
-    "UNINSTALLING": "uninstalling"
+    "UNINSTALLING": "uninstalling";
   },
   "DispatchApplicationStates": {
     "COMPLETE": "complete",
-    "TRANSITION": "transition"
+    "TRANSITION": "transition";
   },
   "DispatchErrorCodes": {
     "APPLICATION_NOT_FOUND": 101,
@@ -3902,7 +3931,7 @@ const DiscordConstants = {
     "APPLICATION_LOCK_FAILED": 2076,
     "NOT_DIRECTORY": 2077,
     "INVALID_DRIVE": 2078,
-    "DISK_FULL": 2080
+    "DISK_FULL": 2080;
   },
   "DistributorNames": {
     "discord": "Discord",
@@ -3912,7 +3941,7 @@ const DiscordConstants = {
     "origin": "Origin",
     "gog": "GOG",
     "twitch": "Twitch",
-    "epic": "Epic"
+    "epic": "Epic";
   },
   "Distributors": {
     "DISCORD": "discord",
@@ -3922,25 +3951,25 @@ const DiscordConstants = {
     "BATTLENET": "battlenet",
     "ORIGIN": "origin",
     "GOG": "gog",
-    "EPIC": "epic"
+    "EPIC": "epic";
   },
   "DownloadLinks": {
     "DESKTOP": "https://discord.com/api/download",
     "IOS": "https://itunes.apple.com/app/discord/id985746746",
-    "ANDROID": "https://play.google.com/store/apps/details?id=com.discord"
+    "ANDROID": "https://play.google.com/store/apps/details?id=com.discord";
   },
   "Durations": {
     "SECOND": 1,
     "MINUTE": 60,
     "HOUR": 3600,
-    "DAY": 86400
+    "DAY": 86400;
   },
   "DynamicLinkType": {
     "SETTINGS": "settings",
     "CHANGELOG": "changelog",
     "LIBRARY": "library",
     "STORE": "store",
-    "INVITE": "invite"
+    "INVITE": "invite";
   },
   "EMBEDDED_ACTIVITY_WTP_FEEDBACK_SURVEY_URL": "https://survey.alchemer.com/s3/6701510/Activities-on-Discord-Beta-Feedback-2",
   "EMBED_LIFETIME": 7200000,
@@ -3960,7 +3989,7 @@ const DiscordConstants = {
     "RICH": "rich",
     "GIFV": "gifv",
     "APPLICATION_NEWS": "application_news",
-    "AUTO_MODERATION_MESSAGE": "auto_moderation_message"
+    "AUTO_MODERATION_MESSAGE": "auto_moderation_message";
   },
   "EmojiDisabledReasons": {
     "0": "DISALLOW_EXTERNAL",
@@ -3970,7 +3999,7 @@ const DiscordConstants = {
     "DISALLOW_EXTERNAL": 0,
     "GUILD_SUBSCRIPTION_UNAVAILABLE": 1,
     "PREMIUM_LOCKED": 2,
-    "ONLY_GUILD_EMOJIS_ALLOWED": 3
+    "ONLY_GUILD_EMOJIS_ALLOWED": 3;
   },
   "EmojiIntention": {
     "0": "REACTION",
@@ -3986,13 +4015,13 @@ const DiscordConstants = {
     "CHAT": 3,
     "GUILD_STICKER_RELATED_EMOJI": 4,
     "GUILD_ROLE_BENEFIT_EMOJI": 5,
-    "COMMUNITY_CONTENT_ONLY": 6
+    "COMMUNITY_CONTENT_ONLY": 6;
   },
   "EmojiSprites": {
     "NonDiversityPerRow": 42,
     "DiversityPerRow": 10,
     "PickerPerRow": 11,
-    "PickerCount": 50
+    "PickerCount": 50;
   },
   "Endpoints": {
     "USER_BULK_RELATIONSHIPS": "/users/@me/relationships/bulk",
@@ -4140,7 +4169,7 @@ const DiscordConstants = {
     "APPLICATION_DIRECTORY_SEARCH": "/application-directory/applications",
     "USER_EMAIL": "/users/@me/email",
     "USER_EMAIL_VERIFY_CODE": "/users/@me/email/verify-code",
-    "PREMIUM_USAGE": "/users/@me/premium-usage"
+    "PREMIUM_USAGE": "/users/@me/premium-usage";
   },
   "EntitlementTypes": {
     "1": "PURCHASE",
@@ -4154,7 +4183,7 @@ const DiscordConstants = {
     "DEVELOPER_GIFT": 3,
     "TEST_MODE_PURCHASE": 4,
     "FREE_PURCHASE": 5,
-    "USER_GIFT": 6
+    "USER_GIFT": 6;
   },
   "ExplicitContentFilterTypes": {
     "0": "DISABLED",
@@ -4162,7 +4191,7 @@ const DiscordConstants = {
     "2": "FRIENDS_AND_NON_FRIENDS",
     "DISABLED": 0,
     "NON_FRIENDS": 1,
-    "FRIENDS_AND_NON_FRIENDS": 2
+    "FRIENDS_AND_NON_FRIENDS": 2;
   },
   "FAVORITES": "@favorites",
   "FIRST_RUN_DATE_KEY": "first_run_date_key",
@@ -4171,12 +4200,12 @@ const DiscordConstants = {
     "contacts"
   ],
   "FeaturedGuildLocations": {
-    "GUILD_DISCOVERY": "GUILD_DISCOVERY"
+    "GUILD_DISCOVERY": "GUILD_DISCOVERY";
   },
   "FormStates": {
     "OPEN": "OPEN",
     "SUBMITTING": "SUBMITTING",
-    "CLOSED": "CLOSED"
+    "CLOSED": "CLOSED";
   },
   "FriendDiscoveryFlags": {
     "0": "NONE",
@@ -4184,12 +4213,12 @@ const DiscordConstants = {
     "4": "FIND_BY_EMAIL",
     "NONE": 0,
     "FIND_BY_PHONE": 2,
-    "FIND_BY_EMAIL": 4
+    "FIND_BY_EMAIL": 4;
   },
   "FriendSourceFlagKeys": {
     "ALL": "all",
     "FRIENDS": "mutual_friends",
-    "GUILDS": "mutual_guilds"
+    "GUILDS": "mutual_guilds";
   },
   "FriendsSections": {
     "ADD_FRIEND": "ADD_FRIEND",
@@ -4197,7 +4226,7 @@ const DiscordConstants = {
     "ONLINE": "ONLINE",
     "PENDING": "PENDING",
     "BLOCKED": "BLOCKED",
-    "SUGGESTIONS": "SUGGESTIONS"
+    "SUGGESTIONS": "SUGGESTIONS";
   },
   "GAME_REPORT_VERSION": 3,
   "GIFPickerResultTypes": {
@@ -4205,11 +4234,11 @@ const DiscordConstants = {
     "FAVORITES": "Favorites",
     "TRENDING_CATEGORY": "Category",
     "SEARCH": "Search",
-    "SEARCH_SUGGESTION": "Search Suggestion"
+    "SEARCH_SUGGESTION": "Search Suggestion";
   },
   "GIFProviders": {
     "GIPHY": "giphy",
-    "TENOR": "tenor"
+    "TENOR": "tenor";
   },
   "GIFTABLE_CURRENCIES": [
     "usd",
@@ -4238,7 +4267,7 @@ const DiscordConstants = {
     "DOWNSIZED_MEDIUM_GIF": "downsized_medium.url",
     "DOWNSIZED_SMALL_MP4": "downsized_small.mp4",
     "ORIGINAL_GIF": "original.url",
-    "ORIGINAL_MP4": "original.mp4"
+    "ORIGINAL_MP4": "original.mp4";
   },
   "GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY": 259200000,
   "GUILD_BANNER_MAX_HEIGHT": 1350,
@@ -4248,12 +4277,12 @@ const DiscordConstants = {
     "NAME": "name",
     "PLATFORM": "platform",
     "ACTIONS": "actions",
-    "LAST_PLAYED": "last_played"
+    "LAST_PLAYED": "last_played";
   },
   "GiftCodeModalStates": {
     "CONFIRM": "CONFIRM",
     "SUCCESS": "SUCCESS",
-    "ERROR": "ERROR"
+    "ERROR": "ERROR";
   },
   "GlobalKeybindActions": {
     "UNASSIGNED": "UNASSIGNED",
@@ -4272,18 +4301,18 @@ const DiscordConstants = {
     "NAVIGATE_FORWARD": "NAVIGATE_FORWARD",
     "OVERLAY_ACTIVATE_REGION_TEXT_WIDGET": "OVERLAY_ACTIVATE_REGION_TEXT_WIDGET",
     "SOUNDBOARD": "SOUNDBOARD",
-    "SOUNDBOARD_HOLD": "SOUNDBOARD_HOLD"
+    "SOUNDBOARD_HOLD": "SOUNDBOARD_HOLD";
   },
   "GoogleBillingUrls": {
     "SUBSCRIPTION_MANAGEMENT": "https://play.google.com/store/account/subscriptions",
     "PAYMENT_SOURCE_MANAGEMENT": "https://play.google.com/store/paymentmethods",
-    "BILLING_HISTORY": "https://play.google.com/store/account/orderhistory"
+    "BILLING_HISTORY": "https://play.google.com/store/account/orderhistory";
   },
   "GuildDiscoverySections": {
     "FEATURED": "featured",
     "GAMES_YOU_PLAY": "gamesYouPlay",
     "SEARCH": "search",
-    "MISC": "misc"
+    "MISC": "misc";
   },
   "GuildExplicitContentFilterTypes": {
     "0": "DISABLED",
@@ -4291,7 +4320,7 @@ const DiscordConstants = {
     "2": "ALL_MEMBERS",
     "DISABLED": 0,
     "MEMBERS_WITHOUT_ROLES": 1,
-    "ALL_MEMBERS": 2
+    "ALL_MEMBERS": 2;
   },
   "GuildFeatures": {
     "INVITE_SPLASH": "INVITE_SPLASH",
@@ -4326,7 +4355,7 @@ const DiscordConstants = {
     "HAS_DIRECTORY_ENTRY": "HAS_DIRECTORY_ENTRY",
     "ANIMATED_BANNER": "ANIMATED_BANNER",
     "LINKED_TO_HUB": "LINKED_TO_HUB",
-    "EXPOSED_TO_ACTIVITIES_WTP_EXPERIMENT": "EXPOSED_TO_ACTIVITIES_WTP_EXPERIMENT"
+    "EXPOSED_TO_ACTIVITIES_WTP_EXPERIMENT": "EXPOSED_TO_ACTIVITIES_WTP_EXPERIMENT";
   },
   "GuildHubTypes": {
     "0": "DEFAULT",
@@ -4334,7 +4363,7 @@ const DiscordConstants = {
     "2": "COLLEGE",
     "DEFAULT": 0,
     "HIGH_SCHOOL": 1,
-    "COLLEGE": 2
+    "COLLEGE": 2;
   },
   "GuildNSFWContentLevel": {
     "0": "DEFAULT",
@@ -4344,7 +4373,7 @@ const DiscordConstants = {
     "DEFAULT": 0,
     "EXPLICIT": 1,
     "SAFE": 2,
-    "AGE_RESTRICTED": 3
+    "AGE_RESTRICTED": 3;
   },
   "GuildSettingsSections": {
     "LANDING": "LANDING",
@@ -4394,16 +4423,16 @@ const DiscordConstants = {
     "ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION": "ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION",
     "ROLE_SUBSCRIPTIONS_BASIC": "ROLE_SUBSCRIPTIONS_BASIC",
     "ROLE_SUBSCRIPTIONS_TIERS": "ROLE_SUBSCRIPTIONS_TIERS",
-    "ROLE_SUBSCRIPTIONS_PAYMENTS": "ROLE_SUBSCRIPTIONS_PAYMENTS"
+    "ROLE_SUBSCRIPTIONS_PAYMENTS": "ROLE_SUBSCRIPTIONS_PAYMENTS";
   },
   "GuildSettingsSubsections": {
     "DISPLAY": "DISPLAY",
     "INVITE": "INVITE",
-    "DEFAULT_NOTIFICATIONS": "DEFAULT_NOTIFICATIONS"
+    "DEFAULT_NOTIFICATIONS": "DEFAULT_NOTIFICATIONS";
   },
   "GuildsBarDragTypes": {
     "GUILD": "GUILD",
-    "FOLDER": "FOLDER"
+    "FOLDER": "FOLDER";
   },
   "HELP_CENTER_CTA_ANALYTICS_NAME": "help_center_cta",
   "HEXColors": {
@@ -4814,12 +4843,20 @@ const DiscordConstants = {
     "BLACK_900": "#000000",
     "PREMIUM_TIER_2_PURPLE_500": "#b473f5",
     "PREMIUM_TIER_2_PURPLE": "#b473f5",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_500": "#8547c6",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS": "#8547c6",
     "PREMIUM_TIER_2_PINK_500": "#e292aa",
     "PREMIUM_TIER_2_PINK": "#e292aa",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS_500": "#ab5d8a",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS": "#ab5d8a",
     "PREMIUM_TIER_1_PURPLE_500": "#b3aeff",
     "PREMIUM_TIER_1_PURPLE": "#b3aeff",
     "PREMIUM_TIER_1_BLUE_500": "#738ef5",
     "PREMIUM_TIER_1_BLUE": "#738ef5",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS_500": "#3442d9",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS": "#3442d9",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS_500": "#5865f2",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS": "#5865f2",
     "GUILD_BOOSTING_PINK_500": "#ff73fa",
     "GUILD_BOOSTING_PINK": "#ff73fa",
     "GUILD_BOOSTING_PURPLE_500": "#b377f3",
@@ -4895,7 +4932,7 @@ const DiscordConstants = {
     "TRANSPARENT": "transparent",
     "SCROLLBAR_THUMB_LIGHT": "#798491",
     "SCROLLBAR_THUMB_DARK": "#808389",
-    "INPUT_PLACEHOLDER_TEXT_DARK": "#87898C"
+    "INPUT_PLACEHOLDER_TEXT_DARK": "#87898C";
   },
   "HelpdeskArticles": {
     "ENABLE_MIC_FIREFOX": "204392448",
@@ -4980,7 +5017,8 @@ const DiscordConstants = {
     "HIGHLIGHTS": "5304469213079",
     "FORCED_COLORS": "1500010454681",
     "CREATOR_TERMS": "5330075836311",
-    "CREATOR_FAQ": "5371495812631"
+    "CREATOR_FAQ": "5371495812631",
+    "POGGERMODE": "5371495812631";
   },
   "HighlightSettings": {
     "0": "NULL",
@@ -4988,12 +5026,12 @@ const DiscordConstants = {
     "2": "ENABLED",
     "NULL": 0,
     "DISABLED": 1,
-    "ENABLED": 2
+    "ENABLED": 2;
   },
   "HypeSquadHouses": {
     "HOUSE_1": "HOUSE_1",
     "HOUSE_2": "HOUSE_2",
-    "HOUSE_3": "HOUSE_3"
+    "HOUSE_3": "HOUSE_3";
   },
   "IDLE_DURATION": 600000,
   "ID_REGEX": {},
@@ -5007,11 +5045,11 @@ const DiscordConstants = {
   "IS_SEARCH_FILTER_TOKEN": {},
   "InAppNotificationTypes": {
     "MESSAGE": "MESSAGE",
-    "FORUM_THREAD_CREATED": "FORUM_THREAD_CREATED"
+    "FORUM_THREAD_CREATED": "FORUM_THREAD_CREATED";
   },
   "InputModes": {
     "PUSH_TO_TALK": "PUSH_TO_TALK",
-    "VOICE_ACTIVITY": "VOICE_ACTIVITY"
+    "VOICE_ACTIVITY": "VOICE_ACTIVITY";
   },
   "InstantInviteSources": {
     "INVITE_NOTICE": "Invite Notice",
@@ -5034,7 +5072,7 @@ const DiscordConstants = {
     "VC_MEMBER_GUILD_CHANNELS": "VC Member Guild Channels",
     "VC_MEMBER_CONTEXT_MENU": "VC Member Context Menu",
     "VC_MEMBER_STREAM_INVITE": "VC Member Stream Invite",
-    "VC_MEMBER_CHANNEL_CALL": "VC Member Channel Call"
+    "VC_MEMBER_CHANNEL_CALL": "VC Member Channel Call";
   },
   "IntegrationSettingsSections": {
     "0": "APPLICATION",
@@ -5048,7 +5086,7 @@ const DiscordConstants = {
     "CHANNEL_FOLLOWING": 2,
     "TWITCH": 3,
     "YOUTUBE": 4,
-    "WEBHOOKS": 5
+    "WEBHOOKS": 5;
   },
   "InviteOptionsType": {
     "SHARE": "Share",
@@ -5061,7 +5099,7 @@ const DiscordConstants = {
     "WHATSAPP": "WhatsApp",
     "TWITTER": "Twitter",
     "MESSENGER": "Messenger",
-    "TELEGRAM": "Telegram"
+    "TELEGRAM": "Telegram";
   },
   "InviteStates": {
     "RESOLVING": "RESOLVING",
@@ -5073,13 +5111,13 @@ const DiscordConstants = {
     "APP_OPENING": "APP_OPENING",
     "APP_OPENED": "APP_OPENED",
     "APP_NOT_OPENED": "APP_NOT_OPENED",
-    "ERROR": "ERROR"
+    "ERROR": "ERROR";
   },
   "InvoiceStatusTypes": {
     "OPEN": 1,
     "PAID": 2,
     "VOID": 3,
-    "UNCOLLECTIBLE": 4
+    "UNCOLLECTIBLE": 4;
   },
   "JoinGuildSources": {
     "APPLICATION_STORE": "Application Store Verified Guild Invite - Lurker",
@@ -5087,7 +5125,7 @@ const DiscordConstants = {
     "NOTICE_BAR": "Notice - Lurker Mode",
     "MOBILE_GUILD_DISCOVERY": "iOS Guild Discovery - Lurker",
     "DIRECTORY_ENTRY": "Directory Channel Entry",
-    "DIRECTORY_EVENTS": "Directory Channel Events"
+    "DIRECTORY_EVENTS": "Directory Channel Events";
   },
   "KeybindActions": {
     "SERVER_NEXT": "SERVER_NEXT",
@@ -5146,7 +5184,7 @@ const DiscordConstants = {
     "CAROUSEL_PREV": "CAROUSEL_PREV",
     "MODAL_CAROUSEL_NEXT": "MODAL_CAROUSEL_NEXT",
     "MODAL_CAROUSEL_PREV": "MODAL_CAROUSEL_PREV",
-    "DEVTOOLS": "DEVTOOLS"
+    "DEVTOOLS": "DEVTOOLS";
   },
   "KeyboardDeviceTypes": {
     "0": "KEYBOARD_KEY",
@@ -5156,7 +5194,7 @@ const DiscordConstants = {
     "KEYBOARD_KEY": 0,
     "MOUSE_BUTTON": 1,
     "KEYBOARD_MODIFIER_KEY": 2,
-    "GAMEPAD_BUTTON": 3
+    "GAMEPAD_BUTTON": 3;
   },
   "KeyboardEnvs": {
     "1": "WINDOWS",
@@ -5166,7 +5204,7 @@ const DiscordConstants = {
     "WINDOWS": 1,
     "MACOS": 2,
     "LINUX": 3,
-    "BROWSER": 4
+    "BROWSER": 4;
   },
   "KeyboardKeys": {
     "BACKSPACE": 8,
@@ -5202,7 +5240,7 @@ const DiscordConstants = {
     "P": 80,
     "S": 83,
     "U": 85,
-    "COMMA": 188
+    "COMMA": 188;
   },
   "LEFT_PANEL_WIDTH": 320,
   "LOCAL_BOT_ID": "1",
@@ -5214,7 +5252,7 @@ const DiscordConstants = {
     "CHANNEL_SETTINGS": "CHANNEL_SETTINGS",
     "GUILD_SETTINGS": "GUILD_SETTINGS",
     "RTC_DEBUG": "RTC_DEBUG",
-    "GUILD_IDENTITY_SETTINGS": "GUILD_IDENTITY_SETTINGS"
+    "GUILD_IDENTITY_SETTINGS": "GUILD_IDENTITY_SETTINGS";
   },
   "LibraryApplicationActions": {
     "PLAY": "play",
@@ -5222,14 +5260,14 @@ const DiscordConstants = {
     "UPDATE": "update",
     "PAUSE": "pause",
     "MOVE_UP": "move_up",
-    "RESUME": "resume"
+    "RESUME": "resume";
   },
   "LibraryApplicationFlags": {
     "HIDDEN": 1,
     "PRIVATE": 2,
     "OVERLAY_DISABLED": 4,
     "ENTITLED": 8,
-    "PREMIUM": 16
+    "PREMIUM": 16;
   },
   "LinuxKeyToCode": {
     "0": 19,
@@ -5348,7 +5386,7 @@ const DiscordConstants = {
     "vol down": 122,
     "vol up": 123,
     "track back": 173,
-    "track skip": 171
+    "track skip": 171;
   },
   "LobbyErrors": {
     "0": "NO_ERROR",
@@ -5366,13 +5404,13 @@ const DiscordConstants = {
     "INVALID_SECRET": 4,
     "FULL": 5,
     "LOBBY_LIMIT_REACHED": 6,
-    "ALREADY_CONNECTING": 7
+    "ALREADY_CONNECTING": 7;
   },
   "LobbyTypes": {
     "1": "PRIVATE",
     "2": "PUBLIC",
     "PRIVATE": 1,
-    "PUBLIC": 2
+    "PUBLIC": 2;
   },
   "LocalDispatchApplicationStates": {
     "INSTALL_REQUIRED": "install_required",
@@ -5381,7 +5419,7 @@ const DiscordConstants = {
     "UPDATE_REQUIRED": "update_required",
     "UPDATING": "updating",
     "REPAIRING": "repairing",
-    "UNINSTALLING": "uninstalling"
+    "UNINSTALLING": "uninstalling";
   },
   "LocalizedPricingCountryCodes": [
     "PL",
@@ -5394,11 +5432,11 @@ const DiscordConstants = {
     "GDM_INVITE": "GDM Invite",
     "FRIEND_INVITE": "Friend Invite",
     "SPOTIFY": "Spotify",
-    "STREAM": "Stream"
+    "STREAM": "Stream";
   },
   "LoginMethods": {
     "PASSWORD": "password",
-    "LOGIN_CODE": "login_code"
+    "LOGIN_CODE": "login_code";
   },
   "LoginStates": {
     "NONE": "NONE",
@@ -5412,11 +5450,11 @@ const DiscordConstants = {
     "LOGGING_IN_MFA_SMS": "LOGGING_IN_MFA_SMS",
     "LOGIN_AGE_GATE": "LOGIN_AGE_GATE",
     "PASSWORD_RECOVERY_PHONE_VERIFICATION": "PASSWORD_RECOVERY_VERIFY_PHONE",
-    "PHONE_IP_AUTHORIZATION": "PHONE_IP_AUTHORIZATION"
+    "PHONE_IP_AUTHORIZATION": "PHONE_IP_AUTHORIZATION";
   },
   "LoginSuccessfulSources": {
     "QR_CODE": "QR Code Login",
-    "MOBILE_WEB_HANDOFF": "Mobile Web Handoff"
+    "MOBILE_WEB_HANDOFF": "Mobile Web Handoff";
   },
   "MARKDOWN_SPOILER_REGEXP": {},
   "MARKDOWN_SPOILER_REGEXP_GLOBAL": {},
@@ -5496,7 +5534,7 @@ const DiscordConstants = {
     "0": "NONE",
     "1": "ELEVATED",
     "NONE": 0,
-    "ELEVATED": 1
+    "ELEVATED": 1;
   },
   "MOBILE_WEB_HANDOFF_DEEP_LINK": "https://discordapp.com/mweb-handoff",
   "MULTI_MONTH_PLANS": [
@@ -5613,7 +5651,7 @@ const DiscordConstants = {
     "left": 80,
     "right": 79,
     "down": 81,
-    "up": 82
+    "up": 82;
   },
   "MarketingURLs": {
     "API_DOCS": "//discord.com/developers/docs/intro",
@@ -5636,15 +5674,15 @@ const DiscordConstants = {
     "STREAMKIT": "//discord.com/streamkit",
     "WHY_DISCORD": "//discord.com/why-discord",
     "STAGES": "//discord.com/stages",
-    "TOS_UPDATE_FEB_2022": "http://dis.gd/importantupdates"
+    "TOS_UPDATE_FEB_2022": "http://dis.gd/importantupdates";
   },
   "MediaEngineHookTypes": {
     "SOUND": "SOUND",
-    "VIDEO": "VIDEO"
+    "VIDEO": "VIDEO";
   },
   "MediaEngineVideoStates": {
     "PLAYING": "playing",
-    "PAUSED": "paused"
+    "PAUSED": "paused";
   },
   "MessageFlags": {
     "CROSSPOSTED": 1,
@@ -5656,22 +5694,22 @@ const DiscordConstants = {
     "EPHEMERAL": 64,
     "LOADING": 128,
     "FAILED_TO_MENTION_SOME_ROLES_IN_THREAD": 256,
-    "SHOULD_SHOW_LINK_NOT_DISCORD_WARNING": 1024
+    "SHOULD_SHOW_LINK_NOT_DISCORD_WARNING": 1024;
   },
   "MessagePreviewSections": {
-    "MESSAGE": "MESSAGE"
+    "MESSAGE": "MESSAGE";
   },
   "MessageRestrictionTypes": {
     "EMPTY_MESSAGE": "EMPTY_MESSAGE",
     "MESSAGE_TOO_LONG": "MESSAGE_TOO_LONG",
     "RATE_LIMITED": "RATE_LIMITED",
     "SHOUTING_CANCELLED": "SHOUTING_CANCELLED",
-    "SLOWMODE_COOLDOWN": "SLOWMODE_COOLDOWN"
+    "SLOWMODE_COOLDOWN": "SLOWMODE_COOLDOWN";
   },
   "MessageStates": {
     "SENT": "SENT",
     "SENDING": "SENDING",
-    "SEND_FAILED": "SEND_FAILED"
+    "SEND_FAILED": "SEND_FAILED";
   },
   "MessageTypes": {
     "0": "DEFAULT",
@@ -5723,7 +5761,7 @@ const DiscordConstants = {
     "THREAD_STARTER_MESSAGE": 21,
     "GUILD_INVITE_REMINDER": 22,
     "CONTEXT_MENU_COMMAND": 23,
-    "AUTO_MODERATION_ACTION": 24
+    "AUTO_MODERATION_ACTION": 24;
   },
   "MessageTypesDeletable": {
     "0": true,
@@ -5738,7 +5776,7 @@ const DiscordConstants = {
     "19": true,
     "20": true,
     "22": true,
-    "23": true
+    "23": true;
   },
   "MessageTypesWithLazyLoadedReferences": [
     19,
@@ -5756,7 +5794,7 @@ const DiscordConstants = {
     "INSTALLING_MODULES_FINISHED": "installing-modules-finished",
     "INSTALLING_MODULE": "installing-module",
     "INSTALLING_MODULE_PROGRESS": "installing-module-progress",
-    "NO_PENDING_UPDATES": "no-pending-updates"
+    "NO_PENDING_UPDATES": "no-pending-updates";
   },
   "MonthsRequiredForAppliedGuildBoostLevel": {
     "1": 1,
@@ -5767,21 +5805,21 @@ const DiscordConstants = {
     "6": 12,
     "7": 15,
     "8": 18,
-    "9": 24
+    "9": 24;
   },
   "MouseButtons": {
     "PRIMARY": 0,
     "SECONDARY": 2,
     "WHEEL": 4,
     "BACK": 8,
-    "FORWARD": 16
+    "FORWARD": 16;
   },
   "MouseKeyCodes": {
     "Left": 0,
     "Right": 1,
     "Center": 2,
     "Back": 3,
-    "Forward": 4
+    "Forward": 4;
   },
   "NAVIGATION_THROTTLE": 50,
   "NEW_GROUP_DM_POPOUT_ID": "PrivateChannelRecipientsInvitePopout",
@@ -5791,7 +5829,7 @@ const DiscordConstants = {
   "NativeAppStates": {
     "OPENING": "OPENING",
     "OPEN": "OPEN",
-    "OPEN_FAIL": "OPEN_FAIL"
+    "OPEN_FAIL": "OPEN_FAIL";
   },
   "NativeFeatures": {
     "VOICE_LEGACY_SUBSYSTEM": "voice_legacy_subsystem",
@@ -5799,23 +5837,23 @@ const DiscordConstants = {
     "POPOUT_WINDOWS": "popout_windows",
     "ELEVATED_HOOK": "elevated_hook",
     "CREATE_HOST_ON_ATTACH": "create_host_on_attach",
-    "USER_DATA_CACHE": "user_data_cache"
+    "USER_DATA_CACHE": "user_data_cache";
   },
   "NearbyErrors": {
     "0": "MICROPHONE_ERROR",
     "1": "BLUETOOTH_ERROR",
     "MICROPHONE_ERROR": 0,
-    "BLUETOOTH_ERROR": 1
+    "BLUETOOTH_ERROR": 1;
   },
   "NearbyTypes": {
-    "USER": "u"
+    "USER": "u";
   },
   "NetworkConnectionSpeeds": {
     "UNKNOWN": "unknown",
     "SLOW_TWO_G": "slow-2g",
     "TWO_G": "2g",
     "THREE_G": "3g",
-    "FOUR_G": "4g"
+    "FOUR_G": "4g";
   },
   "NetworkConnectionTypes": {
     "NONE": "none",
@@ -5825,7 +5863,7 @@ const DiscordConstants = {
     "ETHERNET": "ethernet",
     "BLUETOOTH": "bluetooth",
     "WIMAX": "wimax",
-    "OTHER": "other"
+    "OTHER": "other";
   },
   "NoticeTypes": {
     "GENERIC": "GENERIC",
@@ -5864,57 +5902,57 @@ const DiscordConstants = {
     "PREMIUM_REACTIVATE": "PREMIUM_REACTIVATE",
     "CONNECT_PLAYSTATION": "CONNECT_PLAYSTATION",
     "LOCALIZED_PRICING": "LOCALIZED_PRICING",
-    "BACK_TO_PREVIOUS_SCREEN": "BACK_TO_PREVIOUS_SCREEN"
+    "BACK_TO_PREVIOUS_SCREEN": "BACK_TO_PREVIOUS_SCREEN";
   },
   "NotificationActionTypes": {
-    "GUILD_INVITE": "Guild Invite"
+    "GUILD_INVITE": "Guild Invite";
   },
   "NotificationPermissionTypes": {
     "NEVER": "NEVER",
     "ENABLED": "ENABLED",
-    "BLOCKED": "BLOCKED"
+    "BLOCKED": "BLOCKED";
   },
   "NotificationSettingsUpdateType": {
     "GUILD": "guild",
-    "CHANNEL": "channel"
+    "CHANNEL": "channel";
   },
   "NotificationTypes": {
-    "REMINDER_NOTIFICATION": "Reminder Notification"
+    "REMINDER_NOTIFICATION": "Reminder Notification";
   },
   "OFF_PLATFORM_PREMIUM_PERKS": [],
   "OperatingSystems": {
     "WINDOWS": "1",
     "MACOS": "2",
-    "LINUX": "3"
+    "LINUX": "3";
   },
   "OverlayActiveRegions": {
-    "TEXT_WIDGET": "TEXT_WIDGET"
+    "TEXT_WIDGET": "TEXT_WIDGET";
   },
   "OverlayAvatarSizes": {
     "LARGE": "large",
-    "SMALL": "small"
+    "SMALL": "small";
   },
   "OverlayDisplayNames": {
     "ALWAYS": "ALWAYS",
     "NEVER": "NEVER",
-    "ONLY_WHILE_SPEAKING": "ONLY_WHILE_SPEAKING"
+    "ONLY_WHILE_SPEAKING": "ONLY_WHILE_SPEAKING";
   },
   "OverlayDisplayUsers": {
     "ALWAYS": "ALWAYS",
-    "ONLY_WHILE_SPEAKING": "ONLY_WHILE_SPEAKING"
+    "ONLY_WHILE_SPEAKING": "ONLY_WHILE_SPEAKING";
   },
   "OverlayEventTypes": {
     "CONNECT": "CONNECT",
     "DISPATCH": "DISPATCH",
     "LOG_MESSAGES": "LOG_MESSAGES",
-    "STORAGE_SYNC": "STORAGE_SYNC"
+    "STORAGE_SYNC": "STORAGE_SYNC";
   },
   "OverlayNotificationPositions": {
     "TOP_LEFT": "topLeft",
     "TOP_RIGHT": "topRight",
     "BOTTOM_LEFT": "bottomLeft",
     "BOTTOM_RIGHT": "bottomRight",
-    "DISABLED": "disabled"
+    "DISABLED": "disabled";
   },
   "OverlayNotificationPriorities": {
     "0": "NORMAL",
@@ -5922,7 +5960,7 @@ const DiscordConstants = {
     "2": "URGENT",
     "NORMAL": 0,
     "HIGH": 1,
-    "URGENT": 2
+    "URGENT": 2;
   },
   "OverlayNotificationStatus": {
     "0": "ACTIVE",
@@ -5930,11 +5968,11 @@ const DiscordConstants = {
     "2": "DISMISSED",
     "ACTIVE": 0,
     "TIMED_OUT": 1,
-    "DISMISSED": 2
+    "DISMISSED": 2;
   },
   "OverlayNotificationTextChatTypes": {
     "ENABLED": "ENABLED",
-    "DISABLED": "DISABLED"
+    "DISABLED": "DISABLED";
   },
   "OverlayNotificationTypes": {
     "0": "GENERIC",
@@ -5942,12 +5980,12 @@ const DiscordConstants = {
     "2": "INCOMING_CALL",
     "GENERIC": 0,
     "TEXT": 1,
-    "INCOMING_CALL": 2
+    "INCOMING_CALL": 2;
   },
   "OverlayWidgetLayoutPolicy": {
     "REQUIRED": "REQUIRED",
     "OPTIONAL": "OPTIONAL",
-    "OPTIONAL_DEFAULT": "OPTIONAL_DEFAULT"
+    "OPTIONAL_DEFAULT": "OPTIONAL_DEFAULT";
   },
   "OverlayWidgetTypes": {
     "DEFAULT": "DEFAULT",
@@ -5956,14 +5994,14 @@ const DiscordConstants = {
     "IN_GAME": "IN_GAME",
     "IN_GAME_TEXT": "IN_GAME_TEXT",
     "IN_GAME_ACTIVE": "IN_GAME_ACTIVE",
-    "IN_GAME_PREVIEW": "IN_GAME_PREVIEW"
+    "IN_GAME_PREVIEW": "IN_GAME_PREVIEW";
   },
   "OverlayWidgets": {
     "GUILDS": "GUILDS",
     "VOICE": "VOICE",
     "TEXT": "TEXT",
     "GUILDS_TEXT": "GUILDS_TEXT",
-    "LOBBY_VOICE": "LOBBY_VOICE"
+    "LOBBY_VOICE": "LOBBY_VOICE";
   },
   "PAYPAL_URL": "https://www.paypal.com",
   "PLACEHOLDER_TAG": "#0000",
@@ -6003,26 +6041,26 @@ const DiscordConstants = {
     "RESET": "Reset",
     "HANDOFF": "Handoff",
     "UNKNOWN": "Unknown",
-    "LANDING": "Landing"
+    "LANDING": "Landing";
   },
   "PaymentFlags": {
     "GIFT": 1,
-    "PREORDER": 8
+    "PREORDER": 8;
   },
   "PaymentModalPriceChangedError": "Price changed",
   "PermissionOverrideType": {
     "ROLE": "ROLE",
-    "MEMBER": "MEMBER"
+    "MEMBER": "MEMBER";
   },
   "PictureInPictureComponents": {
     "VIDEO": "VIDEO",
-    "EMBED_IFRAME": "EMBED_IFRAME"
+    "EMBED_IFRAME": "EMBED_IFRAME";
   },
   "PictureInPicturePositions": {
     "TOP_LEFT": "top-left",
     "TOP_RIGHT": "top-right",
     "BOTTOM_LEFT": "bottom-left",
-    "BOTTOM_RIGHT": "bottom-right"
+    "BOTTOM_RIGHT": "bottom-right";
   },
   "PlatformTypes": {
     "TWITCH": "twitch",
@@ -6041,40 +6079,40 @@ const DiscordConstants = {
     "INSTAGRAM": "instagram",
     "SOUNDCLOUD": "soundcloud",
     "GITHUB": "github",
-    "PLAYSTATION": "playstation"
+    "PLAYSTATION": "playstation";
   },
   "Platforms": {
     "IOS": "iOS",
-    "ANDROID": "Android"
+    "ANDROID": "Android";
   },
   "PopoutCallers": {
     "CALL": "CALL",
-    "GROUP_DM": "GROUP_DM"
+    "GROUP_DM": "GROUP_DM";
   },
   "PopoutEventTypes": {
     "LOADED": "loaded",
-    "UNLOADED": "unloaded"
+    "UNLOADED": "unloaded";
   },
   "PopoutWindowKeys": {
     "CHANNEL_CALL_POPOUT": "DISCORD_CHANNEL_CALL_POPOUT",
     "SOUNDBOARD": "DISCORD_SOUNDBOARD",
-    "RTC_DEBUG_POPOUT": "DISCORD_RTC_DEBUG_POPOUT"
+    "RTC_DEBUG_POPOUT": "DISCORD_RTC_DEBUG_POPOUT";
   },
   "PremiumPaymentSubscriptionModes": {
     "NEW": "new",
-    "RESUBSCRIBE": "resubscribe"
+    "RESUBSCRIBE": "resubscribe";
   },
   "PremiumSubscriptionSKUToPremiumType": {
     "521842865731534868": 2,
     "521846918637420545": 1,
-    "521847234246082599": 2
+    "521847234246082599": 2;
   },
   "PremiumSubscriptionSKUs": {
     "NONE": "628379670982688768",
     "LEGACY": "521842865731534868",
     "TIER_1": "521846918637420545",
     "TIER_2": "521847234246082599",
-    "GUILD": "590663762298667008"
+    "GUILD": "590663762298667008";
   },
   "PremiumTypes": {
     "0": "NONE_DEPRECATED",
@@ -6082,7 +6120,7 @@ const DiscordConstants = {
     "2": "TIER_2",
     "NONE_DEPRECATED": 0,
     "TIER_1": 1,
-    "TIER_2": 2
+    "TIER_2": 2;
   },
   "PremiumUsageFlags": {
     "1": "PREMIUM_DISCRIMINATOR",
@@ -6090,18 +6128,18 @@ const DiscordConstants = {
     "4": "PROFILE_BANNER",
     "PREMIUM_DISCRIMINATOR": 1,
     "ANIMATED_AVATAR": 2,
-    "PROFILE_BANNER": 4
+    "PROFILE_BANNER": 4;
   },
   "PremiumUserLimits": {
     "0": {
-      "fileSize": 8388608
+      "fileSize": 8388608;
     },
     "1": {
-      "fileSize": 52428800
+      "fileSize": 52428800;
     },
     "2": {
-      "fileSize": 104857600
-    }
+      "fileSize": 104857600;
+    };
   },
   "PriceSetAssignmentPurchaseTypes": {
     "0": "DEFAULT",
@@ -6113,15 +6151,15 @@ const DiscordConstants = {
     "GIFT": 1,
     "SALE": 2,
     "PREMIUM_TIER_1": 3,
-    "PREMIUM_TIER_2": 4
+    "PREMIUM_TIER_2": 4;
   },
   "ProgressBarIDs": {
-    "DISPATCH_APPLICATION_PROGRESS": "dispatch_application_progress"
+    "DISPATCH_APPLICATION_PROGRESS": "dispatch_application_progress";
   },
   "PublicReleaseChannels": {
     "CANARY": "canary",
     "PTB": "ptb",
-    "STABLE": "stable"
+    "STABLE": "stable";
   },
   "RANDOM_HYPESQUAD_HOUSE": "RANDOM_HYPESQUAD_HOUSE",
   "REACTION_TOOLTIP_MAX_USERS": 3,
@@ -6153,7 +6191,7 @@ const DiscordConstants = {
     "CHANGELOG": "CHANGELOG",
     "LIBRARY": "LIBRARY",
     "STORE_HOME": "STORE_HOME",
-    "STORE_LISTING": "STORE_LISTING"
+    "STORE_LISTING": "STORE_LISTING";
   },
   "RPCErrors": {
     "UNKNOWN_ERROR": 1000,
@@ -6186,7 +6224,7 @@ const DiscordConstants = {
     "PURCHASE_CANCELED": 5008,
     "PURCHASE_ERROR": 5009,
     "UNAUTHORIZED_FOR_ACHIEVEMENT": 5010,
-    "RATE_LIMITED": 5011
+    "RATE_LIMITED": 5011;
   },
   "RPC_AUTHENTICATED_SCOPE": "RPC_AUTHENTICATED_SCOPE",
   "RPC_LOCAL_SCOPE": "RPC_LOCAL_SCOPE",
@@ -6194,13 +6232,13 @@ const DiscordConstants = {
   "RPC_PRIVATE_SCOPE": "RPC_PRIVATE_SCOPE",
   "RPC_SCOPE_CONFIG": {
     "ANY": "$any",
-    "ALL": "$all"
+    "ALL": "$all";
   },
   "RTCConnectionQuality": {
     "UNKNOWN": "unknown",
     "BAD": "bad",
     "AVERAGE": "average",
-    "FINE": "fine"
+    "FINE": "fine";
   },
   "RTCConnectionStates": {
     "DISCONNECTED": "DISCONNECTED",
@@ -6211,7 +6249,7 @@ const DiscordConstants = {
     "RTC_CONNECTING": "RTC_CONNECTING",
     "RTC_CONNECTED": "RTC_CONNECTED",
     "NO_ROUTE": "NO_ROUTE",
-    "ICE_CHECKING": "ICE_CHECKING"
+    "ICE_CHECKING": "ICE_CHECKING";
   },
   "RTCDebugSections": {
     "TRANSPORT": "TRANSPORT",
@@ -6220,17 +6258,17 @@ const DiscordConstants = {
     "INBOUND": "INBOUND",
     "STREAMS_OUTBOUND": "STREAMS_OUTBOUND",
     "STREAMS_INBOUND": "STREAMS_INBOUND",
-    "CAMERA": "CAMERA"
+    "CAMERA": "CAMERA";
   },
   "RecentMentionsFilters": {
     "ALL_SERVERS": "ALL_SERVERS",
-    "THIS_SERVER": "THIS_SERVER"
+    "THIS_SERVER": "THIS_SERVER";
   },
   "RegistrationStates": {
     "NONE": "NONE",
     "REGISTERING": "REGISTERING",
     "REGISTER_AGE_GATE": "REGISTER_AGE_GATE",
-    "REGISTER_WITH_ERROR": "REGISTER_WITH_ERROR"
+    "REGISTER_WITH_ERROR": "REGISTER_WITH_ERROR";
   },
   "RelationshipTypes": {
     "0": "NONE",
@@ -6244,10 +6282,10 @@ const DiscordConstants = {
     "BLOCKED": 2,
     "PENDING_INCOMING": 3,
     "PENDING_OUTGOING": 4,
-    "IMPLICIT": 5
+    "IMPLICIT": 5;
   },
   "RelativeMarketingURLs": {
-    "DEVELOPER_PORTAL": "/developers"
+    "DEVELOPER_PORTAL": "/developers";
   },
   "Routes": {
     "INDEX": "/",
@@ -6294,7 +6332,7 @@ const DiscordConstants = {
     "VERIFY_HUB_EMAIL": "/verify-hub-email",
     "OPEN_APP_FROM_EMAIL": "/open-app-from-email",
     "BILLING_MANAGE_SUBSCRIPTION": "/billing/premium/manage",
-    "MOBILE_WEB_HANDOFF": "/mweb-handoff"
+    "MOBILE_WEB_HANDOFF": "/mweb-handoff";
   },
   "SCHEDULED_EVENT_IMAGE_MAX_HEIGHT": 960,
   "SCHEDULED_EVENT_IMAGE_MAX_WIDTH": 2400,
@@ -6308,14 +6346,14 @@ const DiscordConstants = {
     "3": "VIP_ACCESS",
     "FULL": 1,
     "EARLY_ACCESS": 2,
-    "VIP_ACCESS": 3
+    "VIP_ACCESS": 3;
   },
   "SKUFlags": {
     "PREMIUM_PURCHASE": 1,
     "HAS_FREE_PREMIUM_CONTENT": 2,
     "AVAILABLE": 4,
     "PREMIUM_AND_DISTRIBUTION": 8,
-    "STICKER_PACK": 16
+    "STICKER_PACK": 16;
   },
   "SKUTypes": {
     "1": "DURABLE_PRIMARY",
@@ -6327,7 +6365,7 @@ const DiscordConstants = {
     "DURABLE": 2,
     "CONSUMABLE": 3,
     "BUNDLE": 4,
-    "SUBSCRIPTION": 5
+    "SUBSCRIPTION": 5;
   },
   "SLOWMODE_COOLDOWN_BUFFER_MS": 100,
   "SLOWMODE_VALUES": [
@@ -6355,21 +6393,21 @@ const DiscordConstants = {
   "SearchAutocompleteGroups": {
     "HISTORY": "HISTORY",
     "SEARCH_OPTIONS": "SEARCH_OPTIONS",
-    "DATES": "DATES"
+    "DATES": "DATES";
   },
   "SearchModes": {
     "NEWEST": "newest",
     "OLDEST": "oldest",
-    "MOST_RELEVANT": "most_relevant"
+    "MOST_RELEVANT": "most_relevant";
   },
   "SearchPopoutModes": {
     "EMPTY": "EMPTY",
     "FILTER": "FILTER",
-    "FILTER_ALL": "FILTER_ALL"
+    "FILTER_ALL": "FILTER_ALL";
   },
   "SearchSections": {
     "SEARCH": "SEARCH",
-    "CHANNEL": "CHANNEL"
+    "CHANNEL": "CHANNEL";
   },
   "SearchTokenTypes": {
     "FILTER_FROM": "FILTER_FROM",
@@ -6389,7 +6427,7 @@ const DiscordConstants = {
     "FILTER_ON": "FILTER_ON",
     "ANSWER_ON": "ANSWER_ON",
     "FILTER_IN": "FILTER_IN",
-    "ANSWER_IN": "ANSWER_IN"
+    "ANSWER_IN": "ANSWER_IN";
   },
   "SearchTypes": {
     "GUILD": "GUILD",
@@ -6401,17 +6439,17 @@ const DiscordConstants = {
     "STICKER": "STICKER",
     "STICKER_SHOP": "STICKER_SHOP",
     "INSTANT_INVITE": "INSTANT_INVITE",
-    "EMOJI": "EMOJI"
+    "EMOJI": "EMOJI";
   },
   "SendTypes": {
     "DIRECT_MESSAGE": "Direct Message",
     "SMS": "SMS",
-    "EMAIL": "Email"
+    "EMAIL": "Email";
   },
   "SettingsPaneTypes": {
     "CHANNEL_SETTINGS": "Channel Settings",
     "CHANNEL_NOTIFICATION_SETTINGS": "Channel Notification Settings",
-    "GUILD_NOTIFICATION_SETTINGS": "Guild Notification Settings"
+    "GUILD_NOTIFICATION_SETTINGS": "Guild Notification Settings";
   },
   "SoundshareEnableState": {
     "0": "NOT_ENABLED",
@@ -6421,7 +6459,7 @@ const DiscordConstants = {
     "NOT_ENABLED": 0,
     "ENABLING": 1,
     "ENABLED": 2,
-    "FAILED_TO_ENABLE": 3
+    "FAILED_TO_ENABLE": 3;
   },
   "SoundshareStatusCode": {
     "0": "OK",
@@ -6431,7 +6469,7 @@ const DiscordConstants = {
     "-1": "FAILED",
     "OK": 0,
     "ACE_INSTALL_FAILED": 4,
-    "ACE_NOT_AUTHORIZED": 5
+    "ACE_NOT_AUTHORIZED": 5;
   },
   "SoundshareTraceStates": {
     "0": "DETACHED",
@@ -6445,18 +6483,18 @@ const DiscordConstants = {
     "ATTACHED": 2,
     "STARTED": 3,
     "PLAYING": 4,
-    "SILENCE": 5
+    "SILENCE": 5;
   },
   "SpoilerRenderSetting": {
     "ALWAYS": "ALWAYS",
     "ON_CLICK": "ON_CLICK",
-    "IF_MODERATOR": "IF_MODERATOR"
+    "IF_MODERATOR": "IF_MODERATOR";
   },
   "SpringTransitionPhases": {
     "INITIAL": "initial",
     "ENTER": "enter",
     "UPDATE": "update",
-    "LEAVE": "leave"
+    "LEAVE": "leave";
   },
   "StoreApplicationGenresFilter": {
     "ALL": -1,
@@ -6524,13 +6562,13 @@ const DiscordConstants = {
     "MUSIC_RHYTHM": 62,
     "PARTY_MINI_GAME": 63,
     "PINBALL": 64,
-    "TRIVIA_BOARD_GAME": 65
+    "TRIVIA_BOARD_GAME": 65;
   },
   "StoreApplicationSort": {
     "NEW_RELEASES": "new",
     "ALPHABETICAL": "asc",
     "REVERSE_ALPHABETICAL": "desc",
-    "ID": "id"
+    "ID": "id";
   },
   "StoreRecommendationTypes": {
     "NOW_PLAYING": "1",
@@ -6540,7 +6578,7 @@ const DiscordConstants = {
     "RECENT_RELEASE_DATE": "6",
     "RELEASE_DATE": "7",
     "EARLY_ACCESS": "8",
-    "HAS_FREE_PREMIUM_CONTENT": "9"
+    "HAS_FREE_PREMIUM_CONTENT": "9";
   },
   "StreamLayouts": {
     "THEATRE": "theatre",
@@ -6549,15 +6587,15 @@ const DiscordConstants = {
     "POPOUT": "popout",
     "PORTRAIT": "portrait",
     "LANDSCAPE": "landscape",
-    "MINIMIZED": "minimized"
+    "MINIMIZED": "minimized";
   },
   "StripeElementsOptions": {
     "fonts": [
       {
         "src": "url(https://cdn.discordapp.com/assets/stripe/whitney-book.ttf)",
-        "family": "Whitney"
+        "family": "Whitney";
       }
-    ]
+    ];
   },
   "SubscriptionIntervalTypes": {
     "1": "MONTH",
@@ -6565,7 +6603,7 @@ const DiscordConstants = {
     "3": "DAY",
     "MONTH": 1,
     "YEAR": 2,
-    "DAY": 3
+    "DAY": 3;
   },
   "SubscriptionPlanGatewayPlans": {
     "628379151761408000": "none_month",
@@ -6577,7 +6615,7 @@ const DiscordConstants = {
     "511651880837840896": "premium_month_tier_2",
     "511651885459963904": "premium_year_tier_2",
     "590665532894740483": null,
-    "590665538238152709": null
+    "590665538238152709": null;
   },
   "SubscriptionPlanInfo": {
     "628379151761408000": {
@@ -6585,14 +6623,14 @@ const DiscordConstants = {
       "name": "None Monthly",
       "skuId": "628379670982688768",
       "interval": 1,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "628381571568631808": {
       "id": "628381571568631808",
       "name": "None Yearly",
       "skuId": "628379670982688768",
       "interval": 2,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651856145973248": {
       "id": "511651856145973248",
@@ -6600,7 +6638,7 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521842865731534868",
       "interval": 1,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651860671627264": {
       "id": "511651860671627264",
@@ -6608,7 +6646,7 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521842865731534868",
       "interval": 2,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651871736201216": {
       "id": "511651871736201216",
@@ -6616,7 +6654,7 @@ const DiscordConstants = {
       "premiumType": 1,
       "skuId": "521846918637420545",
       "interval": 1,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651876987469824": {
       "id": "511651876987469824",
@@ -6624,7 +6662,7 @@ const DiscordConstants = {
       "premiumType": 1,
       "skuId": "521846918637420545",
       "interval": 2,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651880837840896": {
       "id": "511651880837840896",
@@ -6632,7 +6670,7 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521847234246082599",
       "interval": 1,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "511651885459963904": {
       "id": "511651885459963904",
@@ -6640,21 +6678,21 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521847234246082599",
       "interval": 2,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "590665532894740483": {
       "id": "590665532894740483",
       "name": "Nitro Server Boost Monthly",
       "skuId": "590663762298667008",
       "interval": 1,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "590665538238152709": {
       "id": "590665538238152709",
       "name": "Nitro Server Boost Yearly",
       "skuId": "590663762298667008",
       "interval": 2,
-      "intervalCount": 1
+      "intervalCount": 1;
     },
     "642251038925127690": {
       "id": "642251038925127690",
@@ -6662,7 +6700,7 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521847234246082599",
       "interval": 1,
-      "intervalCount": 3
+      "intervalCount": 3;
     },
     "944037208325619722": {
       "id": "944037208325619722",
@@ -6670,36 +6708,36 @@ const DiscordConstants = {
       "premiumType": 2,
       "skuId": "521847234246082599",
       "interval": 1,
-      "intervalCount": 6
+      "intervalCount": 6;
     },
     "944037355453415424": {
       "id": "944037355453415424",
       "name": "Nitro Server Boost Three Month",
       "skuId": "590663762298667008",
       "interval": 1,
-      "intervalCount": 3
+      "intervalCount": 3;
     },
     "944037391444738048": {
       "id": "944037391444738048",
       "name": "Nitro Server Boost Six Month",
       "skuId": "590663762298667008",
       "interval": 1,
-      "intervalCount": 6
+      "intervalCount": 6;
     },
     "944265614527037440": {
       "id": "944265614527037440",
       "name": "None Three Month",
       "skuId": "628379670982688768",
       "interval": 1,
-      "intervalCount": 3
+      "intervalCount": 3;
     },
     "944265636643602432": {
       "id": "944265636643602432",
       "name": "None Six Month",
       "skuId": "628379670982688768",
       "interval": 1,
-      "intervalCount": 6
-    }
+      "intervalCount": 6;
+    };
   },
   "SubscriptionPlans": {
     "NONE_MONTH": "628379151761408000",
@@ -6717,7 +6755,7 @@ const DiscordConstants = {
     "PREMIUM_3_MONTH_TIER_2": "642251038925127690",
     "PREMIUM_6_MONTH_TIER_2": "944037208325619722",
     "PREMIUM_3_MONTH_GUILD": "944037355453415424",
-    "PREMIUM_6_MONTH_GUILD": "944037391444738048"
+    "PREMIUM_6_MONTH_GUILD": "944037391444738048";
   },
   "SubscriptionStatusTypes": {
     "0": "UNPAID",
@@ -6731,33 +6769,34 @@ const DiscordConstants = {
     "PAST_DUE": 2,
     "CANCELED": 3,
     "ENDED": 4,
-    "ACCOUNT_HOLD": 6
+    "ACCOUNT_HOLD": 6;
   },
   "SubscriptionTrials": {
     "520373071933079552": {
       "id": "520373071933079552",
       "skus": [
         "521847234246082599"
-      ]
+      ];
     },
     "902329034132684800": {
       "id": "902329034132684800",
       "skus": [
         "521847234246082599"
-      ]
-    }
+      ];
+    };
   },
   "SubscriptionTypes": {
     "1": "PREMIUM",
     "2": "GUILD",
     "PREMIUM": 1,
-    "GUILD": 2
+    "GUILD": 2;
   },
   "SystemChannelFlags": {
     "SUPPRESS_JOIN_NOTIFICATIONS": 1,
     "SUPPRESS_PREMIUM_SUBSCRIPTIONS": 2,
     "SUPPRESS_GUILD_REMINDER_NOTIFICATIONS": 4,
-    "SUPPRESS_JOIN_NOTIFICATION_REPLIES": 8
+    "SUPPRESS_JOIN_NOTIFICATION_REPLIES": 8,
+    "SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS": 16;
   },
   "TOKEN_REGEX": {},
   "TOS_AGREEMENT_DUE_BY": "2022-03-28T05:00:00.000Z",
@@ -6765,14 +6804,14 @@ const DiscordConstants = {
   "TTSNotificationTypes": {
     "NEVER": "NEVER",
     "ALL_CHANNELS": "ALL_CHANNELS",
-    "SELECTED_CHANNEL": "SELECTED_CHANNEL"
+    "SELECTED_CHANNEL": "SELECTED_CHANNEL";
   },
   "TWITCH_CLIENT_ID": "33kozedd0zs6fbauka98psnc7zwom2s",
   "TYPING_DELAY_LOCAL": 1500,
   "TYPING_TIMEOUT": 10000,
   "TableSortDirections": {
     "ASCENDING": "asc",
-    "DESCENDING": "desc"
+    "DESCENDING": "desc";
   },
   "TenorFormats": {
     "GIF": "gif",
@@ -6785,13 +6824,13 @@ const DiscordConstants = {
     "NANOMP4": "nanomp4",
     "WEBM": "webm",
     "TINYWEBM": "tinywebm",
-    "NANOWEBM": "nanowebm"
+    "NANOWEBM": "nanowebm";
   },
   "TransportTypes": {
     "IPC": "ipc",
     "WEBSOCKET": "ws",
     "HTTP": "http",
-    "POST_MESSAGE": "post_message"
+    "POST_MESSAGE": "post_message";
   },
   "UNAMBIGUOUS_CHARACTERS": "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789",
   "UNREACHABLE_REQUEST_ANIMATION_FRAME_ID": 0,
@@ -6806,7 +6845,7 @@ const DiscordConstants = {
   "UpsellActionTypes": {
     "PRIMARY": "primary",
     "SECONDARY": "secondary",
-    "DISMISS": "dismiss"
+    "DISMISS": "dismiss";
   },
   "UserFlags": {
     "STAFF": 1,
@@ -6826,7 +6865,7 @@ const DiscordConstants = {
     "DISABLE_PREMIUM": 2097152,
     "MFA_SMS": 16,
     "PREMIUM_PROMO_DISMISSED": 32,
-    "HAS_UNREAD_URGENT_MESSAGES": 8192
+    "HAS_UNREAD_URGENT_MESSAGES": 8192;
   },
   "UserNotificationSettings": {
     "0": "ALL_MESSAGES",
@@ -6836,20 +6875,20 @@ const DiscordConstants = {
     "ALL_MESSAGES": 0,
     "ONLY_MENTIONS": 1,
     "NO_MESSAGES": 2,
-    "NULL": 3
+    "NULL": 3;
   },
   "UserRequiredActions": {
     "AGREEMENTS": "AGREEMENTS",
     "TOS_UPDATE_ACKNOWLEDGMENT": "TOS_UPDATE_ACKNOWLEDGMENT",
     "REQUIRE_CAPTCHA": "REQUIRE_CAPTCHA",
     "REQUIRE_VERIFIED_EMAIL": "REQUIRE_VERIFIED_EMAIL",
-    "REQUIRE_VERIFIED_PHONE": "REQUIRE_VERIFIED_PHONE"
+    "REQUIRE_VERIFIED_PHONE": "REQUIRE_VERIFIED_PHONE";
   },
   "UserSearchWorkerMessageTypes": {
     "UPDATE_USERS": "UPDATE_USERS",
     "USER_RESULTS": "USER_RESULTS",
     "QUERY_SET": "QUERY_SET",
-    "QUERY_CLEAR": "QUERY_CLEAR"
+    "QUERY_CLEAR": "QUERY_CLEAR";
   },
   "UserSettingsSections": {
     "OVERVIEW": "Overview",
@@ -6900,11 +6939,11 @@ const DiscordConstants = {
     "HOTSPOT_OPTIONS": "Hotspot Options",
     "DISMISSIBLE_CONTENT_OPTIONS": "Dismissible Content Options",
     "PAYMENT_FLOW_MODAL_TEST_PAGE": "Payment Flow Modals",
-    "POGGERMODE": "Powermode Settings"
+    "POGGERMODE": "Powermode Settings";
   },
   "VerificationCriteria": {
     "ACCOUNT_AGE": 5,
-    "MEMBER_AGE": 10
+    "MEMBER_AGE": 10;
   },
   "VerificationLevels": {
     "0": "NONE",
@@ -6916,31 +6955,31 @@ const DiscordConstants = {
     "LOW": 1,
     "MEDIUM": 2,
     "HIGH": 3,
-    "VERY_HIGH": 4
+    "VERY_HIGH": 4;
   },
   "VerificationTypes": {
     "CAPTCHA": "captcha",
     "EMAIL_OR_PHONE": "email_or_phone",
     "PHONE": "phone",
-    "EMAIL": "email"
+    "EMAIL": "email";
   },
   "VideoQualityMode": {
     "1": "AUTO",
     "2": "FULL",
     "AUTO": 1,
-    "FULL": 2
+    "FULL": 2;
   },
   "ViewHistoryKeys": {
     "APPLICATION_LIBRARY_BADGE": "application_library_badge_18_11_02",
     "SERVER_DISCOVERY_BADGE": "server_discovery_badge_19_02_11",
-    "E3_SERVER_DISCOVERY_BADGE": "e3_server_discovery_badge_19_06_08"
+    "E3_SERVER_DISCOVERY_BADGE": "e3_server_discovery_badge_19_06_08";
   },
   "WELCOME_OLD_GUILD_AGE_THRESHOLD": 2592000000,
   "WebhookTypes": {
     "1": "INCOMING",
     "2": "CHANNEL_FOLLOWER",
     "INCOMING": 1,
-    "CHANNEL_FOLLOWER": 2
+    "CHANNEL_FOLLOWER": 2;
   },
   "WindowsKeyToCode": {
     "0": 48,
@@ -7055,7 +7094,7 @@ const DiscordConstants = {
     "fast forward": 176,
     "`": 192,
     "\\": 220,
-    "'": 222
+    "'": 222;
   },
   "ADYEN_PAYMENT_SOURCES": [
     7,
@@ -7070,17 +7109,17 @@ const DiscordConstants = {
     "REGISTER": "https://discord.com/register",
     "CREATE_GUILD": "https://discord.com/guilds/create",
     "HYPESQUAD_ONLINE": "https://discord.com/settings/hypesquad-online",
-    "BROWSE_NITRO_TITLES": "https://discord.com/store/browse?type=nitro"
+    "BROWSE_NITRO_TITLES": "https://discord.com/store/browse?type=nitro";
   },
   "BLOG_DOMAIN": "blog.discord.com",
   "BraintreeErrors": {
-    "PAYPAL_POPUP_CLOSED": "PAYPAL_POPUP_CLOSED"
+    "PAYPAL_POPUP_CLOSED": "PAYPAL_POPUP_CLOSED";
   },
   "ClientTypes": {
     "DESKTOP": "desktop",
     "WEB": "web",
     "MOBILE": "mobile",
-    "UNKNOWN": "unknown"
+    "UNKNOWN": "unknown";
   },
   "CurrencyCodes": {
     "AED": "aed",
@@ -7264,7 +7303,7 @@ const DiscordConstants = {
     "YER": "yer",
     "ZAR": "zar",
     "ZMW": "zmw",
-    "ZWL": "zwl"
+    "ZWL": "zwl";
   },
   "DELAYED_PAYMENTS": [
     6
@@ -7273,7 +7312,7 @@ const DiscordConstants = {
   "ElevatedPermissions": "1116959940670",
   "ExternalSKUStrategyTypes": {
     "CONSTANT": 1,
-    "APPLE_STICKER": 2
+    "APPLE_STICKER": 2;
   },
   "FEEDBACK_DOMAIN": "feedback.discord.com",
   "FallbackCurrencyCountry": "US",
@@ -7286,7 +7325,7 @@ const DiscordConstants = {
     "DISPLAY_BOLD": "ABCGintoNormalVariable_Bold",
     "DISPLAY_SEMIBOLD": "ABCGintoNormalVariable_Medium",
     "DISPLAY": "ABCGintoNormalVariable",
-    "CODE_SEMIBOLD": "SourceCodePro-Semibold"
+    "CODE_SEMIBOLD": "SourceCodePro-Semibold";
   },
   "Links": {
     "PRESSKIT": "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
@@ -7309,22 +7348,22 @@ const DiscordConstants = {
     "PARTNER_CODE_OF_CONDUCT": "https://support.discord.com/hc/en-us/articles/360024871991",
     "SUBMIT_TNS_REPORT": "https://dis.gd/request",
     "MERCH_STORE": "https://discordmerch.com",
-    "MOD_ACADEMY_EXAM": "https://dis.gd/exam"
+    "MOD_ACADEMY_EXAM": "https://dis.gd/exam";
   },
   "LocalizedLinks": {
     "TWITTER": {
       "default": "https://twitter.com/discord",
-      "ja": "https://twitter.com/discord_jp"
-    }
+      "ja": "https://twitter.com/discord_jp";
+    };
   },
   "MobilePaymentDefault": {
     "COUNTRY": "US",
-    "CURRENCY": "usd"
+    "CURRENCY": "usd";
   },
   "NavigateEventSource": {
     "SWIPE": "SWIPE",
     "BROWSER": "BROWSER",
-    "KEYBIND": "KEYBIND"
+    "KEYBIND": "KEYBIND";
   },
   "OAuth2Scopes": {
     "IDENTIFY": "identify",
@@ -7351,7 +7390,7 @@ const DiscordConstants = {
     "APPLICATIONS_ENTITLEMENTS": "applications.entitlements",
     "ACTIVITIES_READ": "activities.read",
     "ACTIVITIES_WRITE": "activities.write",
-    "RELATIONSHIPS_READ": "relationships.read"
+    "RELATIONSHIPS_READ": "relationships.read";
   },
   "PREPAID_PAYMENT_SOURCES": [
     7
@@ -7362,28 +7401,28 @@ const DiscordConstants = {
     "2": "Braintree",
     "3": "Apple",
     "4": "Google",
-    "5": "Adyen"
+    "5": "Adyen";
   },
   "PaymentGateways": {
     "STRIPE": 1,
     "BRAINTREE": 2,
     "APPLE": 3,
     "GOOGLE": 4,
-    "ADYEN": 5
+    "ADYEN": 5;
   },
   "PaymentSettings": {
     "BRAINTREE": {
       "KEY": "production_5st77rrc_49pp2rp4phym7387",
-      "PAYMENT_GATEWAY": "braintree"
+      "PAYMENT_GATEWAY": "braintree";
     },
     "STRIPE": {
       "KEY": "pk_live_CUQtlpQUF0vufWpnpUmQvcdi",
-      "PAYMENT_GATEWAY": "stripe"
-    }
+      "PAYMENT_GATEWAY": "stripe";
+    };
   },
   "PaymentSourceFlags": {
     "1": "NEW",
-    "NEW": 1
+    "NEW": 1;
   },
   "PaymentSourceTypes": {
     "0": "UNKNOWN",
@@ -7405,7 +7444,7 @@ const DiscordConstants = {
     "SEPA_DEBIT": 6,
     "PAYSAFE_CARD": 7,
     "GCASH": 8,
-    "PAYMENT_REQUEST": 99
+    "PAYMENT_REQUEST": 99;
   },
   "PaymentStatusTypes": {
     "0": "PENDING",
@@ -7419,7 +7458,7 @@ const DiscordConstants = {
     "FAILED": 2,
     "REVERSED": 3,
     "REFUNDED": 4,
-    "CANCELED": 5
+    "CANCELED": 5;
   },
   "Permissions": {
     "CREATE_INSTANT_INVITE": "1",
@@ -7463,11 +7502,11 @@ const DiscordConstants = {
     "STREAM": "512",
     "USE_EMBEDDED_ACTIVITIES": "549755813888",
     "REQUEST_TO_SPEAK": "4294967296",
-    "MANAGE_EVENTS": "8589934592"
+    "MANAGE_EVENTS": "8589934592";
   },
   "PriceTierTypes": {
     "1": "GUILD_ROLE_SUBSCRIPTIONS",
-    "GUILD_ROLE_SUBSCRIPTIONS": 1
+    "GUILD_ROLE_SUBSCRIPTIONS": 1;
   },
   "RECAPTCHA_SITE_KEY": "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn",
   "REDIRECTED_PAYMENT_SOURCES": [
@@ -7495,7 +7534,7 @@ const DiscordConstants = {
     "RATELIMITED": 4002,
     "TOKEN_REVOKED": 4003,
     "INVALID_VERSION": 4004,
-    "INVALID_ENCODING": 4005
+    "INVALID_ENCODING": 4005;
   },
   "RPCCommands": {
     "DISPATCH": "DISPATCH",
@@ -7568,7 +7607,7 @@ const DiscordConstants = {
     "SEND_GENERIC_EVENT": "SEND_GENERIC_EVENT",
     "SEND_ANALYTICS_EVENT": "SEND_ANALYTICS_EVENT",
     "OPEN_EXTERNAL_LINK": "OPEN_EXTERNAL_LINK",
-    "ENCOURAGE_HW_ACCELERATION": "ENCOURAGE_HW_ACCELERATION"
+    "ENCOURAGE_HW_ACCELERATION": "ENCOURAGE_HW_ACCELERATION";
   },
   "RPCEvents": {
     "CURRENT_USER_UPDATE": "CURRENT_USER_UPDATE",
@@ -7608,7 +7647,7 @@ const DiscordConstants = {
     "ENTITLEMENT_DELETE": "ENTITLEMENT_DELETE",
     "USER_ACHIEVEMENT_UPDATE": "USER_ACHIEVEMENT_UPDATE",
     "READY": "READY",
-    "ERROR": "ERROR"
+    "ERROR": "ERROR";
   },
   "RPC_PORT_RANGE": 10,
   "RPC_STARTING_PORT": 6463,
@@ -7626,7 +7665,7 @@ const DiscordConstants = {
     "CONTROLLER_SUPPORT": 10,
     "CLOUD_SAVES": 11,
     "ONLINE_COOP": 12,
-    "SECURE_NETWORKING": 13
+    "SECURE_NETWORKING": 13;
   },
   "SKUGenres": {
     "ACTION": 1,
@@ -7693,12 +7732,12 @@ const DiscordConstants = {
     "MUSIC_RHYTHM": 62,
     "PARTY_MINI_GAME": 63,
     "PINBALL": 64,
-    "TRIVIA_BOARD_GAME": 65
+    "TRIVIA_BOARD_GAME": 65;
   },
   "SOCIAL_LINKS": {
     "FACEBOOK_URL": "https://www.facebook.com/discord/",
     "INSTAGRAM_URL": "https://www.instagram.com/discord/",
-    "YOUTUBE_URL": "https://www.youtube.com/discord/"
+    "YOUTUBE_URL": "https://www.youtube.com/discord/";
   },
   "STATUS_DOMAIN": "status.discord.com",
   "STATUS_PAGE_ENDPOINT": "https://status.discord.com",
@@ -7711,7 +7750,7 @@ const DiscordConstants = {
     "DND": "dnd",
     "INVISIBLE": "invisible",
     "STREAMING": "streaming",
-    "UNKNOWN": "unknown"
+    "UNKNOWN": "unknown";
   },
   "TOKENS_KEY": "tokens",
   "TOKEN_KEY": "token",
@@ -8267,11 +8306,11 @@ const DiscordConstants = {
     "DEPRECATED_TEXT_INPUT_PREFIX": [
       "#dcddde",
       "#b9bbbe"
-    ]
+    ];
   },
   "ThemeTypes": {
     "DARK": "dark",
-    "LIGHT": "light"
+    "LIGHT": "light";
   },
   "UNSAFE_Colors": {
     "HINT_PURPLE": "#c9d2f0",
@@ -8295,12 +8334,12 @@ const DiscordConstants = {
     "GREY5": "#535559",
     "GREY6": "#4f545c",
     "GREY7": "#1c242b",
-    "GREY9": "#202226"
+    "GREY9": "#202226";
   },
   "UserMediaErrors": {
     "PERMISSION_DENIED": "PERMISSION_DENIED",
     "PERMISSION_DISMISSED": "PERMISSION_DISMISSED",
-    "NO_DEVICES_FOUND": "NO_DEVICES_FOUND"
+    "NO_DEVICES_FOUND": "NO_DEVICES_FOUND";
   },
   "VANITY_URL_PREFIX": "https://discord.gg",
   "VAULTABLE_PAYMENT_SOURCES": [
@@ -8326,10 +8365,10 @@ const DiscordConstants = {
     "MKTG_VIDEO_PLAYED": "mktg_video_played",
     "DEEP_LINK_CLICKED": "deep_link_clicked",
     "SEO_PAGE_VIEWED": "seo_server_landing_page_viewed",
-    "SEO_PAGE_CTA_CLICKED": "seo_server_landing_page_cta_clicked"
+    "SEO_PAGE_CTA_CLICKED": "seo_server_landing_page_cta_clicked";
   },
   "WebAnalyticsPageLoads": {
-    "MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN": "mktg_ack_modal_open"
+    "MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN": "mktg_ack_modal_open";
   },
   "WebColors": {
     "PRIMARY_DARK_100": "hsl(240, calc(var(--saturation-factor, 1) * 5.9%), 96.7%)",
@@ -8739,12 +8778,20 @@ const DiscordConstants = {
     "BLACK_900": "hsl(0, calc(var(--saturation-factor, 1) * 0%), 0%)",
     "PREMIUM_TIER_2_PURPLE_500": "hsl(270, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
     "PREMIUM_TIER_2_PURPLE": "hsl(270, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_500": "hsl(269, calc(var(--saturation-factor, 1) * 52.7%), 52.7%)",
+    "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS": "hsl(269, calc(var(--saturation-factor, 1) * 52.7%), 52.7%)",
     "PREMIUM_TIER_2_PINK_500": "hsl(342, calc(var(--saturation-factor, 1) * 58%), 72.9%)",
     "PREMIUM_TIER_2_PINK": "hsl(342, calc(var(--saturation-factor, 1) * 58%), 72.9%)",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS_500": "hsl(325, calc(var(--saturation-factor, 1) * 31.7%), 51.8%)",
+    "PREMIUM_TIER_2_PINK_FOR_GRADIENTS": "hsl(325, calc(var(--saturation-factor, 1) * 31.7%), 51.8%)",
     "PREMIUM_TIER_1_PURPLE_500": "hsl(244, calc(var(--saturation-factor, 1) * 100%), 84.1%)",
     "PREMIUM_TIER_1_PURPLE": "hsl(244, calc(var(--saturation-factor, 1) * 100%), 84.1%)",
     "PREMIUM_TIER_1_BLUE_500": "hsl(228, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
     "PREMIUM_TIER_1_BLUE": "hsl(228, calc(var(--saturation-factor, 1) * 86.7%), 70.6%)",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "PREMIUM_TIER_1_DARK_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS_500": "hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)",
+    "PREMIUM_TIER_1_BLUE_FOR_GRADIENTS": "hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)",
     "GUILD_BOOSTING_PINK_500": "hsl(302, calc(var(--saturation-factor, 1) * 100%), 72.5%)",
     "GUILD_BOOSTING_PINK": "hsl(302, calc(var(--saturation-factor, 1) * 100%), 72.5%)",
     "GUILD_BOOSTING_PURPLE_500": "hsl(269, calc(var(--saturation-factor, 1) * 83.8%), 71%)",
@@ -8820,7 +8867,7 @@ const DiscordConstants = {
     "TRANSPARENT": "transparent",
     "SCROLLBAR_THUMB_LIGHT": "hsl(212, calc(var(--saturation-factor, 1) * 9.8%), 52.2%)",
     "SCROLLBAR_THUMB_DARK": "hsl(220, calc(var(--saturation-factor, 1) * 3.7%), 52%)",
-    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)"
+    "INPUT_PLACEHOLDER_TEXT_DARK": "hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)";
   },
   "WebRoutes": {
     "INDEX": "/",
@@ -8898,20 +8945,20 @@ const DiscordConstants = {
     "LEGAL_ARCHIVE": "/archive/",
     "TERMS_MAY_2020": "/archive/terms/may-2020",
     "PRIVACY_JUNE_2020": "/archive/privacy/june-2020",
-    "GUIDELINES_MAY_2020": "/archive/guidelines/may-2020"
+    "GUIDELINES_MAY_2020": "/archive/guidelines/may-2020";
   },
   "APP_STORE_REVIEW_LINK": "itms-apps://itunes.apple.com/us/app/id985746746?mt=8&action=write-review",
   "ActivityPartyApplicationNames": {
-    "spotify": "Spotify"
+    "spotify": "Spotify";
   },
   "AppStates": {
     "INACTIVE": "inactive",
     "BACKGROUND": "background",
-    "ACTIVE": "active"
+    "ACTIVE": "active";
   },
   "AuditLogFilterTypes": {
     "USER": "USER",
-    "ACTION": "ACTION"
+    "ACTION": "ACTION";
   },
   "AuthStates": {
     "WELCOME": "WELCOME",
@@ -8925,8 +8972,7 @@ const DiscordConstants = {
     "AGE_GATE_UNDERAGE": "AGE_GATE_UNDERAGE",
     "AGE_GATE": "AGE_GATE",
     "COUNTRY_SELECT": "COUNTRY_SELECT",
-    "EXTERNAL_LINK": "EXTERNAL_LINK",
-    "LOGIN_PASSWORD": "LOGIN_PASSWORD"
+    "EXTERNAL_LINK": "EXTERNAL_LINK";
   },
   "BANNER_HEIGHT": 150,
   "Base64GIFPrefix": "data:image/gif;base64,",
@@ -8940,23 +8986,23 @@ const DiscordConstants = {
   "CallModalScenes": {
     "VOICE": "VOICE",
     "VIDEO": "VIDEO",
-    "STREAM": "STREAM"
+    "STREAM": "STREAM";
   },
   "CaptchaEvent": {
     "SOLVED": "solved",
-    "EXPIRED": "expired"
+    "EXPIRED": "expired";
   },
   "Changeset": {
     "NOOP": 0,
     "INSERT": 1,
     "UPDATE": 2,
-    "REMOVE": 3
+    "REMOVE": 3;
   },
   "CompressionQuality": {
     "HIGH": 0.6,
     "0.6": "HIGH",
     "LOW": 0.3,
-    "0.3": "LOW"
+    "0.3": "LOW";
   },
   "ContactSyncModalScenes": {
     "LANDING": "LANDING",
@@ -8964,14 +9010,14 @@ const DiscordConstants = {
     "RESULTS": "RESULTS",
     "NO_RESULTS": "NO_RESULTS",
     "ADD_PHONE": "ADD_PHONE",
-    "VERIFY_PHONE": "VERIFY_PHONE"
+    "VERIFY_PHONE": "VERIFY_PHONE";
   },
   "DISCORD_CONNECT_EXAMPLE_APP_APPLICATION_ID": "628735568569696256",
   "DISCORD_CONNECT_EXAMPLE_APP_DEEPLINK_URI": "discordconnect://connect",
   "DM_WIDTH": 72,
   "DiscoverabilityScenes": {
     "LANDING": "LANDING",
-    "NAME": "NAME"
+    "NAME": "NAME";
   },
   "DrawerTabTypes": {
     "CHAT": "CHAT",
@@ -8981,30 +9027,30 @@ const DiscordConstants = {
     "MENTIONS_AND_QUICKSWITCHER": "MENTIONS_AND_QUICKSWITCHER",
     "USER_SETTINGS": "USER_SETTINGS",
     "STAGE_DISCOVERY": "STAGE_DISCOVERY",
-    "SERVER_DISCOVERY": "SERVER_DISCOVERY"
+    "SERVER_DISCOVERY": "SERVER_DISCOVERY";
   },
   "DrawerTypes": {
     "CHANNELS": "CHANNELS",
-    "MEMBERS": "MEMBERS"
+    "MEMBERS": "MEMBERS";
   },
   "EMOJI_CHAT_SIZE": 18,
   "EMOJI_SEARCH_HEADER_HEIGHT": 56,
   "EXPRESSION_FOOTER_HEIGHT": 40,
   "ExpressionPickerScene": {
     "OVERVIEW": "overview",
-    "GIF_RESULTS": "gif_results"
+    "GIF_RESULTS": "gif_results";
   },
   "GESTURE_HANDLER_ROOT_VIEW_ID": "DiscordGestureHandlerEnabledRootViewTag",
   "GIF_FETCH_LIMIT_IOS": 50,
   "GIF_RE_IOS": {},
   "Gradients": {
     "PREMIUM_TIER_1": [
-      "#738ef5",
-      "#b3aeff"
+      "#3442d9",
+      "#5865f2"
     ],
     "PREMIUM_TIER_2": [
-      "#b473f5",
-      "#e292aa"
+      "#8547c6",
+      "#ab5d8a"
     ],
     "PREMIUM_GUILD": [
       "#3442d9",
@@ -9013,7 +9059,7 @@ const DiscordConstants = {
     "CREATOR_REVENUE": [
       "#11a574",
       "#169dd8"
-    ]
+    ];
   },
   "GuildSettingsPermissionSections": {
     "0": "GENERAL",
@@ -9021,56 +9067,56 @@ const DiscordConstants = {
     "2": "VOICE",
     "GENERAL": 0,
     "TEXT": 1,
-    "VOICE": 2
+    "VOICE": 2;
   },
   "HorizontalGradient": {
     "START": {
       "x": 0,
-      "y": 0
+      "y": 0;
     },
     "END": {
       "x": 1,
-      "y": 0
-    }
+      "y": 0;
+    };
   },
   "INVITE_EMBED_AVATAR_SIZE": 50,
   "InviteModalScenes": {
-    "ADVANCED": "ADVANCED"
+    "ADVANCED": "ADVANCED";
   },
   "KeyboardThemes": {
     "DEFAULT": "default",
     "DARK": "dark",
-    "LIGHT": "light"
+    "LIGHT": "light";
   },
   "KeyboardTypes": {
     "SYSTEM": "system",
     "EXPRESSION": "expression",
-    "MEDIA": "media"
+    "MEDIA": "media";
   },
   "LINKING_WHITELIST": [
     {
       "regex": {},
-      "protocol": "youtube://"
+      "protocol": "youtube://";
     },
     {
       "regex": {},
-      "protocol": "instagram://"
+      "protocol": "instagram://";
     },
     {
       "regex": {},
-      "protocol": "twitch://"
+      "protocol": "twitch://";
     },
     {
       "regex": {},
-      "protocol": "twitter://"
+      "protocol": "twitter://";
     },
     {
       "regex": {},
-      "protocol": "discordconnect://"
+      "protocol": "discordconnect://";
     },
     {
       "regex": {},
-      "protocol": "https://open.spotify.com"
+      "protocol": "https://open.spotify.com";
     }
   ],
   "LinkingTypes": {
@@ -9091,11 +9137,11 @@ const DiscordConstants = {
     "FRIENDS": "friends",
     "EDIT_PROFILE": "edit-profile",
     "MOBILE_WEB_HANDOFF": "mobile-web-handoff",
-    "VOICE_CHANNEL": "voice-channel"
+    "VOICE_CHANNEL": "voice-channel";
   },
   "LoadingType": {
     "LOAD_BEFORE": "load_before",
-    "LOAD_AFTER": "load_after"
+    "LOAD_AFTER": "load_after";
   },
   "MANAGE_SUBSCRIPTION_LINK": "itms-apps://apps.apple.com/account/subscriptions",
   "MAX_INVITE_AVATARS_TO_SHOW": 6,
@@ -9105,10 +9151,10 @@ const DiscordConstants = {
     "2": "VIDEO",
     "IMAGE": 0,
     "GIF": 1,
-    "VIDEO": 2
+    "VIDEO": 2;
   },
   "MentionModalScreens": {
-    "MENTIONS": "mentions"
+    "MENTIONS": "mentions";
   },
   "ModalAnimation": {
     "NONE": "none",
@@ -9117,18 +9163,18 @@ const DiscordConstants = {
     "SLIDE_OUT": "slide-out",
     "SLIDE_IN_OUT": "slide-in-out",
     "SLIDE_IN_OUT_REVERSE": "slide-in-out-reverse",
-    "FADE": "fade"
+    "FADE": "fade";
   },
   "NODE_MARGIN_HORIZONTAL": 4,
   "NODE_MARGIN_VERTICAL": 4,
   "NODE_SIZE": 32,
   "NUFIntentModalScenes": {
-    "LANDING": "LANDING"
+    "LANDING": "LANDING";
   },
   "NotificationSettingsSections": {
     "OVERVIEW": "OVERVIEW",
     "ADD_OVERRIDE": "ADD_OVERRIDE",
-    "CHANNEL_OVERRIDE": "CHANNEL_OVERRIDE"
+    "CHANNEL_OVERRIDE": "CHANNEL_OVERRIDE";
   },
   "RESET_EXPRESSION_CATEGORY_SCROLL_DELAY": 100,
   "RowType": {
@@ -9141,7 +9187,7 @@ const DiscordConstants = {
     "MESSAGE": 1,
     "BLOCKED_GROUP": 2,
     "UPLOAD_PROGRESS": 3,
-    "LOADING": 4
+    "LOADING": 4;
   },
   "STORAGE_SECURE_KEYS": [
     "token",
@@ -9155,7 +9201,7 @@ const DiscordConstants = {
     "BLURRED_NO_QUERY": 0,
     "BLURRED_WITH_QUERY": 1,
     "FOCUSED_NO_QUERY": 2,
-    "FOCUSED_WITH_QUERY": 3
+    "FOCUSED_WITH_QUERY": 3;
   },
   "SectionListElementType": {
     "0": "ROW",
@@ -9163,40 +9209,40 @@ const DiscordConstants = {
     "2": "FOOTER",
     "ROW": 0,
     "HEADER": 1,
-    "FOOTER": 2
+    "FOOTER": 2;
   },
   "SeparatorAction": {
     "TOGGLE_BLOCKED_MESSAGES": "toggle",
     "LOAD_MORE_BEFORE": "load_more_before",
-    "LOAD_MORE_AFTER": "load_more_after"
+    "LOAD_MORE_AFTER": "load_more_after";
   },
   "SeparatorType": {
     "DAY": "day",
-    "UNREAD": "unread"
+    "UNREAD": "unread";
   },
   "SlashCommands": [
     {
       "name": "tableflip",
-      "commandPreview": "(╯°□°）╯︵ ┻━┻"
+      "commandPreview": "(╯°□°）╯︵ ┻━┻";
     },
     {
       "name": "unflip",
-      "commandPreview": "┬─┬ ノ( ゜-゜ノ)"
+      "commandPreview": "┬─┬ ノ( ゜-゜ノ)";
     },
     {
       "name": "shrug",
-      "commandPreview": "¯\\_(ツ)_/¯"
+      "commandPreview": "¯\\_(ツ)_/¯";
     }
   ],
   "SourceTypes": {
     "CAMERA": "camera",
-    "PHOTO": "photo"
+    "PHOTO": "photo";
   },
   "StorageKeys": {
     "LOGOUT_TIMESTAMP_KEY": "logout_timestamp_key",
     "ACKNOWLEDGED_TOOLTIPS_KEY": "acknowledged_tooltips_key",
     "KRISP_ONBOARD": "krisp_onboard",
-    "SCREENSHARE_ONBOARD": "screenshare_onboard"
+    "SCREENSHARE_ONBOARD": "screenshare_onboard";
   },
   "StoreKitErrors": {
     "UNKNOWN": "ESKERRORDOMAIN0",
@@ -9218,7 +9264,7 @@ const DiscordConstants = {
     "OVERLAY_INVALID_CONFIGURATION": "ESKERRORDOMAIN16",
     "OVERLAY_TIMEOUT": "ESKERRORDOMAIN17",
     "INELIGIBLE_FOR_OFFER": "ESKERRORDOMAIN18",
-    "UNSUPPORTED_PLATFORM": "ESKERRORDOMAIN19"
+    "UNSUPPORTED_PLATFORM": "ESKERRORDOMAIN19";
   },
   "TooltipNames": {
     "GUILD_TOOLTIP": "guild_tooltip",
@@ -9230,11 +9276,11 @@ const DiscordConstants = {
     "SCREENSHARE_ONBOARD_SPARKLES": "screenshare_onboard_sparkles",
     "SCREENSHARE_SWIPE_UP_CONTROLS": "screenshare_swipe_up_controls",
     "STAGE_DISCOVERY_TOOLTIP": "stage_discovery_tooltip",
-    "HUB_DISCOVERY_TOOLTIP": "hub_discovery_tooltip"
+    "HUB_DISCOVERY_TOOLTIP": "hub_discovery_tooltip";
   },
   "UPLOAD_BANNER_SIZE": {
     "width": 1080,
-    "height": 432
+    "height": 432;
   },
   "UPLOAD_MEDIUM_SIZE": 256,
   "UPLOAD_SMALL_SIZE": 128,
@@ -9249,7 +9295,7 @@ const DiscordConstants = {
     "ANIMATED_AVATAR": "animated-avatar",
     "CUSTOM_PROFILES": "custom-profiles",
     "GLOBAL_STICKER": "global-sticker",
-    "PREMIUM_GUILD_PROFILE": "premium-guild-profile"
+    "PREMIUM_GUILD_PROFILE": "premium-guild-profile";
   },
   "VIDEO_RE_IOS": {},
   "VerificationModalScenes": {
@@ -9261,7 +9307,7 @@ const DiscordConstants = {
     "ADD_PHONE": "ADD_PHONE",
     "VERIFY_PHONE": "VERIFY_PHONE",
     "VERIFY_PASSWORD": "VERIFY_PASSWORD",
-    "PHONE_THEN_EMAIL_INTERSTITIAL": "PHONE_THEN_EMAIL_INTERSTITIAL"
+    "PHONE_THEN_EMAIL_INTERSTITIAL": "PHONE_THEN_EMAIL_INTERSTITIAL";
   },
   "WHITESPACE_RE": {},
   "WebBrowserType": {
@@ -9270,9 +9316,8 @@ const DiscordConstants = {
     "2": "CHROME",
     "SAFARI": 0,
     "IN_APP": 1,
-    "CHROME": 2
-  }
-};
+    "CHROME": 2;
+  };
+}
 
-// the last statement of the file will be parsed with dts-gen
-DiscordConstants;
+export default Constants;
