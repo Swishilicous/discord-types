@@ -409,6 +409,7 @@ interface Constants {
     "LOGIN_MFA": "LOGIN_MFA",
     "LOGIN_MFA_STEP": "LOGIN_MFA_STEP",
     "LOGIN_MFA_FAILURE": "LOGIN_MFA_FAILURE",
+    "LOGIN_ATTEMPTED": "LOGIN_ATTEMPTED",
     "CLEAR_AUTHENTICATION_ERRORS": "CLEAR_AUTHENTICATION_ERRORS",
     "LOGIN_MFA_SMS": "LOGIN_MFA_SMS",
     "LOGIN_MFA_SMS_FAILURE": "LOGIN_MFA_SMS_FAILURE",
@@ -438,6 +439,7 @@ interface Constants {
     "MFA_SEND_VERIFICATION_KEY": "MFA_SEND_VERIFICATION_KEY",
     "MFA_CLEAR_BACKUP_CODES": "MFA_CLEAR_BACKUP_CODES",
     "OAUTH2_TOKEN_REVOKE": "OAUTH2_TOKEN_REVOKE",
+    "PASSWORD_UPDATED": "PASSWORD_UPDATED",
     "MFA_SMS_TOGGLE": "MFA_SMS_TOGGLE",
     "MFA_SMS_TOGGLE_COMPLETE": "MFA_SMS_TOGGLE_COMPLETE",
     "TRACK": "TRACK",
@@ -480,9 +482,12 @@ interface Constants {
     "CONNECTION_INTERRUPTED": "CONNECTION_INTERRUPTED",
     "CLEAR_GUILD_HASHES": "CLEAR_GUILD_HASHES",
     "CLEAR_CACHES": "CLEAR_CACHES",
+    "WINDOW_INIT": "WINDOW_INIT",
+    "WINDOW_FULLSCREEN_CHANGE": "WINDOW_FULLSCREEN_CHANGE",
     "WINDOW_FOCUS": "WINDOW_FOCUS",
     "WINDOW_RESIZED": "WINDOW_RESIZED",
     "WINDOW_HIDDEN": "WINDOW_HIDDEN",
+    "WINDOW_UNLOAD": "WINDOW_UNLOAD",
     "PRESENCE_UPDATES": "PRESENCE_UPDATES",
     "PRESENCES_REPLACE": "PRESENCES_REPLACE",
     "SESSIONS_REPLACE": "SESSIONS_REPLACE",
@@ -663,6 +668,8 @@ interface Constants {
     "GUILD_ROLE_PROMPTS_DELETE_SUCCESS": "GUILD_ROLE_PROMPTS_DELETE_SUCCESS",
     "GUILD_ROLE_PROMPTS_DELETE_FAILURE": "GUILD_ROLE_PROMPTS_DELETE_FAILURE",
     "GUILD_SETTINGS_ROLE_PROMPT_UPDATE": "GUILD_SETTINGS_ROLE_PROMPT_UPDATE",
+    "GUILD_SETTINGS_ROLE_PROMPT_SELECT": "GUILD_SETTINGS_ROLE_PROMPT_SELECT",
+    "GUILD_SETTINGS_ROLE_PROMPTS_UPDATE": "GUILD_SETTINGS_ROLE_PROMPTS_UPDATE",
     "GUILD_INTEGRATIONS_UPDATE": "GUILD_INTEGRATIONS_UPDATE",
     "INTEGRATION_CREATE": "INTEGRATION_CREATE",
     "INTEGRATION_UPDATE": "INTEGRATION_UPDATE",
@@ -1719,6 +1726,7 @@ interface Constants {
     "REGISTER_TRANSITION": "register_transition",
     "LOGIN_VIEWED": "login_viewed",
     "READY_PAYLOAD_RECEIVED": "ready_payload_received",
+    "FORCED_UPDATE_PASSWORD_SUCCEEDED": "force_update_password_succeeded",
     "EXTERNAL_FINGERPRINT_DROPPED": "external_fingerprint_dropped",
     "EXTERNAL_DYNAMIC_LINK_RECEIVED": "external_dynamic_link_received",
     "DEEP_LINK_CLICKED": "deep_link_clicked",
@@ -4073,6 +4081,7 @@ interface Constants {
     "REGISTER": "/auth/register",
     "REGISTER_PHONE": "/auth/register/phone",
     "TRACK": "/science",
+    "METRICS": "/metrics",
     "SSO": "/sso",
     "VERIFY": "/auth/verify",
     "AUTHORIZE_IP": "/auth/authorize-ip",
@@ -5421,11 +5430,6 @@ interface Constants {
     "REPAIRING": "repairing",
     "UNINSTALLING": "uninstalling";
   },
-  "LocalizedPricingCountryCodes": [
-    "PL",
-    "BR",
-    "TR"
-  ],
   "LoggingInviteTypes": {
     "APPLICATION": "Application",
     "SERVER_INVITE": "Server Invite",
@@ -5437,6 +5441,10 @@ interface Constants {
   "LoginMethods": {
     "PASSWORD": "password",
     "LOGIN_CODE": "login_code";
+  },
+  "LoginRequiredActions": {
+    "CNIL_NONCOMPLIANT": "cnil_noncompliant",
+    "NIST_NONCOMPLIANT": "nist_noncompliant";
   },
   "LoginStates": {
     "NONE": "NONE",
@@ -5782,6 +5790,9 @@ interface Constants {
     19,
     21
   ],
+  "MetricEvents": {
+    "APP_CRASHED": "app_crashed";
+  },
   "ModuleUpdaterEventTypes": {
     "CHECKING_FOR_UPDATES": "checking-for-updates",
     "INSTALLED_MODULE": "installed-module",
@@ -6027,6 +6038,10 @@ interface Constants {
   "PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID": "520373071933079552",
   "PREMIUM_TIER_2_REACTIVATION_TRIAL_ID": "902329034132684800",
   "PREMIUM_YEARLY_DISCOUNT_PERCENT": 16,
+  "PROMOTION_CODE_BASE_URLS": [
+    "discord.com/billing/promotions",
+    "promos.discord.gg"
+  ],
   "PURCHASE_TOKEN": "purchase_token",
   "PURCHASE_TOKEN_TTL": 5184000000,
   "PURGE_MEMORY_TIMEOUT": 300000,
