@@ -7,7 +7,7 @@ export default class Message {
   constructor(message: object);
   activity: unknown;
   application: unknown;
-  applicationId: unknown;
+  applicationId: string | unknown;
   attachments: MessageAttachment[];
   author: User;
   blocked: boolean;
@@ -162,8 +162,6 @@ export interface MessageJSON {
   type: number;
 }
 
-
-
 export interface MessageAttachment {
   filename: string;
   id: string;
@@ -176,13 +174,13 @@ export interface MessageAttachment {
   height?: number;
 }
 
-interface ReactionEmoji {
+export interface ReactionEmoji {
   id: string | undefined;
   name: string;
   animated: boolean;
 }
 
-interface MessageReaction {
+export interface MessageReaction {
   count: number;
   emoji: ReactionEmoji;
   me: boolean;

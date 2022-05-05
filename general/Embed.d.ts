@@ -8,9 +8,15 @@ export default interface Embed {
   color: string;
   fields: [];
   id: string;
+  image?: {
+    height: number;
+    proxyURL: string;
+    url: string;
+    width: number;
+  };
   provider?: {
     name: string;
-    url: string;
+    url: string | undefined;
   };
   rawDescription: string;
   rawTitle: string;
