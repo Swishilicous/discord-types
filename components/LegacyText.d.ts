@@ -1,4 +1,4 @@
-type Text = JSX.Element & {
+type LegacyText = JSX.Element & {
   Colors: {
     ALWAYS_WHITE: string;
     BRAND: string;
@@ -26,7 +26,7 @@ type Text = JSX.Element & {
     SIZE_32: string;
   };
 
-  displayName: 'Text';
+  displayName: 'LegacyText';
 };
 
-export default Text; 
+export default LegacyText; 

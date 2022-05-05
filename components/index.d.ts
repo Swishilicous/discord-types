@@ -21,7 +21,7 @@ export { default as SelectTempWrapper } from './SelectTempWrapper';
 export { default as Slider } from './Slider';
 export { default as Spinner } from './Spinner';
 export { default as TabBar } from './TabBar';
-export { default as Text } from './Text';
+export { default as LegacyText } from './LegacyText';
 export { default as TextInput } from './TextInput';
 export { default as Tooltip } from './Tooltip';
 
