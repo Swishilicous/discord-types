@@ -1,4 +1,6 @@
-type Tooltip = JSX.Element & {
+import { Component } from '.';
+
+type Tooltip = Component & {
   Colors: {
     BLACK: string;
     BRAND: string;

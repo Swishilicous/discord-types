@@ -1,4 +1,6 @@
-type TextInput = JSX.Element & {
+import { Component } from '.';
+
+type TextInput = Component & {
   Sizes: {
     DEFAULT: string;
     MINI: string;

@@ -1,4 +1,4 @@
-import { NamedComponent } from '.';
+import { Component } from '.';
 
 declare enum Looks {
   GREY,
@@ -6,9 +6,9 @@ declare enum Looks {
   CUSTOM
 }
 
-type TabBar = JSX.Element & {
-  Header: NamedComponent<'Header'>;
-  Item: NamedComponent<'Item'> & {
+type TabBar = Component & {
+  Header: Component<'Header'>;
+  Item: Component<'Item'> & {
     defaultProps: {
       disableItemStyles: false;
       disabled: false;
@@ -17,8 +17,8 @@ type TabBar = JSX.Element & {
   };
 
   Looks: typeof Looks;
-  Panel: JSX.Element;
-  Separator: NamedComponent<'Separator'>;
+  Panel: Component;
+  Separator: Component<'Separator'>;
   Types: {
     SIDE: string;
     TOP: string;

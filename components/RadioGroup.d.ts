@@ -1,4 +1,6 @@
-type RadioGroup = JSX.Element & {
+import { Component } from '.';
+
+type RadioGroup = Component & {
   Sizes: {
     MEDIUM: string;
     NONE: string;

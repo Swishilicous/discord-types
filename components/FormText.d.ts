@@ -1,4 +1,6 @@
-type FormText = JSX.Element & {
+import { Component } from '.';
+
+type FormText = Component & {
   Types: {
     DEFAULT: string;
     DESCRIPTION: string;

@@ -1,4 +1,6 @@
-type SearchBar = JSX.Element & {
+import { Component } from '.';
+
+type SearchBar = Component & {
   Sizes: {
     LARGE: string;
     MEDIUM: string;

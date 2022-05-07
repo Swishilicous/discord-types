@@ -1,7 +1,9 @@
+import { Component } from '.';
+
 type Scrollers = {
-  AdvancedScrollerAuto: JSX.Element;
-  AdvancedScrollerNone: JSX.Element;
-  AdvancedScrollerThin: JSX.Element;
+  AdvancedScrollerAuto: Component;
+  AdvancedScrollerNone: Component;
+  AdvancedScrollerThin: Component;
 };
 
 export default Scrollers;

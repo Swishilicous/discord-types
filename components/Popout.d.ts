@@ -1,4 +1,6 @@
-type Popout = JSX.Element & {
+import { Component } from '.';
+
+type Popout = Component & {
   Align: {
     BOTTOM: string;
     CENTER: string;

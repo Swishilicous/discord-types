@@ -1,4 +1,6 @@
-type Caret = JSX.Element & {
+import { Component } from '.';
+
+type Caret = Component & {
   Directions: {
     DOWN: string;
     LEFT: string;

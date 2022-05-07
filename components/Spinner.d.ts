@@ -1,4 +1,6 @@
-type Spinner = JSX.Element & {
+import { Component } from '.';
+
+type Spinner = Component & {
   Type: {
     CHASING_DOTS: string;
     LOW_MOTION: string;

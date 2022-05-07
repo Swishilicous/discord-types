@@ -1,14 +1,14 @@
-import { NamedComponent } from '.';
+import { Component } from '.';
 
-type Menu = JSX.Element & {
-  Menu: NamedComponent<'Menu'>;
-  MenuCheckboxItem: JSX.Element;
-  MenuControlItem: JSX.Element;
-  MenuGroup: JSX.Element;
-  MenuItem: JSX.Element;
-  MenuRadioItem: JSX.Element;
-  MenuSeparat: JSX.Element;
-  MenuSpinner: NamedComponent<'MenuSpinner'>;
+type Menu = Component & {
+  Menu: Component<'Menu'>;
+  MenuCheckboxItem: Component;
+  MenuControlItem: Component;
+  MenuGroup: Component;
+  MenuItem: Component;
+  MenuRadioItem: Component;
+  MenuSeparat: Component;
+  MenuSpinner: Component<'MenuSpinner'>;
   MenuStyle: {
     FIXED: string;
     FLEXIBLE: string;

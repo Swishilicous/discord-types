@@ -1,4 +1,6 @@
-type FormNotice = JSX.Element & {
+import { Component } from '.';
+
+type FormNotice = Component & {
   Types: {
     BRAND: string;
     CUSTOM: string;

@@ -1,10 +1,10 @@
-import { NamedComponent } from '.';
+import { Component } from '.';
 
-type HeaderBar = JSX.Element & {
-  Caret: JSX.Element;
-  Divider: NamedComponent<'Divider'>;
-  Icon: NamedComponent<'Icon'>;
-  Title: NamedComponent<'Title'>;
+type HeaderBar = Component & {
+  Caret: Component;
+  Divider: Component<'Divider'>;
+  Icon: Component<'Icon'>;
+  Title: Component<'Title'>;
 
   displayName: 'HeaderBar';
 };

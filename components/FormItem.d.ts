@@ -1,4 +1,6 @@
-type FormItem = JSX.Element & {
+import { Component } from '.';
+
+type FormItem = Component & {
   Tags: {
     H1: string;
     H2: string;

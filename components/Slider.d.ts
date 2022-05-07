@@ -1,4 +1,6 @@
-type Slider = JSX.Element & {
+import { Component } from '.';
+
+type Slider = Component & {
   defaultProps: {
     disabled: false;
     fillStyles: {};

@@ -1,4 +1,6 @@
-type LegacyText = JSX.Element & {
+import { Component } from '.';
+
+type LegacyText = Component & {
   Colors: {
     ALWAYS_WHITE: string;
     BRAND: string;

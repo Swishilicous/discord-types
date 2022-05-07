@@ -1,12 +1,12 @@
-import { NamedComponent } from '.';
+import { Component } from '.';
 
 type Modal = {
-  ModalCloseButton: NamedComponent<'ModalCloseButton'>;
-  ModalContent: NamedComponent<'ModalContent'>;
-  ModalFooter: NamedComponent<'ModalFooter'>;
-  ModalHeader: NamedComponent<'ModalHeader'>;
-  ModalListContent: NamedComponent<'ModalListContent'>;
-  ModalRoot: NamedComponent<'ModalRoot'>;
+  ModalCloseButton: Component<'ModalCloseButton'>;
+  ModalContent: Component<'ModalContent'>;
+  ModalFooter: Component<'ModalFooter'>;
+  ModalHeader: Component<'ModalHeader'>;
+  ModalListContent: Component<'ModalListContent'>;
+  ModalRoot: Component<'ModalRoot'>;
   ModalSize: {
     DYNAMIC: string;
     LARGE: string;
@@ -14,7 +14,7 @@ type Modal = {
     SMALL: string;
   };
 
-  default: JSX.Element;
+  default: Component;
 };
 
 export default Modal;

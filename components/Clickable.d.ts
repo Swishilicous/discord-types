@@ -1,4 +1,6 @@
-type Clickable = JSX.Element & {
+import { Component } from '.';
+
+type Clickable = Component & {
   contextType: any; // React context
   defaultProps: {
     tag: 'div',

@@ -1,4 +1,6 @@
-type Flex = JSX.Element & {
+import { Component } from '.';
+
+type Flex = Component & {
   Align: {
     START: string;
     END: string;
@@ -7,7 +9,7 @@ type Flex = JSX.Element & {
     BASELINE: string;
   };
 
-  Child: JSX.Element & {
+  Child: Component & {
     defaultProps: {
       basis: 'auto';
       grow: 1;

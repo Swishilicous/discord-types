@@ -1,4 +1,6 @@
-type Markdown = JSX.Element & {
+import { Component } from '.';
+
+type Markdown = Component & {
   defaultProps: {
     output: Function;
     parser: Function;

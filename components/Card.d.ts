@@ -1,4 +1,6 @@
-type Card = JSX.Element & {
+import { Component } from '.';
+
+type Card = Component & {
   Types: {
     BRAND: string;
     CUSTOM: string;

@@ -1,4 +1,6 @@
-type DropdownButton = JSX.Element & {
+import { Component } from '.';
+
+type DropdownButton = Component & {
   Colors: {
     BLACK: string;
     BRAND: string;

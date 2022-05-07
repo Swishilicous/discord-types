@@ -1,4 +1,6 @@
-type FormTitle = JSX.Element & {
+import { Component } from '.';
+
+type FormTitle = Component & {
   Tags: {
     H1: string;
     H2: string;

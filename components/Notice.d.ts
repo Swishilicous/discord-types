@@ -1,11 +1,11 @@
-import { NamedComponent } from '.';
+import { Component } from '.';
 
 type Notice = {
-  Notice: NamedComponent<'Notice'>;
-  NoticeButton: NamedComponent<'NoticeButton'>;
-  NoticeButtonAnchor: NamedComponent<'NoticeButtonAnchor'>;
-  NoticeCloseButton: NamedComponent<'NoticeCloseButton'>;
-  PrimaryCTANoticeButton: NamedComponent<'PrimaryCTANoticeButton'>;
+  Notice: Component<'Notice'>;
+  NoticeButton: Component<'NoticeButton'>;
+  NoticeButtonAnchor: Component<'NoticeButtonAnchor'>;
+  NoticeCloseButton: Component<'NoticeCloseButton'>;
+  PrimaryCTANoticeButton: Component<'PrimaryCTANoticeButton'>;
   NoticeColors: {
     BRAND: string;
     CUSTOM: string;

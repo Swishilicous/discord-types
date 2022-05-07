@@ -1,4 +1,6 @@
-type Checkbox = JSX.Element & {
+import { Component } from '.';
+
+type Checkbox = Component & {
   Aligns: {
     CENTER: string;
     TOP: string;
