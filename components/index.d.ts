@@ -25,4 +25,6 @@ export { default as LegacyText } from './LegacyText';
 export { default as TextInput } from './TextInput';
 export { default as Tooltip } from './Tooltip';
 
-export type Component<T extends string = never> = (props: any) => Component & T extends string ? { displayName: T; } : never;
+export type Component<T extends string | void = void> = (props: any) => T extends string
+  ? JSX.Element & { displayName: T; }
+  : JSX.Element;
