@@ -3,7 +3,7 @@ type require = (id: number) => any;
 /**
  * Webpack's \_\_webpack_require\_\_ instance.
  */
-export interface __webpack_require__ extends require {
+export default interface __webpack_require__ extends require {
   E: Function;
   F: { j: Function; };
   O: Function & { j: Function; };

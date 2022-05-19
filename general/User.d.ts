@@ -52,6 +52,7 @@ export default class User {
 
 export interface UserJSON {
   avatar: string;
+  avatarDecoration: unknown | undefined;
   discriminator: string;
   id: string;
   publicFlags: number;

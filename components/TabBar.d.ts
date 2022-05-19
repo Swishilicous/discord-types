@@ -22,6 +22,7 @@ type TabBar = Component & {
   Types: {
     SIDE: string;
     TOP: string;
+    TOP_PILL: string;
   };
 
   displayName: 'TabBar';
