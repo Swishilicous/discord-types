@@ -1,6 +1,7 @@
+import { FluxStore } from '.';
 import { GuildMember } from '../general';
 
-export default class GuildMemberStore {
+export default class GuildMemberStore extends FluxStore {
   getAllGuildsAndMembers(): Record<string, Record<string, GuildMember>>;
   /** @returns Format: [guildId-userId: Timestamp (string)] */
   getCommunicationDisabledUserMap(): Record<string, string>;

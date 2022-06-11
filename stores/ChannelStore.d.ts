@@ -1,6 +1,11 @@
+import { FluxStore } from '.';
 import { Channel } from '../general';
 
-export default class ChannelStore {
+/**
+ * TODO:
+ * update this
+ */
+export default class ChannelStore extends FluxStore {
   getAllThreadsForParent(channelId: string): Channel[];
   getChannel(channelId: string): Channel;
   getDMFromUserId(userId: string): string;

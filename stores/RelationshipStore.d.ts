@@ -1,4 +1,6 @@
-export default class RelationshipStore {
+import { FluxStore } from '.';
+
+export default class RelationshipStore extends FluxStore {
   getFriendIDs(): string[];
   /** Related to friend nicknames experiment. */
   getNickname(userId: string): string;

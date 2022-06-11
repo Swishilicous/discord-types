@@ -1,4 +1,6 @@
-export default class SelectedChannelStore {
+import { FluxStore } from '.';
+
+export default class SelectedChannelStore extends FluxStore {
   getChannelId(e?: unknown): string;
   getLastChannelFollowingDestination(): unknown;
   getLastSelectedChannelId(): string;
