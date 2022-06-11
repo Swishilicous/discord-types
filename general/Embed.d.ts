@@ -21,6 +21,7 @@ export default interface Embed {
   rawDescription: string;
   rawTitle: string;
   referenceId: unknown;
+  timestamp: string;
   thumbnail?: {
     height: number;
     proxyURL: string | undefined;
@@ -53,6 +54,7 @@ export interface EmbedJSON {
     name: string;
     url: string;
   };
+  timestamp: string;
   thumbnail?: {
     height: number;
     proxy_url: string | undefined;
