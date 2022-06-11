@@ -1,6 +1,23 @@
-import { Component } from '.';
+import React from 'react';
 
-type Checkbox = Component & {
+interface Checkbox {
+  (props: {
+    disabled?: boolean;
+    readOnly?: boolean;
+    value?: boolean;
+    shape?: string;
+    align?: string;
+    className?: string;
+    children?: React.ReactNode;
+    size?: number;
+    reverse?: boolean;
+    checkboxColor?: string;
+    displayOnly?: boolean;
+    type?: string;
+    onClick?: React.InputHTMLAttributes<HTMLInputElement>['onClick'];
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => void;
+  }): JSX.Element;
+
   Aligns: {
     CENTER: string;
     TOP: string;
@@ -9,6 +26,7 @@ type Checkbox = Component & {
   Shapes: {
     BOX: string;
     ROUND: string;
+    SMALL_BOX: string;
   };
 
   Types: {
@@ -33,6 +51,6 @@ type Checkbox = Component & {
   };
 
   displayName: 'Checkbox';
-};
+}
 
 export default Checkbox; 
