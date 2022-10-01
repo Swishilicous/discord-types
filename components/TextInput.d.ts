@@ -6,18 +6,15 @@ type TextInput = Component & {
     MINI: string;
   };
 
-  defaultProps: {
-    autoFocus: false;
-    disabled: false;
-    maxLength: 999;
-    name: '';
-    placeholder: '';
-    size: string; // TextInput.Sizes.DEFAULT
-    type: 'text';
-  };
+  autoFocus?: false;
+  disabled?: false;
+  maxLength?: 999;
+  name?: string;
+  placeholder?: string;
+  size: string; // TextInput.Sizes.DEFAULT
+  type: 'text';
 
-  contextType: any;
-  displayName: 'TextInput';
+  contextType: any; // react context
 };
 
 export default TextInput;

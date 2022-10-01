@@ -24,16 +24,12 @@ type Popout = Component & {
     CENTER: string;
   };
 
-  defaultProps: {
-    animation: string; // Popout.Animation.TRANSLATE
-    autoInvert: true;
-    nudgeAlignIntoViewport: true;
-    position: string; // Popout.Positions.RIGHT
-    positionKey: undefined;
-    spacing: 8;
-  };
-
-  displayName: 'Popout';
+  animation: string; // Popout.Animation.TRANSLATE
+  autoInvert: true;
+  nudgeAlignIntoViewport: true;
+  position: string; // Popout.Positions.RIGHT
+  positionKey: undefined;
+  spacing: 8;
 };
 
-export default Popout; 
+export default Popout;

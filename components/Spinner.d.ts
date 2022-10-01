@@ -8,9 +8,6 @@ type Spinner = Component & {
     SPINNING_CIRCLE: string;
     WANDERING_CUBES: string;
   };
-
-
-  displayName: 'Spinner';
 };
 
 export default Spinner;

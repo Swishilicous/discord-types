@@ -39,8 +39,6 @@ type DropdownButton = Component & {
     TINY: string;
     XLARGE: string;
   };
-
-  displayName: 'DropdownButton';
 };
 
-export default DropdownButton; 
+export default DropdownButton;

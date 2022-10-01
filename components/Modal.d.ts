@@ -1,12 +1,12 @@
 import { Component } from '.';
 
 type Modal = {
-  ModalCloseButton: Component<'ModalCloseButton'>;
-  ModalContent: Component<'ModalContent'>;
-  ModalFooter: Component<'ModalFooter'>;
-  ModalHeader: Component<'ModalHeader'>;
-  ModalListContent: Component<'ModalListContent'>;
-  ModalRoot: Component<'ModalRoot'>;
+  ModalCloseButton: Component;
+  ModalContent: Component;
+  ModalFooter: Component;
+  ModalHeader: Component;
+  ModalListContent: Component;
+  ModalRoot: Component;
   ModalSize: {
     DYNAMIC: string;
     LARGE: string;

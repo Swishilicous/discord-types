@@ -15,8 +15,6 @@ type Card = Component & {
     outline: false;
     type: string; // Card.Types.PRIMARY
   };
-
-  displayName: 'Card';
 };
 
 export default Card;

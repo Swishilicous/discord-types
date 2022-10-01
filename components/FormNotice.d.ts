@@ -9,8 +9,6 @@ type FormNotice = Component & {
     SUCCESS: string;
     WARNING: string;
   };
-
-  displayName: 'FormNotice';
 };
 
 export default FormNotice;

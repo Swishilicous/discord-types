@@ -10,18 +10,14 @@ type Flex = Component & {
   };
 
   Child: Component & {
-    defaultProps: {
-      basis: 'auto';
-      grow: 1;
-      shrink: 1;
-      wrap: false;
-    };
-
-    displayName: 'FlexChild';
+    basis: 'auto';
+    grow: 1;
+    shrink: 1;
+    wrap: false;
   };
 
   Direction: {
-    VERTICAL: string,
+    VERTICAL: string;
     HORIZONTAL: string;
   };
 
@@ -40,12 +36,10 @@ type Flex = Component & {
   };
 
   defaultProps: {
-    shrink: 1,
-    grow: 1,
+    shrink: 1;
+    grow: 1;
     basis: 'auto';
   };
-
-  displayName: 'Flex';
 };
 
-export default Flex; 
+export default Flex;
