@@ -5,8 +5,6 @@ type SelectTempWrapper = Component & {
     BOTTOM: string;
     TOP: string;
   };
-
-  displayName: 'SelectTempWrapper';
 };
 
-export default SelectTempWrapper; 
+export default SelectTempWrapper;

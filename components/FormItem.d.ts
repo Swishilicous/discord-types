@@ -8,8 +8,6 @@ type FormItem = Component & {
     H4: string;
     H5: string;
   };
-
-  displayName: 'FormItem';
 };
 
-export default FormItem; 
+export default FormItem;

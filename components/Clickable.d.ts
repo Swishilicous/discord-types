@@ -1,14 +1,10 @@
 import { Component } from '.';
 
 type Clickable = Component & {
-  contextType: any; // React context
-  defaultProps: {
-    tag: 'div',
-    role: 'button',
-    tabIndex: 0;
-  };
-
-  displayName: 'Clickable';
+  contextType: import('react').Context<any>;
+  tag: 'div';
+  role?: 'button';
+  tabIndex: 0;
 };
 
 export default Clickable;

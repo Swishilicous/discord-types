@@ -7,21 +7,17 @@ type SearchBar = Component & {
     SMALL: string;
   };
 
-  defaultProps: {
-    autoFocus: false;
-    disabled: false;
-    gridResults: false;
-    preventEscapePropagation: true;
-    query: '';
-    sections: [];
-    selectedColumn: -1;
-    selectedRow: -1;
-    selectedSection: 0;
-    size: string; // SearchBar.Sizes.SMALL
-    useKeyboardNavigation: true;
-  };
-
-  displayName: 'SearchBar';
+  autoFocus: false;
+  disabled: false;
+  gridResults: false;
+  preventEscapePropagation: true;
+  query: string;
+  sections: [];
+  selectedColumn: -1;
+  selectedRow: -1;
+  selectedSection: 0;
+  size: string; // SearchBar.Sizes.SMALL
+  useKeyboardNavigation: true;
 };
 
-export default SearchBar; 
+export default SearchBar;

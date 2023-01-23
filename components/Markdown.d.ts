@@ -1,21 +1,17 @@
 import { Component } from '.';
 
 type Markdown = Component & {
-  defaultProps: {
-    output: Function;
-    parser: Function;
-  };
+  output: Function;
+  parser: Function;
 
   rules: Record<string, {
-    html: Function | undefined;
-    match: Function | undefined;
+    html?: Function;
+    match?: Function;
     order: number;
-    parse: Function | undefined;
+    parse?: Function;
     quality?: Function;
-    react: Function | undefined;
+    react?: Function;
   }>;
-
-  displayName: 'Markdown';
 };
 
-export default Markdown; 
+export default Markdown;

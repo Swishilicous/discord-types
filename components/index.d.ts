@@ -8,6 +8,8 @@ export { default as FormItem } from './FormItem';
 export { default as FormNotice } from './FormNotice';
 export { default as FormText } from './FormText';
 export { default as FormTitle } from './FormTitle';
+export { default as FormSection } from './FormSection';
+export { default as FormDivider } from './FormDivider';
 export { default as HeaderBar } from './HeaderBar';
 export { default as Markdown } from './Markdown';
 export { default as Menu } from './Menu';
@@ -18,6 +20,7 @@ export { default as RadioGroup } from './RadioGroup';
 export { default as Scrollers } from './Scrollers';
 export { default as SearchBar } from './SearchBar';
 export { default as SelectTempWrapper } from './SelectTempWrapper';
+export { default as Switch } from './Switch';
 export { default as Slider } from './Slider';
 export { default as Spinner } from './Spinner';
 export { default as TabBar } from './TabBar';
@@ -25,6 +28,4 @@ export { default as LegacyText } from './LegacyText';
 export { default as TextInput } from './TextInput';
 export { default as Tooltip } from './Tooltip';
 
-export type Component<T extends string | void = void> = (props: any) => T extends string
-  ? JSX.Element & { displayName: T; }
-  : JSX.Element;
+export type Component = () => JSX.Element;

@@ -4,7 +4,7 @@ type LegacyText = Component & {
   Colors: {
     ALWAYS_WHITE: string;
     BRAND: string;
-    CUSTOM: string | undefined;
+    CUSTOM?: string;
     ERROR: string;
     HEADER_PRIMARY: string;
     HEADER_SECONDARY: string;
@@ -27,8 +27,6 @@ type LegacyText = Component & {
     SIZE_24: string;
     SIZE_32: string;
   };
-
-  displayName: 'LegacyText';
 };
 
-export default LegacyText; 
+export default LegacyText;

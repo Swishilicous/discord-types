@@ -11,8 +11,6 @@ type FormText = Component & {
     LABEL_SELECTED: string;
     SUCCESS: string;
   };
-
-  displayName: 'FormText';
 };
 
 export default FormText;

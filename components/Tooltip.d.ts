@@ -20,18 +20,14 @@ type Tooltip = Component & {
     TOP: string;
   };
 
-  defaultProps: {
-    allowOverflow: false;
-    color: string; // Tooltip.Colors.PRIMARY
-    disableTooltipPointerEvents: true;
-    forceOpen: false;
-    hideOnClick: true;
-    position: string; // Tooltip.Positions.TOP
-    shouldShow: true;
-    spacing: number;
-  };
-
-  displayName: 'Tooltip';
+  allowOverflow: false;
+  color: string; // Tooltip.Colors.PRIMARY
+  disableTooltipPointerEvents: true;
+  forceOpen: false;
+  hideOnClick: true;
+  position: string; // Tooltip.Positions.TOP
+  shouldShow: true;
+  spacing: number;
 };
 
-export default Tooltip; 
+export default Tooltip;

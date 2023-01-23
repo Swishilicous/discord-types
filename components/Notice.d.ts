@@ -1,11 +1,11 @@
 import { Component } from '.';
 
 type Notice = {
-  Notice: Component<'Notice'>;
-  NoticeButton: Component<'NoticeButton'>;
-  NoticeButtonAnchor: Component<'NoticeButtonAnchor'>;
-  NoticeCloseButton: Component<'NoticeCloseButton'>;
-  PrimaryCTANoticeButton: Component<'PrimaryCTANoticeButton'>;
+  Notice: Component;
+  NoticeButton: Component;
+  NoticeButtonAnchor: Component;
+  NoticeCloseButton: Component;
+  PrimaryCTANoticeButton: Component;
   NoticeColors: {
     BRAND: string;
     CUSTOM: string;
@@ -23,4 +23,4 @@ type Notice = {
   };
 };
 
-export default Notice; 
+export default Notice;

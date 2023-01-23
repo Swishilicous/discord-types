@@ -8,8 +8,6 @@ type FormTitle = Component & {
     H4: string;
     H5: string;
   };
-
-  displayName: 'FormTitle';
 };
 
-export default FormTitle; 
+export default FormTitle;

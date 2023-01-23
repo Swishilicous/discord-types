@@ -2,11 +2,9 @@ import { Component } from '.';
 
 type HeaderBar = Component & {
   Caret: Component;
-  Divider: Component<'Divider'>;
-  Icon: Component<'Icon'>;
-  Title: Component<'Title'>;
-
-  displayName: 'HeaderBar';
+  Divider: Component;
+  Icon: Component;
+  Title: Component;
 };
 
-export default HeaderBar; 
+export default HeaderBar;

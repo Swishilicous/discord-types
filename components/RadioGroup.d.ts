@@ -7,8 +7,6 @@ type RadioGroup = Component & {
     NOT_SET: string;
     SMALL: string;
   };
-
-  displayName: 'RadioGroup';
 };
 
-export default RadioGroup; 
+export default RadioGroup;
