@@ -10,7 +10,7 @@
 		"url": "git+https://github.com/Swishilicous/Discord-Types.git"
 	},
 	"dependencies": {
-		"@types/react": "17.0.2",
-		"moment": "^2.29.1"
+		"@types/react": "18.2.13",
+		"moment": "^2.29.4"
 	}
 }
