@@ -18,11 +18,14 @@ export default class Guild {
   discoverySplash: string | undefined;
   explicitContentFilter: number;
   features: Set<keyof Constants['GuildFeatures']>;
+  homeHeader: string | undefined;
   hubType: unknown;
   icon: string | undefined;
   id: string;
   joinedAt: Date;
+  latestOnboardingQuestionId: string | undefined;
   maxMembers: number;
+  maxStageVideoChannelUsers: number;
   maxVideoChannelUsers: number;
   mfaLevel: number;
   name: string;
@@ -35,6 +38,7 @@ export default class Guild {
   publicUpdatesChannelId: string | undefined;
   roles: Record<string, Role>;
   rulesChannelId: string | undefined;
+  safetyAlertsChannelId: string | undefined;
   splash: string | undefined;
   systemChannelFlags: number;
   systemChannelId: string | undefined;
